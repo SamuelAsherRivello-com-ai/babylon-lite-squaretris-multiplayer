@@ -15,7 +15,8 @@ All browser runs use headless Microsoft Edge with a real hardware WebGPU adapter
 | Layout and assets | [Run](layout-and-assets.log): 576×1024 integer desktop, 250×444 small display, fullscreen, DPR2 single backing multiplication, half render preset, six actual WAV responses, mute URL loaded no audio, reduced effects, useful unsupported-WebGPU message |
 | Zoom-equivalent changes | [Run](zoom-and-focus.log): 100/125/150/200% paired CSS viewport and DPR emulation preserved logical framing and single backing multiplication; form field owned game keys. Actual browser-menu zoom remains unverified: headless keyboard shortcut had no effect and Edge settings is unavailable headlessly |
 | Backend | [Exact published artifact](../backend-release-verified.json): v0.9.12, actual two-client integration; shared server 150/150 regression tests and real 240-second staged relay probe passed before client bootstrap |
-| Public deployment | Pending release and Pages verification; this row will be replaced with observed results |
+| Public deployment | [Run](public-duel.log): v0.0.2, matching version.txt, hardware WebGPU (nonfallback adapter), independent desktop/mobile clients with real 150±50 ms injected RTT, matching win/loss, mutual rematch and refresh recovery; zero page errors and failed assets; development hook absent |
+| Renderer shortcut | [Run](render-shortcut.log): R cycles double/quarter/half/native and leaves focused room-code input in control |
 
 Screenshots are captured from the actual game: [aim and ghost](duel-aim.png), [settled placement](duel-placed.png), [result](duel-results.png), [garbage](garbage-inserted.png), [draw](auto-draw.png), [emulated mobile touch](mobile-touch.png), [desktop](desktop.png), [small display](small-display.png), [graphics error](unsupported-webgpu.png).
 

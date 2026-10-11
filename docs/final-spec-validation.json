@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "id": "babylon-lite-content",
+      "type": "spec",
+      "valid": true,
+      "issues": [
+        {
+          "level": "INFO",
+          "path": "requirements[0]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        },
+        {
+          "level": "INFO",
+          "path": "requirements[7]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        }
+      ],
+      "durationMs": 6
+    },
+    {
+      "id": "babylon-render-resolution",
+      "type": "spec",
+      "valid": true,
+      "issues": [
+        {
+          "level": "INFO",
+          "path": "requirements[3]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        }
+      ],
+      "durationMs": 2
+    },
+    {
+      "id": "browser-template-layout",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 1
+    },
+    {
+      "id": "game-integration-guidance",
+      "type": "spec",
+      "valid": true,
+      "issues": [
+        {
+          "level": "INFO",
+          "path": "requirements[0]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        },
+        {
+          "level": "INFO",
+          "path": "requirements[3]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        }
+      ],
+      "durationMs": 1
+    },
+    {
+      "id": "game-project-delivery",
+      "type": "spec",
+      "valid": true,
+      "issues": [
+        {
+          "level": "INFO",
+          "path": "requirements[2]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        },
+        {
+          "level": "INFO",
+          "path": "requirements[4]",
+          "message": "Requirement text is very long (>500 characters). Move examples and edge cases into scenarios, or split it into separate requirements that each state one behavior."
+        }
+      ],
+      "durationMs": 0
+    },
+    {
+      "id": "pixel-perfect-duel-presentation",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    },
+    {
+      "id": "private-duel-session",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 3
+    },
+    {
+      "id": "source-organization-standards",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 3
+    },
+    {
+      "id": "template-ai-guidance",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 2
+    },
+    {
+      "id": "template-layout-verification",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 2
+    },
+    {
+      "id": "timed-block-duel",
+      "type": "spec",
+      "valid": true,
+      "issues": [],
+      "durationMs": 0
+    }
+  ],
+  "summary": {
+    "totals": {
+      "items": 11,
+      "passed": 11,
+      "failed": 0
+    },
+    "byType": {
+      "spec": {
+        "items": 11,
+        "passed": 11,
+        "failed": 0
+      }
+    }
+  },
+  "version": "1.0",
+  "root": {
+    "path": "D:\\Documents\\Projects\\VC\\Babylon\\babylon-lite-tetris-multiplayer-clone",
+    "source": "nearest"
+  }
+}

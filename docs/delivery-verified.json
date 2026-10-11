@@ -1,0 +1,33 @@
+{
+  "change": "add-hidden-board-tetris-duel",
+  "state": "archived",
+  "archive": "openspec/changes/archive/2026-10-11-add-hidden-board-tetris-duel",
+  "progress": {
+    "total": 38,
+    "complete": 38,
+    "remaining": 0
+  },
+  "finalization": "Five capabilities semantically merged and validated before archive; finalization checkbox closed after successful CLI archive",
+  "specValidation": "11 passed, 0 failed",
+  "gameRelease": "v0.0.2",
+  "releaseRun": 38113100507,
+  "pagesRun": 38113151313,
+  "releasedCommit": "5d8990bba6dea043a5ff7e1e883fbe794fdbbcc8",
+  "serverCatalogCommit": "97551fb",
+  "serverFinalizationCommit": "2de6385",
+  "serverChange": "openspec/changes/archive/2026-10-11-add-tetris-duel",
+  "liveDemo": "https://samuelasherrivello.github.io/babylon-lite-tetris-multiplayer-clone/",
+  "serverEndpoint": "https://rmc-colyseus-multiplayer-server.vercel.app",
+  "serverVersion": "0.9.12",
+  "clientVersion": "0.9.12",
+  "hosting": "Existing free Vercel Hobby relay; static GitHub Pages frontend",
+  "publicBrowserEvidence": "docs/verification/public-duel.log",
+  "localGameCheckout": "D:\\Documents\\Projects\\VC\\Babylon\\babylon-lite-tetris-multiplayer-clone",
+  "localServerCheckout": "D:\\Documents\\Projects\\VC\\Babylon\\rmc-colyseus-multiplayer-server",
+  "unverified": [
+    "Physical touch hardware",
+    "Actual browser-menu zoom (paired viewport/DPR emulation passed)",
+    "Codex autocomplete UI",
+    "Original conversation source URL"
+  ]
+}

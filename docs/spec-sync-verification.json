@@ -1,0 +1,66 @@
+[
+  {
+    "capability": "babylon-lite-content",
+    "added": [
+      "Fixed portrait duel content mode",
+      "Live duel settings and render diagnostics"
+    ],
+    "removed": [
+      "Developer-selectable content mode",
+      "Viewport settings label and modal-controlled world-edge outline",
+      "Pixel-art showcase scene",
+      "Native-size showcase sprite"
+    ],
+    "preservedUnrelated": true
+  },
+  {
+    "capability": "game-project-delivery",
+    "added": [
+      "Traceable template and shared skills integration",
+      "Compatible server-first publication",
+      "Verified public WebSocket hosting",
+      "Meaningful gameplay and privacy evidence",
+      "Verified release and documentation"
+    ],
+    "removed": [],
+    "preservedUnrelated": true
+  },
+  {
+    "capability": "pixel-perfect-duel-presentation",
+    "added": [
+      "Single portrait own-board view",
+      "Sparse opponent hints",
+      "Sharp original pixel presentation",
+      "Local landing ghost",
+      "Keyboard and concurrent touch controls",
+      "Clear live recovery and settings behavior"
+    ],
+    "removed": [],
+    "preservedUnrelated": true
+  },
+  {
+    "capability": "private-duel-session",
+    "added": [
+      "Private two-seat admission",
+      "Recipient-specific hidden state",
+      "Server-authoritative ordered actions",
+      "Responsive local prediction with reconciliation",
+      "Bounded authenticated recovery"
+    ],
+    "removed": [],
+    "preservedUnrelated": true
+  },
+  {
+    "capability": "timed-block-duel",
+    "added": [
+      "Independent falling-block boards",
+      "Five-second aim and commit",
+      "Atomic placement and row clearing",
+      "Telegraphed garbage and cancellation",
+      "Simultaneous outcomes are order independent",
+      "Top-out and rematch"
+    ],
+    "removed": [],
+    "preservedUnrelated": true
+  }
+]

@@ -10,7 +10,7 @@ A private-board, two-player pixel-art duel: aim above the well, release, and sen
 
 ## Images
 
-<a href="docs/verification/duel-aim.png"><img src="docs/verification/duel-aim.png" width="640" alt="Actual WebGPU duel: own aim, landing ghost, private well and opponent outline" /></a>
+<a href="docs/verification/public-duel.png"><img src="docs/verification/public-duel.png" width="640" alt="Shipped v0.0.2 WebGPU duel: own aim, landing ghost, private well and opponent outline" /></a>
 
 ## Getting Started
 
@@ -71,6 +71,8 @@ Original patterned blocks, circuit gutters and six short event sounds are reprod
 See [verification evidence](docs/verification/README.md), [asset provenance](docs/asset-provenance.md), [game brief](docs/game-brief.md), [template adaptations](docs/template-adaptations.md) and [backend release evidence](docs/backend-release-verified.json). Physical touch hardware and Codex skill autocomplete are unverified; browser touch emulation is recorded separately.
 
 ## Release
+
+Latest verified release: [v0.0.2](https://github.com/SamuelAsherRivello/babylon-lite-tetris-multiplayer-clone/releases/tag/v0.0.2).
 
 The checked-in **Release** GitHub Actions workflow tests/builds, bumps root `version.txt`, commits/tags on `main`, and creates a GitHub release. **Deploy live demo** builds and deploys Pages on pushes to `main` or manual dispatch. Explicitly dispatch Pages after a release bot commit when needed, then verify `/version.txt` and the displayed version. No paid backend or alternate host is needed.
 

@@ -22,13 +22,13 @@ Source: github-repository-template main `49d6c20741f2aaac509f7954392d72526614aca
 | Mobile touch and browser zoom | Verified by emulation; physical cases unverified | CDP concurrent touch/cancellation; paired viewport/DPR zoom emulation; physical touch and actual browser-menu zoom not claimed |
 | OpenSpec setup/version/doctor/artifact integrity | Verified with adaptation | Compatible installed/library OpenSpec 1.14.0 replaces stale template 1.13.1; generator-owned files, doctor and strict validation pass |
 | Codex reopen/autocomplete | Unverified | Codex was not reopened; generated files and names verified on disk |
-| Project context and accepted-spec lifecycle | Verified for planning; final sync/archive pending | Project-specific config, explicit validated deltas, tracked acceptance tasks; finalize after public delivery |
+| Project context and accepted-spec lifecycle | Verified | Project-specific config, five semantically compared capability merges, 11/11 main specs valid; archived change 2026-10-11-add-hidden-board-tetris-duel, 38/38 tasks |
 | Placeholder search and retained historical references | Verified | Original quoted example and inherited historical specs retain their provenance. Unavailable prompt URL is deliberately explicit; no gameplay placeholder assets remain |
 | README local links, screenshot and commands review | Verified | Existing local targets and inspected/executed scripts |
-| Release, tag, Pages and public demo | Pending verification | Checked workflows and Pages configured; replace this outcome after observing actual release/public gameplay |
+| Release, tag, Pages and public demo | Verified | v0.0.2 tag/release, successful release/Pages workflows, matching visible version and version.txt, real public two-client win/loss/rematch/recovery with zero runtime errors or failed assets |
 
 ## Scorecard
 
-The 12 original scorecard questions are true for the implemented local project: renamed app, Vite root, confirmed metadata, actual README, real commands, replaced starter material, four corners, one orientation, mute UI/URL, nonconflicting displayed shortcuts, generated/local exclusions, and actual checks with limitations disclosed. **12/12 local implementation points.** Public delivery is separately pending until the release and live-browser checks complete; this score is not a claim that publication has already passed.
+The 12 original scorecard questions are true: renamed app, Vite root, confirmed metadata, actual README, real commands, replaced starter material, four corners, one orientation, mute UI/URL, nonconflicting displayed shortcuts, generated/local exclusions, and actual checks with limitations disclosed. **12/12 points.** Public v0.0.2 gameplay and both server live-demo catalogs are verified separately in the delivery evidence.
 
 No pending user authorization is required. Physical touch, actual browser-menu zoom, prompt-link provenance and autocomplete are explicitly unverified rather than fabricated.

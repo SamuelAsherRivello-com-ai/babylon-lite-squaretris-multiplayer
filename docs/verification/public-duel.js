@@ -5,7 +5,7 @@ async page => {
   const a=await aContext.newPage(),b=await bContext.newPage(),clients=[a,b],errors=[],failedAssets=[];
   for(const p of clients){p.on('pageerror',e=>errors.push(e.message));p.on('response',r=>{if(r.status()>=400)failedAssets.push({url:r.url(),status:r.status()});});}
   await a.goto(url);await a.getByRole('button',{name:'Create room',exact:true}).waitFor({timeout:30000});
-  const version=await a.locator('#version').innerText();if(version!=='v0.0.1')throw Error('Wrong public version: '+version);
+  const version=await a.locator('#version').innerText();if(version!=='v0.0.2')throw Error('Wrong public version: '+version);
   const devHook=await a.evaluate(()=>typeof window.__duelInspect);if(devHook!=='undefined')throw Error('Development state hook shipped');
   const code=await a.getByRole('textbox',{name:'Room code',exact:true}).inputValue();
   await a.getByRole('button',{name:'Create room',exact:true}).click();await a.getByRole('button',{name:'Ready up',exact:true}).waitFor({timeout:25000});

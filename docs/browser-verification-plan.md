@@ -1,6 +1,6 @@
 # Browser verification plan
 
-This is a pending test plan, not evidence that the game client exists or passed.
+This records the original verification plan. Observed outcomes, screenshots, limitations and public v0.0.2 proof are in [verification/README.md](verification/README.md).
 
 Use independent Edge sessions `tetris-a` and `tetris-b` with hardware WebGPU. Create a private room in one and join its code in the other. Never copy session storage between players.
 
