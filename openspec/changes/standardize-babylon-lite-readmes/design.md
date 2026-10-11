@@ -2,7 +2,7 @@
 
 ## Context
 
-See `proposal.md` for motivation and repository scope. The target repositories are independent GitHub repositories with different application roots and documentation paths. The read-only inventory found a shared family resemblance but not a single reliable project directory name: some READMEs use paths such as `project-name/`, while others use repository-specific folders. Several repositories already contain prompt details and screenshots; a smaller subset has missing or placeholder prompt content.
+See `proposal.md` for motivation and repository scope. The target repositories are independent GitHub repositories with different application roots and documentation paths. The read-only inventory found a shared family resemblance but not a single reliable project directory name: some READMEs use paths such as `tetris/`, while others use repository-specific folders. Several repositories already contain prompt details and screenshots; a smaller subset has missing or placeholder prompt content.
 
 The template README is the presentation reference, not a source of application code. The implementation must therefore be repository-local and content-preserving.
 

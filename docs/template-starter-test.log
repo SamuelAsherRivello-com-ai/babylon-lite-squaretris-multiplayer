@@ -1,0 +1,33 @@
+
+> test
+> node --test --test-isolation=none tetris/test/page.test.mjs tetris/test/content.test.mjs
+
+✔ defaults to Babylon Lite 2D and does not apply the pixel preset to 3D (1.2328ms)
+✔ derives four relative render resolutions from native backing dimensions and caps double by the WebGPU limit (0.2996ms)
+✔ snaps Babylon Lite sprite anchors after the layer view and preserves the grid on round trip (0.9133ms)
+✔ snaps correctly through a zoomed and rotated Babylon Lite layer view (0.1498ms)
+✔ requires explicit mode setup and resnaps a layer after view changes (0.5145ms)
+✔ rejects Babylon Lite sprite mutations outside the pixel-grid entry module (7.2156ms)
+✔ keeps the logical camera focus and spinning title at world origin across target sizes (2.888ms)
+✔ adapts Babylon Lite sprite projection dimensions while sharing the engine surface registry (0.225ms)
+✔ formats the active internal render scale independently of the CSS viewport (0.1791ms)
+✔ keeps the Babylon Lite world HUD at the existing CSS-pixel position across DPRs (0.3883ms)
+✔ draws the live Babylon Lite readout and clears a hidden HUD (0.4905ms)
+✔ keeps the shell renderer-neutral and wires Babylon presentation through optional slots (1.0298ms)
+✔ reports WebGPU-only initialization and allocation failures and uses the engine-owned frame lifecycle (0.9748ms)
+✔ imports an original 32x32 hard-edged PNG with only black and gray pixels (1.0736ms)
+✔ keeps npm/application and GitHub Pages roots (0.0596ms)
+✔ fits orientations and project-defined ratios in CSS pixels (0.3029ms)
+✔ invalid dimensions and orientation give actionable errors (0.2375ms)
+✔ renderer settings patch the shared config without dropping shell preferences (0.1496ms)
+✔ preserves corner contracts and engine-neutral content-layer guidance (0.6472ms)
+✔ keeps the UI and content source boundaries discoverable (0.4927ms)
+✔ renders the shell without a presentation and with a stub presentation (183.7833ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1452.1041

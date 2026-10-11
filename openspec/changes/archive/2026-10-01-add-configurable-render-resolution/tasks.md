@@ -2,7 +2,7 @@
 
 ## 1. Resolution model
 
-- [x] 1.1 Add logical-resolution and render-preset configuration under `project-name/src/content/`, derive quarter/half/native/double integer dimensions from the live native backing size, and verify cycling, aspect preservation, minimum dimensions, and recomputation with focused unit tests.
+- [x] 1.1 Add logical-resolution and render-preset configuration under `tetris/src/content/`, derive quarter/half/native/double integer dimensions from the live native backing size, and verify cycling, aspect preservation, minimum dimensions, and recomputation with focused unit tests.
 - [x] 1.2 Cap upscaled dimensions against the active WebGPU device limit while preserving aspect ratio, and verify capped actual dimensions with limit-boundary tests.
 
 ## 2. React settings and HUD
@@ -20,5 +20,5 @@
 
 ## 4. Documentation and integration verification
 
-- [x] 4.1 Update `project-name/documentation/layout-and-game-integration.md` with logical, internal render, backing, and CSS dimensions and the four nearest-neighbor presets; verify examples match implementation behavior.
+- [x] 4.1 Update `tetris/documentation/layout-and-game-integration.md` with logical, internal render, backing, and CSS dimensions and the four nearest-neighbor presets; verify examples match implementation behavior.
 - [x] 4.2 Run focused tests and the production build, then verify click/R cycling, local-storage restore, viewport/DPR recomputation, hardware-limit capping, hard edges, and error handling in a WebGPU-capable browser.

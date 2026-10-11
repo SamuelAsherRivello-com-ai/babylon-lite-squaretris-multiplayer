@@ -1,0 +1,43 @@
+# Populated game template
+
+`$ai-skills-create-game`
+
+- **Title:** Tetris Multiplayer Clone.
+- **Type:** Online competitive 1v1 falling-block duel. Exactly two human players; no cooperative team, spectators or bots.
+- **World and camera:**
+  - One stationary local well, 10 columns by 20 visible rows with four hidden entry rows.
+  - Portrait 288×512 logical viewport, 16×16-pixel board cells, orthographic 2D presentation and no scrolling or camera motion.
+  - Render only the local settled board, local piece and local landing ghost. The opponent is represented by a labeled maximum-stack-height line and an aiming-piece outline aligned to the same columns in a separate strip above the well.
+  - Hide the opponent outline on commitment; never show their falling piece, landing ghost, settled blocks or next queue.
+- **Core loop:** Both players ready, then begin after a three-second countdown. Independently move and rotate each piece above the well, manually release it or let the five-second deadline release it automatically. The piece falls straight without steering, resolves after 200 ms, clears complete rows and immediately gives that player the next piece. Clear multiple lines to cancel incoming garbage and attack the opponent. Top-out loses; simultaneous top-outs draw. Both players ready for a fresh rematch.
+- **Controls:** Left/right arrows or A/D aim horizontally; Up/X rotates clockwise; Z rotates counterclockwise; Space releases. Horizontal repeat starts after 150 ms and repeats every 50 ms. Five visible touch buttons support concurrent movement and rotation/release. Form focus, blur and pointer cancellation release held inputs safely.
+- **Duel mechanics:**
+  - Create or join using an editable four-character room code, share an invite URL and ready together.
+  - Use identical seven-bag piece streams, consumed independently; faster placement can produce more attacks.
+  - Clearing one/two/three/four rows produces zero/one/two/four attack rows. Cancel oldest pending incoming rows before sending excess; simultaneous outgoing attacks cancel each other.
+  - Warn for at least one second before inserting garbage at the receiver's next placement boundary, after that placement's cancellation. One hidden gap per packet; never insert during a committed fall.
+  - Keep the local landing ghost visible while aiming and update it immediately after movement or rotation. Show blocked entry explicitly.
+- **Look and feel:**
+  - Original dark navy pixel machinery, cyan and amber accents, distinct patterned pieces, restrained clear effects and coordinated decorative gutters.
+  - Crisp nearest-sampled sprites, no mipmaps, MSAA=1, snapped anchors and integer fitting with letterboxing. Document the reduced-fidelity fractional fallback for screens below 1× and fractional DPR.
+  - Show the local next-five queue, countdown, line count, incoming attack warning, opponent status/height, room code and connection state. Keep the template's title, repository links, settings and version corner roles.
+  - Six original event sounds: move, rotate, release, line clear, attack warning and result. Include a mute control, `?mute=1`, and reduced effects. No music.
+- **Gameplay requirements:**
+  - All seven tetrominoes, legal integer orientations and horizontal rotation offsets 0, −1, +1, −2, +2. No hold, soft drop, floor kicks or steering after release.
+  - Deterministic collision, locking, line clearing, garbage cancellation, overflow/top-out and simultaneous results.
+  - Independent five-second maximum aiming windows, responsive early release and ready-gated rematches.
+  - Actionable unsupported-WebGPU and connection/expired-room states; opening settings does not pause an online match.
+- **Multiplayer server and smoothness:**
+  - Extend [the existing RMC Colyseus multiplayer server](https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server), preserving its other games, shared client APIs and release conventions.
+  - Use its existing relay and **free Vercel Hobby deployment**, configured GitHub Actions credentials, staged checks, promotion and rollback. Do not require another host, paid service or external datastore.
+  - Keep server authority over deadlines, legal placement, bag generation, clearing, garbage, outcomes and seat ownership. Relay only validated actions and recipient-specific projected state.
+  - Validate protocol version, epoch, piece ID, sequence and action; rate-limit commands. Never transmit an opponent board/queue/landing data or another seat's credential.
+  - Predict local aim/release immediately, reconcile acknowledgments and discard stale piece/epoch commands. Snap ordered opponent hints to cells; animate local cosmetic effects independently.
+  - Use fixed 20 ms simulation ticks, at most 20 Hz ordinary snapshots and immediate commitment/results. Prefer compact, predictable synchronization over extra effects.
+  - Recover the same seat with a private credential and at most 15 seconds cumulative pause budget per match; code alone cannot claim a reserved seat. Refresh rotates the credential; explicit leave forfeits.
+  - Disclose process-local hosting limits: Vercel function expiry or instance routing may end a room. Show expiry and offer explicit new-room creation rather than claim a restored match.
+  - Verify deterministic rules, two real clients, capacity/isolation, hidden payloads, recovery, top-out/draw/rematch, the existing bounded 240-second relay check, approximately 150 ms RTT with ±50 ms jitter, desktop/mobile layouts and concurrent emulated touch.
+- **Template and delivery:** Generate the repository from the required GitHub template, preserve this OpenSpec plan, import the shared skills library with provenance, use Babylon Lite WebGPU through its PixelPerfect2D wrapper, release/verify the backend before client implementation, then release and verify the GitHub Pages game. Add the actual verified live-demo URL to both shared-server README catalogs.
+- **Inspiration links:** [Tetris gameplay reference](https://en.wikipedia.org/wiki/Tetris).
+- **Inspiration screenshots:** None supplied. Use the gameplay reference and original artwork; capture real game screenshots during browser verification.
+- **Originality requirement:** Keep the requested project title while creating original block textures, patterns, sounds, interface and presentation. Adapt falling-block gameplay to the confirmed hidden-board, timed aim-and-release rules rather than copying commercial assets or branding.

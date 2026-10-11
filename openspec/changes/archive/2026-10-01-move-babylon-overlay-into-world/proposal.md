@@ -24,6 +24,6 @@ None.
 
 ## Impact
 
-- Affected implementation: `project-name/src/content/Content.jsx`, `project-name/src/ui/App.jsx`, `project-name/src/ui/ViewportInfoContext.jsx`, and Babylon Lite content/rendering helpers and styles as needed.
-- Affected checks: `project-name/test/content.test.mjs` and any focused renderer lifecycle/layout checks needed to protect world text updates, placement, and control behavior.
+- Affected implementation: `tetris/src/content/Content.jsx`, `tetris/src/ui/App.jsx`, `tetris/src/ui/ViewportInfoContext.jsx`, and Babylon Lite content/rendering helpers and styles as needed.
+- Affected checks: `tetris/test/content.test.mjs` and any focused renderer lifecycle/layout checks needed to protect world text updates, placement, and control behavior.
 - Runtime dependency changes: none expected; use the text and sprite rendering APIs already present in the pinned Babylon Lite package.

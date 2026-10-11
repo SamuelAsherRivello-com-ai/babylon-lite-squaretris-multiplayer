@@ -1,0 +1,154 @@
+
+> rmc-colyseus-multiplayer-server@0.9.9 test
+> node --import tsx --test --test-concurrency=1 multiplayer-server/test/*.mjs
+
+admission create
+admission join
+admission join
+admission join
+admission join
+admission join
+admission join
+admission join
+✔ Asteroids fixed host: four seats, damaged-state late join, identity recovery, spoof rejection and terminal host loss (1333.9058ms)
+✔ introductory wave is exactly three parents, six terminal children, nine hits for every roster (1.7593ms)
+✔ finite seeded later waves obey health and entity caps (3.167ms)
+✔ wrapped collision and projectile consumes at most one hit (0.7794ms)
+✔ personal three lives persist across waves and returning identity; spectators reset together after five seconds (0.4136ms)
+✔ stale/replayed/old-run inputs are rejected or neutralized and no friendly damage exists (0.5425ms)
+✔ wave two samples living roster once; respawning included; joining leaves current roots alone (0.32ms)
+✔ identical seed and inputs replay identically; frame fits transport (2.8019ms)
+✔ roster scaling covers 1/2/3/4 players and remains frozen through hot drop (0.9761ms)
+✔ defeat has priority when last fragment and last ship vanish together (0.1657ms)
+✔ a spectator host remains host-side simulation owner; surviving guest continues (0.2192ms)
+✔ simultaneous hits charge one life, safe respawn protects, spectators cannot shoot (0.266ms)
+✔ automatic results countdown resets every connected seat including arrivals for each capacity (0.6768ms)
+✔ arena is symmetric with clear equal escape routes (1.8808ms)
+✔ collision prevents walking through outer walls (2.7533ms)
+✔ plants block movement without eliminating players or growing into them (0.7684ms)
+✔ bomb capacity, fuse, owner damage and blast duration (1.4299ms)
+✔ owner leaves bomb but cannot reenter (0.8318ms)
+✔ chain detonates once and destruction blocks that tick rays (0.3413ms)
+✔ pause and restart have no stale clock or bomb state (1.1521ms)
+✔ same seeded input stream produces identical outcomes (3.7268ms)
+✔ all four starts have mirrored blocks and hidden upgrade opportunities (1.005ms)
+✔ hidden upgrade waits for all blasts, then later explosions destroy exposed items (0.4953ms)
+✔ collection caps stats, exact bomb capacity, eliminated rejection and fresh reset (0.9565ms)
+✔ walls warn for one second, close symmetrically and crush all occupants together (1.0035ms)
+✔ warned tile can be escaped and closed wall blocks movement permanently (0.9707ms)
+✔ inward wall schedule is deterministic, unique and fits the final thirty seconds (0.5047ms)
+✔ Chain Reaction extends every bomb in a same-tick chain and is off by default (1.1187ms)
+✔ four battle seats admit four humans and replace departed humans with CPUs (1.9683ms)
+✔ one human starts with three CPUs and only host can select valid options (1.4538ms)
+✔ CPU opponents generate real authoritative explosions (29.4107ms)
+✔ host can enable Chain Reaction for the next match (0.7316ms)
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'ncBvlalRh' with roomId 'lz2o_b2V8'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'ncBvlalRh' with roomId 'lz2o_b2V8'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+✔ private Bomberman admission, authoritative bombs, isolation, capacity and same-identity reconnect (27385.4192ms)
+✔ two real Colyseus clients complete first-to-three and ready a fresh rematch (36344.372ms)
+✔ two ready humans start countdown; inputs expire and forged input is rejected (11.7058ms)
+✔ disconnect neutralizes input without removing vulnerable character (5.4654ms)
+✔ same-tick final eliminations draw with a bounded four-seat roster (1.3077ms)
+✔ first-to-three advances rounds automatically and ready rematch resets everything (3.2913ms)
+✔ two-minute timeout draws without a single survivor and awards no score (1.5635ms)
+✔ simultaneous final blast eliminations draw and reset all four seats (2.2073ms)
+✔ zero remaining connections return to lobby after round resolution (1.1318ms)
+✔ snapshot hides unrevealed items and inputs cannot grant upgrades or victory (1.3609ms)
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'HZYhFvRdR' with roomId 'qATBnquav'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+{"combatProbe":"passed","endpoint":"http://127.0.0.1:23244","room":"qATBnquav","protocol":1,"tanks":4,"tick":1147,"mode":"ricochet"}
+✔ Combat real private admission, authoritative motion/fire, populations, recovery races and isolation (21064.339ms)
+Combat sustained: 73440 steps in 1092 ms (0.015 ms/tick)
+✔ all arenas have valid distinct spawns and a connected tank-clearance graph (40.2444ms)
+✔ humans and CPUs share forward/reverse, turning, solid wall and tank contact rules (2.5315ms)
+✔ swept fast shells hit tanks and thin walls; classic stops and ricochet reflects corners (1.0135ms)
+✔ one hit destroys, scores once, clears shots, safely respawns with protection ending on fire (3.3045ms)
+✔ mutual impacts survive shot cleanup and repeated victim impacts use deterministic attribution (0.4183ms)
+✔ owner immunity before bounce and reflected self-hit penalties floor at zero (0.2769ms)
+✔ 136-second clock, final tick impacts, unique winner, ties, frozen outcomes and ready rematch reset (32.6162ms)
+✔ sequenced controls expire in 300ms, invalid authority ignored, bounded firing population (17.621ms)
+✔ population matrix, host settings lock, queued handoff, disconnect takeover and no-human suspension (1.5599ms)
+✔ CPU seeded decisions reproduce and all difficulty/arena combinations finish with bounded cost (1094.9786ms)
+✔ High evaluates a covered Ricochet bank shot and every CPU level escapes a wall (7.3527ms)
+✔ garden: movement, collision, bounds, chat, late join, drop, reconnect, capacity and isolation (9590.6525ms)
+✔ gauntlet sync, class switching, late join, capacity, seat reuse, reconnect and isolation (3137.4301ms)
+✔ classes preserve health, cooldown, position and identity; input rejects forgery and expires (2.7345ms)
+✔ four enemies, server combat, food, key, terminal conditions and leader replay (0.7256ms)
+✔ enemy damage, projectile walls, spawn cap and seat reuse (9.9833ms)
+✔ gauntlet-2d sync, duplicate classes, late join, capacity, isolation and fresh reconnect (2741.578ms)
+✔ four seats, duplicate classes, bounded authority and switching preserves health/cooldown (3.6606ms)
+✔ all objectives are reachable and walls block players (2.4497ms)
+✔ combat damage, pickup ownership, locked exit, victory and shared replay (2.3697ms)
+✔ four enemy behaviors, revival, defeat and replay (0.7759ms)
+✔ coded dungeon sync, authority, readiness, four seats, isolation, hot drop and fresh reconnect (4007.665ms)
+✔ readiness, seats, input bounds, stale movement, dodge and cover (4.4566ms)
+✔ three weapon patterns, upgrades, friendly fire and destructible props (2.8668ms)
+✔ enemy patterns, scaled waves, boss cadence, loot, revive, defeat and leader replay (2.0926ms)
+✔ drawing ownership, late join, cleanup, stable seats, 12 capacity, and full-room retry (3542.9411ms)
+✔ participant host relay elects longest eligible host and keeps only host transfer (0.7124ms)
+✔ Just Like Rabbits relays presence, ordered actions, host transfer, capacity, and isolation (2042.6337ms)
+✔ music private room relay: identity, host-only publication, clock, capacity, guest rejoin, isolation and host end (2266.9575ms)
+✔ Neon Breaker synchronizes actions, admits two, snapshots late joins, frees seats, and isolates games (3075.9247ms)
+✔ Neon Breaker paddles travel the full width, overlap, and stay at distinct rows (2.8463ms)
+✔ a descending ball can bounce off either paddle at its own collision row (0.3865ms)
+✔ brick destruction scores, waves advance, and terminal match can restart (0.3389ms)
+✔ last ball consumes one shared life and waits for launch (0.2002ms)
+✔ wide paddle powerup affects both paddles and multiball remains capped (0.3033ms)
+✔ private room creation accepts custom codes, rejects collisions, normalizes joins and throttles guesses (35304.3661ms)
+✔ private room codes normalize input and use four uppercase alphanumeric characters (1.3871ms)
+✔ room code attempt limiter resets after its window (0.1936ms)
+✔ private room link helpers generate suggestions, read codes and preserve page parameters (4.1723ms)
+✔ racing synchronization, readiness, late arrival, authority, capacity, departure and fresh retry (7843.3057ms)
+✔ ready authority, frozen roster, fresh participant and capacity (0.9399ms)
+✔ invalid and stale inputs rejected, missing controls expire (6.0949ms)
+✔ ordered directional gates prevent skip/reverse and validate three laps (0.7148ms)
+✔ recovery preserves progress and has bounded cooldown and penalty (0.2743ms)
+✔ contested pickup has one owner, timed respawn and bounded nitro (0.3715ms)
+✔ AI completes full replayable race within target duration and snapshots are independent (102.4578ms)
+✔ hard timeout ends unfinished race and empty session clears trucks (118.9493ms)
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'tnaCRSCoP' with roomId 'pzmpC071T'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+✔ Ring Rivals private room synchronizes the bout, enforces capacity, isolates games, and recovers the same seat (7732.2388ms)
+✔ Ring Rivals awards a forfeit after the 15-second recovery window expires (20526.7633ms)
+✔ Ring Rivals validates seats, boxer selections, sequence and action state (1.1624ms)
+✔ head and body guard reduce matching attacks and evasion avoids a timed hit (0.4949ms)
+✔ knockout ends a round, best-of-three resolves, and equal timer health draws without a point (1.0381ms)
+✔ disconnect suspends the clock and a forfeit ends the match (0.2333ms)
+✔ private two-player duel synchronizes, enforces capacity, and restores the same seat (8443.6139ms)
+✔ fighter roster, two-seat admission, and private token-safe snapshots (1.2589ms)
+✔ bounded sequence inputs reject forged fields and stale frames (1.1307ms)
+✔ authoritative combat supports blocks and simultaneous knockout trades (0.9123ms)
+✔ timer, round transition, match winner, rematch, and same-seat recovery (0.4112ms)
+✔ sumo synchronization, authority, solo bot, late join, capacity, isolation and recovery (3137.3952ms)
+✔ bounded inputs, stale input and dash cooldown (1.1463ms)
+✔ collision credits ring-out, self-fall does not, first to three freezes then replays (0.286ms)
+✔ expired or departed attacker receives no point and late joins spawn safely (0.1319ms)
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'KjA5VlfL3' with roomId 'dRx91QnXL'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+✔ Tetris relay private admission, gameplay, privacy, recovery, outcome, rematch and expiry (28220.2132ms)
+✔ all orientations occupy four unique cells; edge rotations kick and O preserves occupancy (5.5943ms)
+✔ straight landing stops above first obstacle and blocked entry has no fictitious landing (0.7676ms)
+✔ identical independent seven-bag streams and replay do not depend on other player speed (6.7625ms)
+✔ deadline equality auto releases, descent cannot steer, next piece starts independently (1.3434ms)
+✔ fractional callback jitter uses one fixed tick grid and preserves simultaneous outcomes (2.7273ms)
+✔ multirow attacks, warning maturity, FIFO cancellation and placement-boundary insertion (2.1963ms)
+✔ single clears do not attack or cancel and simultaneous excess attacks neutralize (1.5939ms)
+✔ upward overflow tops out and simultaneous hidden occupancy is an order-independent draw (1.6713ms)
+✔ private projection never includes other board, queue, RNG, fall or packet gap (1.6795ms)
+✔ validation deduplicates sequences and rejects stale piece, epoch, enum and forged state (1.0456ms)
+✔ disconnect pauses clocks; leave forfeits; both-ready rematch resets epoch and board (1.1242ms)
+ℹ tests 117
+ℹ suites 0
+ℹ pass 117
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 240875.2416

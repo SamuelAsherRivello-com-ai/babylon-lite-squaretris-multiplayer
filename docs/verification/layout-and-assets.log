@@ -1,0 +1,58 @@
+### Result
+{"desktop":{"viewport":[576,1024],"backing":[576,1024],"dpr":1,"fullscreen":false},"fullscreen":{"viewport":[576,1024],"backing":[576,1024],"dpr":1,"fullscreen":true},"small":{"viewport":[250,444],"backing":[250,444],"dpr":1,"fullscreen":false},"dpr2":{"viewport":[288,512],"backing":[576,1024],"dpr":2,"fullscreen":false},"zoom":{"viewport":[288,512],"backing":[288,512],"dpr":1,"fullscreen":false},"zoomActuallyChanged":false,"mutedResources":0,"sounds":[{"name":"clear.wav","bytes":9746},{"name":"move.wav","bytes":2028},{"name":"release.wav","bytes":4896},{"name":"result.wav","bytes":15920},{"name":"warning.wav","bytes":8864},{"name":"rotate.wav","bytes":2910}],"halfText":"Settings\n×\n\nThe online match continues while settings are open.\n\nFullscreen · F\nMute sounds\nReduced effects\nRender resolution\nquarter\nhalf\nnative\ndouble\nBabylon Lite · PixelPerfect2D\n144×256 render / 288×512 native\nFractional DPR or reduced resolution may soften pixel spacing.","graphicsMessage":"Babylon Lite requires WebGPU. Enable WebGPU or use a compatible browser and device."}
+### Ran Playwright code
+```js
+await (async page => {
+  const browser=page.context().browser();
+  for(const context of browser.contexts())if(context!==page.context())await context.close();
+  await page.goto('http://127.0.0.1:5179/babylon-lite-tetris-multiplayer-clone/?mute=1');
+  await page.waitForFunction(()=>window.__duelInspect?.().graphicsReady);
+  const measure=()=>page.evaluate(()=>{const v=document.querySelector('#viewport'),c=document.querySelector('canvas');return {viewport:[v.clientWidth,v.clientHeight],backing:[c.width,c.height],dpr:devicePixelRatio,fullscreen:!!document.fullscreenElement};});
+  await page.setViewportSize({width:1280,height:1080});await page.waitForTimeout(200);const desktop=await measure();
+  if(desktop.viewport[0]!==576||desktop.viewport[1]!==1024)throw Error('Integer desktop fit failed');
+  await page.screenshot({path:'docs/verification/desktop.png'});
+  await page.keyboard.press('f');await page.waitForTimeout(200);const fullscreen=await measure();
+  if(!fullscreen.fullscreen)throw Error('Fullscreen did not activate');
+  await page.keyboard.press('f');await page.waitForTimeout(150);
+  await page.setViewportSize({width:250,height:450});await page.waitForTimeout(200);const small=await measure();
+  if(small.viewport[0]>250||small.viewport[1]>450)throw Error('Small layout overflow');
+  await page.screenshot({path:'docs/verification/small-display.png'});
+  await page.setViewportSize({width:1280,height:900});
+  const cdp=await page.context().newCDPSession(page);
+  await cdp.send('Emulation.setDeviceMetricsOverride',{width:1280,height:900,deviceScaleFactor:2,mobile:false});await page.waitForTimeout(250);const dpr2=await measure();
+  if(dpr2.backing[0]!==dpr2.viewport[0]*2)throw Error('DPR applied incorrectly');
+  await cdp.send('Emulation.clearDeviceMetricsOverride');
+  await page.keyboard.press('Control++');await page.waitForTimeout(200);const zoom=await measure();
+  await page.keyboard.press('Control+0');
+  const mutedResources=await page.evaluate(()=>performance.getEntriesByType('resource').filter(v=>v.name.endsWith('.wav')).length);
+  if(mutedResources!==0)throw Error('Mute URL initialized sound');
+  await page.getByRole('button',{name:'Settings · C',exact:true}).click();
+  await page.getByRole('checkbox',{name:'Mute sounds',exact:true}).uncheck();
+  await page.getByRole('checkbox',{name:'Reduced effects',exact:true}).check();
+  await page.getByRole('combobox').selectOption('half');
+  await page.waitForTimeout(250);
+  const halfText=await page.getByRole('dialog').innerText();
+  await page.getByRole('button',{name:'Close dialog',exact:true}).click();
+  await page.getByRole('button',{name:'Create room',exact:true}).click();
+  await page.waitForFunction(()=>performance.getEntriesByType('resource').filter(v=>v.name.endsWith('.wav')).length===6);
+  const sounds=await page.evaluate(()=>performance.getEntriesByType('resource').filter(v=>v.name.endsWith('.wav')).map(v=>({name:v.name.split('/').pop(),bytes:v.decodedBodySize})));
+  if(sounds.some(v=>!v.bytes))throw Error('Sound failed to load');
+  await page.getByRole('button',{name:'Settings · C',exact:true}).click();
+  await page.getByRole('checkbox',{name:'Mute sounds',exact:true}).check();
+  await page.getByRole('combobox').selectOption('native');
+  await page.getByRole('button',{name:'Close dialog',exact:true}).click();
+  const unsupported=await browser.newContext();await unsupported.addInitScript(()=>Object.defineProperty(navigator,'gpu',{value:undefined}));const noGpu=await unsupported.newPage();
+  await noGpu.goto('http://127.0.0.1:5179/babylon-lite-tetris-multiplayer-clone/?mute=1');
+  await noGpu.getByRole('status').filter({hasText:'requires WebGPU'}).waitFor();
+  const graphicsMessage=await noGpu.getByRole('status').innerText();
+  await noGpu.screenshot({path:'docs/verification/unsupported-webgpu.png'});await unsupported.close();
+  return {desktop,fullscreen,small,dpr2,zoom,zoomActuallyChanged:zoom.dpr!==desktop.dpr,mutedResources,sounds,halfText,graphicsMessage};
+}
+)(page);
+```
+### Page
+- Page URL: http://127.0.0.1:5179/babylon-lite-tetris-multiplayer-clone/?mute=1&room=W7RZ
+- Page Title: Tetris Multiplayer Clone
+- Console: 0 errors, 1 warnings
+### Events
+- New console entries: .playwright-cli\console-2026-10-11T04-30-17-717Z.log#L13-L15

@@ -7,14 +7,14 @@ Provide a small, discoverable source organization that separates reusable React 
 ## Requirements
 
 ### Requirement: Separate UI and content responsibilities
-The starter SHALL place reusable React components, layout logic, styles, and UI-only helpers under `project-name/src/ui/`. Project content and future canvas or renderer integration entry points SHALL live under `project-name/src/content/`.
+The starter SHALL place reusable React components, layout logic, styles, and UI-only helpers under `tetris/src/ui/`. Project content and future canvas or renderer integration entry points SHALL live under `tetris/src/content/`.
 
 #### Scenario: Consumer adds canvas content
 - **WHEN** a consumer adds Babylon, another renderer, or custom canvas content
 - **THEN** the content entry point has an obvious location under `src/content/` while the existing UI remains under `src/ui/`
 
 ### Requirement: Provide a starter UI template component
-The starter SHALL include a discoverable template component under `project-name/src/ui/` that demonstrates where reusable UI composition belongs without adding renderer behavior.
+The starter SHALL include a discoverable template component under `tetris/src/ui/` that demonstrates where reusable UI composition belongs without adding renderer behavior.
 
 #### Scenario: Consumer starts a new UI component
 - **WHEN** a consumer inspects the UI source directory

@@ -9,7 +9,7 @@ The starter currently keeps React UI, layout code, and future content concerns i
 - Organize the application source into `src/ui/` for React components, layout, styles, and the starter template component, and `src/content/` for the current content entry and future canvas-based content.
 - Add a concise project-level coding and naming guide that establishes the boundary between UI and content without introducing a framework or renderer dependency.
 - Add minimal automated checks for the source layout and the existing renderer-free layout contract.
-- Remove generated layout verification artifacts from `project-name/documentation/` and update remaining documentation links so the guide points only to maintained material.
+- Remove generated layout verification artifacts from `tetris/documentation/` and update remaining documentation links so the guide points only to maintained material.
 
 ## Scope and impact
 

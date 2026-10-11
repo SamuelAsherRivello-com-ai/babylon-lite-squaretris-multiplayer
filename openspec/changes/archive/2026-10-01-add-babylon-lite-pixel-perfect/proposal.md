@@ -6,7 +6,7 @@ The template currently has a renderer-free content boundary, so consumers have n
 
 ## What Changes
 
-- Add Babylon Lite as a concrete renderer integration owned by `project-name/src/content/`.
+- Add Babylon Lite as a concrete renderer integration owned by `tetris/src/content/`.
 - Add a developer-editable content configuration selecting Babylon Lite and 2D or 3D content; use Pixel Perfect only for Babylon Lite + 2D, without adding a runtime mode selector.
 - Provide a default 2D showcase with a white background and an original 32x32 black-and-gray concentric-square tile with deliberate stair-step edges, centered and rotating slowly around its center.
 - Render `(B) Babylon Lite`, the live scale, and `Mode: 2DPixelPerfect` in the highlighted area marked 2 in the reference, left justified with its left edge just left of center. Match `corner-title` styling on the first line and `corner-body` on the scale/mode lines. Use the supplied `#e0694b` accent color for the text and a 5-CSS-pixel Babylon Lite outline. Clicking `(B)` opens a matching React settings dialog; show the outline while it is open and remove it when the dialog closes.
@@ -28,10 +28,10 @@ The template currently has a renderer-free content boundary, so consumers have n
 
 ## Impact
 
-- Runtime code and artwork: `project-name/src/content/`.
-- React content mounting and canvas layering: `project-name/src/main.jsx` and `project-name/src/ui/BrowserSurface.jsx` as needed, keeping reusable UI under `src/ui/`.
+- Runtime code and artwork: `tetris/src/content/`.
+- React content mounting and canvas layering: `tetris/src/main.jsx` and `tetris/src/ui/BrowserSurface.jsx` as needed, keeping reusable UI under `src/ui/`.
 - Dependencies and lockfile: add and pin a compatible `@babylonjs/lite` version after verifying its current API and WebGPU initialization behavior.
-- Documentation: `project-name/documentation/layout-and-game-integration.md`.
+- Documentation: `tetris/documentation/layout-and-game-integration.md`.
 - OpenSpec: new `babylon-lite-content` capability and deltas for `browser-template-layout` and `game-integration-guidance`.
 - Verification: focused lifecycle/configuration checks, production build, and browser verification of sharp output, rotation, resize/DPR behavior, UI layering, and WebGPU-unavailable handling.
 

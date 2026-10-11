@@ -1,0 +1,12 @@
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId 'di5DQnhMN' with roomId 'HZkvvky2y'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+✔ Tetris relay private admission, gameplay, privacy, recovery, outcome, rematch and expiry (43045.9505ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53578.7627

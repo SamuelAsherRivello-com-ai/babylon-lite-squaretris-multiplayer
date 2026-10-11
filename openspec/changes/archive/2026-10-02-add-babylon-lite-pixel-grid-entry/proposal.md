@@ -25,7 +25,7 @@ Babylon Lite's 2D sprite API accepts fractional `positionPx` values, and its cam
 
 ## Impact
 
-- Babylon Lite content utilities and their existing showcase call sites under `project-name/src/content/`.
+- Babylon Lite content utilities and their existing showcase call sites under `tetris/src/content/`.
 - Babylon Lite content and game-integration specs and documentation.
 - Automated source-level checks in the repository's existing Node test suite; no new runtime dependency or alternate renderer.
 - Babylon Lite `1.32.0` APIs verified in the installed package: `Sprite2DHandle`, `addSprite2D`, `updateSprite2D`, `sprite2DWorldToScreenToRef`, and `sprite2DScreenToWorldToRef`.

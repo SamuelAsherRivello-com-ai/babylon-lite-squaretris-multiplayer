@@ -4,7 +4,7 @@
 
 See `proposal.md` for motivation. `main.jsx` mounts React only into `ui_layer`; `index.html` has an empty content sibling. `App.jsx` supplies four corners and calculates a 20px inset as percentages of window dimensions. CSS fixes UI across the browser, and page tests assert that old structure directly.
 
-React, React DOM, Vite, and its React plugin are already configured. Vite root is `project-name/`, base is `/github-repository-template/`, and GitHub Pages CI uses Node 24, npm tests/build, and `project-name/dist/`. Accepted specs are absent. OpenSpec context is stale about the stack. Skill tests expect bundled skills despite current repository guidance; that is a separate potential baseline failure.
+React, React DOM, Vite, and its React plugin are already configured. Vite root is `tetris/`, base is `/github-repository-template/`, and GitHub Pages CI uses Node 24, npm tests/build, and `tetris/dist/`. Accepted specs are absent. OpenSpec context is stale about the stack. Skill tests expect bundled skills despite current repository guidance; that is a separate potential baseline failure.
 
 ## Goals / Non-Goals
 
@@ -42,7 +42,7 @@ Conceptual mockup; content extends beneath UI and spacing is illustrative:
 
 ### Shared configuration and geometry
 
-Use a layout configuration module under `project-name/src/` plus React composition props. Validate finite positive dimensions and orientation consistency: width < height for portrait, width > height for landscape, equal for square. For available CSS dimensions W,H and ratio r, fit width `min(W,H*r)` and height `width/r`; center using opposing residual gutters. Use CSS sizing and, if measurement is necessary, a resize observer. DPR never multiplies layout dimensions.
+Use a layout configuration module under `tetris/src/` plus React composition props. Validate finite positive dimensions and orientation consistency: width < height for portrait, width > height for landscape, equal for square. For available CSS dimensions W,H and ratio r, fit width `min(W,H*r)` and height `width/r`; center using opposing residual gutters. Use CSS sizing and, if measurement is necessary, a resize observer. DPR never multiplies layout dimensions.
 
 Proposed starter assumptions: landscape 16:9 and plain gutter; current code establishes no preferred ratio. Preserve 20 CSS-pixel inset at normal sizes, cap it at small sizes, and bound corner regions with wrapping/scrolling so controls stay reachable. Browser zoom changes available CSS dimensions; recompute fit normally. Arbitrarily tiny surfaces cannot guarantee all corner text is simultaneously visible.
 
@@ -97,7 +97,7 @@ Recommend presets with optional overrides as a proposed consumer default, not a 
 - Pixel-perfect 2D discusses orthographic camera conventions, nearest filtering, deliberate mipmap/anti-aliasing choices, logical alignment, and centered integer CSS scaling.
 - Performance-scaled 3D discusses camera choice, fixed/dynamic internal render scale and explicit dynamic bounds while keeping UI at independent CSS resolution.
 
-Comments at the content integration seam identify where Babylon Lite could initialize, resize, and dispose a canvas renderer under React lifecycle, including StrictMode remounts. Link to a guide under `project-name/documentation/`; do not add imports, calls, dependencies, engine examples, or canvas sizing controllers.
+Comments at the content integration seam identify where Babylon Lite could initialize, resize, and dispose a canvas renderer under React lifecycle, including StrictMode remounts. Link to a guide under `tetris/documentation/`; do not add imports, calls, dependencies, engine examples, or canvas sizing controllers.
 
 ### Resolution contract
 

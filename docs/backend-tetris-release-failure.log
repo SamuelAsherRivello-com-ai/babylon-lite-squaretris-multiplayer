@@ -1,0 +1,209 @@
+publish	UNKNOWN STEP	﻿2026-10-10T22:13:29.0855544Z Current runner version: '2.337.0'
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0881177Z ##[group]Runner Image Provisioner
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0882089Z Hosted Compute Agent
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0882776Z Version: 20261002.596
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0883411Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0884129Z Build Date: 2026-10-02T22:28:27Z
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0884936Z Worker ID: {0881485a-beec-4855-827f-eeadba397a8e}
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0885654Z Region: westus2
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0886262Z Cloud: Azure
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0886882Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0888559Z ##[group]Operating System
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0889296Z Ubuntu
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0890039Z 24.04.5
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0890629Z LTS
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0891230Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0891833Z ##[group]Runner Image
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0892539Z Image: ubuntu-24.04
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0893160Z Version: 20261004.327.1
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0894532Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0896183Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0897205Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0898317Z ##[group]GITHUB_TOKEN Permissions
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0901233Z Contents: write
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0901927Z Metadata: read
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0902575Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0904703Z Secret source: Actions
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0905739Z Cache mode: write
+publish	UNKNOWN STEP	2026-10-10T22:13:29.0906484Z Prepare workflow directory
+publish	UNKNOWN STEP	2026-10-10T22:13:29.1247569Z Prepare all required actions
+publish	UNKNOWN STEP	2026-10-10T22:13:29.1296792Z Getting action download info
+publish	UNKNOWN STEP	2026-10-10T22:13:29.4856037Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+publish	UNKNOWN STEP	2026-10-10T22:13:29.6145838Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+publish	UNKNOWN STEP	2026-10-10T22:13:29.8439133Z Complete job name: publish
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9242279Z ##[group]Run actions/checkout@v4
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9243192Z with:
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9243680Z   ref: 289735e0ea7200d7cc8263ef04376ea9f97343f9
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9244271Z   fetch-depth: 0
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9244890Z   repository: SamuelAsherRivello/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9249078Z   token: ***
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9249522Z   ssh-strict: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9250182Z   ssh-user: git
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9250639Z   persist-credentials: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9251136Z   clean: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9251591Z   sparse-checkout-cone-mode: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9252126Z   fetch-tags: false
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9252612Z   show-progress: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9253126Z   lfs: false
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9253612Z   submodules: false
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9254127Z   set-safe-directory: true
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9254710Z   allow-unsafe-pr-checkout: false
+publish	UNKNOWN STEP	2026-10-10T22:13:29.9255566Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0264607Z Syncing repository: SamuelAsherRivello/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0267380Z ##[group]Getting Git version info
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0269113Z Working directory is '/home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server'
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0271322Z [command]/usr/bin/git version
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0348190Z git version 2.55.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0387929Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0396477Z Temporarily overriding HOME='/home/runner/work/_temp/5e67772f-ff37-4b21-9efc-1b72072bb6d5' before making global git config changes
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0399008Z Adding repository directory to the temporary git global config as a safe directory
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0401944Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0455459Z Deleting the contents of '/home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server'
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0459548Z ##[group]Initializing the repository
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0465626Z [command]/usr/bin/git init /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0586761Z hint: Using 'master' as the name for the initial branch. This default branch name
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0588457Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0590289Z hint: to use in all of your new repositories, which will suppress this warning,
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0591650Z hint: call:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0592313Z hint:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0593204Z hint: 	git config --global init.defaultBranch <name>
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0594225Z hint:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0595286Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0596774Z hint: 'development'. The just-created branch can be renamed via this command:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0598062Z hint:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0598932Z hint: 	git branch -m <name>
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0600054Z hint:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0601269Z hint: Disable this message with "git config set advice.defaultBranchName false"
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0608085Z Initialized empty Git repository in /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server/.git/
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0625197Z [command]/usr/bin/git remote add origin https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0688504Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0689311Z ##[group]Disabling automatic garbage collection
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0693037Z [command]/usr/bin/git config --local gc.auto 0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0726675Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0727528Z ##[group]Setting up auth
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0734820Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	UNKNOWN STEP	2026-10-10T22:13:30.0773132Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1147388Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1186520Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1435670Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1471516Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1723072Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1766516Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1768223Z ##[group]Fetching the repository
+publish	UNKNOWN STEP	2026-10-10T22:13:30.1779644Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5724863Z From https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5726006Z  * [new branch]      main       -> origin/main
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5726672Z  * [new tag]         v0.1.0     -> v0.1.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5727282Z  * [new tag]         v0.2.0     -> v0.2.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5728029Z  * [new tag]         v0.2.1     -> v0.2.1
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5728984Z  * [new tag]         v0.3.0     -> v0.3.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5729595Z  * [new tag]         v0.4.0     -> v0.4.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5730447Z  * [new tag]         v0.5.0     -> v0.5.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5731041Z  * [new tag]         v0.6.0     -> v0.6.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5731665Z  * [new tag]         v0.7.0     -> v0.7.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5732267Z  * [new tag]         v0.8.0     -> v0.8.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5732914Z  * [new tag]         v0.9.0     -> v0.9.0
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5733537Z  * [new tag]         v0.9.1     -> v0.9.1
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5734263Z  * [new tag]         v0.9.12    -> v0.9.12
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5734898Z  * [new tag]         v0.9.2     -> v0.9.2
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5735991Z  * [new tag]         v0.9.3     -> v0.9.3
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5736733Z  * [new tag]         v0.9.4     -> v0.9.4
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5737710Z  * [new tag]         v0.9.5     -> v0.9.5
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5738766Z  * [new tag]         v0.9.6     -> v0.9.6
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5739534Z  * [new tag]         v0.9.7     -> v0.9.7
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5740426Z  * [new tag]         v0.9.8     -> v0.9.8
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5741019Z  * [new tag]         v0.9.9     -> v0.9.9
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5742766Z [command]/usr/bin/git rev-parse --verify --quiet 289735e0ea7200d7cc8263ef04376ea9f97343f9^{object}
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5766934Z 289735e0ea7200d7cc8263ef04376ea9f97343f9
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5773064Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5774576Z ##[group]Determining the checkout info
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5776240Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5780814Z [command]/usr/bin/git sparse-checkout disable
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5842543Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5885455Z ##[group]Checking out the ref
+publish	UNKNOWN STEP	2026-10-10T22:13:30.5889351Z [command]/usr/bin/git checkout --progress --force 289735e0ea7200d7cc8263ef04376ea9f97343f9
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6089044Z Note: switching to '289735e0ea7200d7cc8263ef04376ea9f97343f9'.
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6090734Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6091365Z You are in 'detached HEAD' state. You can look around, make experimental
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6092521Z changes and commit them, and you can discard any commits you make in this
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6093649Z state without impacting any branches by switching back to a branch.
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6094364Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6094902Z If you want to create a new branch to retain commits you create, you may
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6095939Z do so (now or later) by using -c with the switch command. Example:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6097018Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6097742Z   git switch -c <new-branch-name>
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6098671Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6098926Z Or undo this operation with:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6099275Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6099474Z   git switch -
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6100134Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6100857Z Turn off this advice by setting config variable advice.detachedHead to false
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6101827Z 
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6102362Z HEAD is now at 289735e Document bounded Combat socket handshakes
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6105206Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6143705Z [command]/usr/bin/git log -1 --format=%H
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6172651Z 289735e0ea7200d7cc8263ef04376ea9f97343f9
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6443881Z ##[group]Run actions/setup-node@v4
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6444474Z with:
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6444886Z   node-version: 24
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6445324Z   cache: npm
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6445747Z   always-auth: false
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6446202Z   check-latest: false
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6450280Z   token: ***
+publish	UNKNOWN STEP	2026-10-10T22:13:30.6450711Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:30.8236772Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+publish	UNKNOWN STEP	2026-10-10T22:13:30.8242338Z (node:2311) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+publish	UNKNOWN STEP	2026-10-10T22:13:30.8245397Z (Use `node --trace-deprecation ...` to show where the warning was created)
+publish	UNKNOWN STEP	2026-10-10T22:13:30.8248569Z ##[group]Environment details
+publish	UNKNOWN STEP	2026-10-10T22:13:33.2078119Z node: v24.21.0
+publish	UNKNOWN STEP	2026-10-10T22:13:33.2079000Z npm: 11.19.0
+publish	UNKNOWN STEP	2026-10-10T22:13:33.2079372Z yarn: 1.22.22
+publish	UNKNOWN STEP	2026-10-10T22:13:33.2080795Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:33.2135340Z [command]/opt/hostedtoolcache/node/24.21.0/x64/bin/npm config get cache
+publish	UNKNOWN STEP	2026-10-10T22:13:33.4772890Z /home/runner/.npm
+publish	UNKNOWN STEP	2026-10-10T22:13:33.7308951Z Cache hit for: node-cache-Linux-x64-npm-888b78a123515e74372215588d01458e495ae216579402ae614415aa471cff41
+publish	UNKNOWN STEP	2026-10-10T22:13:33.7435814Z (node:2311) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+publish	UNKNOWN STEP	2026-10-10T22:13:35.0275808Z Received 0 of 138141851 (0.0%), 0.0 MBs/sec
+publish	UNKNOWN STEP	2026-10-10T22:13:36.0281570Z Received 125829120 of 138141851 (91.1%), 60.0 MBs/sec
+publish	UNKNOWN STEP	2026-10-10T22:13:36.2947043Z Received 138141851 of 138141851 (100.0%), 58.1 MBs/sec
+publish	UNKNOWN STEP	2026-10-10T22:13:36.2951180Z Cache Size: ~132 MB (138141851 B)
+publish	UNKNOWN STEP	2026-10-10T22:13:36.2987829Z [command]/usr/bin/tar -xf /home/runner/work/_temp/b8038559-80aa-4352-a0c3-0c0c6d1ef29c/cache.tzst -P -C /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server --use-compress-program unzstd
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7608495Z Cache restored successfully
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7676055Z Cache restored from key: node-cache-Linux-x64-npm-888b78a123515e74372215588d01458e495ae216579402ae614415aa471cff41
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7864071Z ##[group]Run git fetch origin main --no-tags
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7864525Z ^[[36;1mgit fetch origin main --no-tags^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7864895Z ^[[36;1mgit merge-base --is-ancestor HEAD origin/main^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7865353Z ^[[36;1mtest "$(node -p "require('./package.json').version")" = "$VERSION"^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7865944Z ^[[36;1mif git ls-remote --exit-code --tags origin "refs/tags/v$VERSION" >/dev/null; then^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7866419Z ^[[36;1m  echo "Tag v$VERSION already exists" >&2^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7866730Z ^[[36;1m  exit 1^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7866936Z ^[[36;1mfi^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7867204Z ^[[36;1mif gh release view "v$VERSION" >/dev/null 2>&1; then^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7867592Z ^[[36;1m  echo "Release v$VERSION already exists" >&2^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7867906Z ^[[36;1m  exit 1^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.7868139Z ^[[36;1mfi^[[0m
+publish	UNKNOWN STEP	2026-10-10T22:13:36.8160224Z shell: /usr/bin/bash -e {0}
+publish	UNKNOWN STEP	2026-10-10T22:13:36.8160541Z env:
+publish	UNKNOWN STEP	2026-10-10T22:13:36.8160809Z   VERSION: 0.9.12
+publish	UNKNOWN STEP	2026-10-10T22:13:36.8163852Z   GH_TOKEN: ***
+publish	UNKNOWN STEP	2026-10-10T22:13:36.8164093Z ##[endgroup]
+publish	UNKNOWN STEP	2026-10-10T22:13:37.0534644Z From https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:37.0535611Z  * branch            main       -> FETCH_HEAD
+publish	UNKNOWN STEP	2026-10-10T22:13:37.2767748Z Tag v0.9.12 already exists
+publish	UNKNOWN STEP	2026-10-10T22:13:37.2782559Z ##[error]Process completed with exit code 1.
+publish	UNKNOWN STEP	2026-10-10T22:13:37.2929667Z Post job cleanup.
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3775258Z [command]/usr/bin/git version
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3820589Z git version 2.55.0
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3862692Z Temporarily overriding HOME='/home/runner/work/_temp/e7358784-fe12-4ce0-8a24-e061918a6ac3' before making global git config changes
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3863941Z Adding repository directory to the temporary git global config as a safe directory
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3869125Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3910698Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+publish	UNKNOWN STEP	2026-10-10T22:13:37.3946512Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4190375Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4218790Z http.https://github.com/.extraheader
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4238215Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4282802Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4540950Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+publish	UNKNOWN STEP	2026-10-10T22:13:37.4604524Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+publish	UNKNOWN STEP	2026-10-10T22:13:37.5037415Z Cleaning up orphan processes
+publish	UNKNOWN STEP	2026-10-10T22:13:37.5334419Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

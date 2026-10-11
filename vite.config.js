@@ -6,9 +6,9 @@ import { defineConfig } from "vite";
 const repositoryRoot = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: "/github-repository-template/",
+  base: "/babylon-lite-tetris-multiplayer-clone/",
   plugins: [react()],
-  root: "project-name",
+  root: "tetris",
   server: {
     fs: {
       allow: [repositoryRoot],

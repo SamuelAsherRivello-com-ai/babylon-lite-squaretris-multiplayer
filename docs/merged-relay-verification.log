@@ -1,0 +1,15 @@
+✔ Space Invaders private relay: recovery, capacity, isolation, journal and authority (5149.8523ms)
+[Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+[Colyseus reconnection]: 🔄 Re-establishing sessionId '_DptL1IjB' with roomId 'FwrOb_wUD'... (attempt 1 of 18)
+[Colyseus reconnection]: ✅ reconnection successful!
+✔ Tetris relay private admission, gameplay, privacy, recovery, outcome, rematch and expiry (28099.6194ms)
+✔ room rate budget is seat-scoped and rejects excess messages until the window renews (1.1573ms)
+✔ snapshot envelope cannot leak opponent cells through presence players or local warnings (0.4858ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34126.6278

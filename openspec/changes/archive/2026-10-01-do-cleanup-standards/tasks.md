@@ -4,7 +4,7 @@
 
 - [x] 1.1 Create `src/ui/` and `src/content/`, move the existing UI modules, and update imports while verifying Vite still resolves the application entry
 - [x] 1.2 Add the renderer-free content entry and starter `ui/Template` component, then verify the default app starts without engine imports
-- [x] 1.3 Add the concise coding and source-organization guidance under `project-name/documentation/` and verify it names the UI/content boundary and conventions
+- [x] 1.3 Add the concise coding and source-organization guidance under `tetris/documentation/` and verify it names the UI/content boundary and conventions
 
 ## 2. Verification and documentation cleanup
 

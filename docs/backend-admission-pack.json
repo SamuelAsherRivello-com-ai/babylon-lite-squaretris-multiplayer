@@ -1,0 +1,96 @@
+[
+  {
+    "id": "@rmc/multiplayer-client@0.9.11",
+    "name": "@rmc/multiplayer-client",
+    "version": "0.9.11",
+    "size": 42396,
+    "unpackedSize": 128871,
+    "shasum": "5f5d31451fc1d9f05df6acf9c9be991aa3fed477",
+    "integrity": "sha512-sTEwm8a/rA/ygXEvvN66feiYCHfZ/GFfAJeqTUIr4Gv5t04LHwFuXigzczEpfCY4BWPXHieyr2i/t8VU2g8Z4Q==",
+    "filename": "rmc-multiplayer-client-0.9.11.tgz",
+    "files": [
+      {
+        "path": "README.md",
+        "size": 29309,
+        "mode": 420
+      },
+      {
+        "path": "asteroids-connection.js",
+        "size": 2072,
+        "mode": 420
+      },
+      {
+        "path": "asteroids-rules.js",
+        "size": 9615,
+        "mode": 420
+      },
+      {
+        "path": "asteroids-shared-connection.js",
+        "size": 3894,
+        "mode": 420
+      },
+      {
+        "path": "bomberman-cpu.js",
+        "size": 6536,
+        "mode": 420
+      },
+      {
+        "path": "bomberman-rules.js",
+        "size": 13635,
+        "mode": 420
+      },
+      {
+        "path": "combat-rules.js",
+        "size": 5047,
+        "mode": 420
+      },
+      {
+        "path": "index.js",
+        "size": 14516,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1084,
+        "mode": 420
+      },
+      {
+        "path": "racing-simulation.js",
+        "size": 8028,
+        "mode": 420
+      },
+      {
+        "path": "racing-track.js",
+        "size": 2798,
+        "mode": 420
+      },
+      {
+        "path": "seat-reservation.js",
+        "size": 1454,
+        "mode": 420
+      },
+      {
+        "path": "street-fighter-combat.js",
+        "size": 10683,
+        "mode": 420
+      },
+      {
+        "path": "street-fighter-fighters.js",
+        "size": 2857,
+        "mode": 420
+      },
+      {
+        "path": "street-fighter-simulation.js",
+        "size": 8110,
+        "mode": 420
+      },
+      {
+        "path": "tetris-duel-rules.js",
+        "size": 9233,
+        "mode": 420
+      }
+    ],
+    "entryCount": 16,
+    "bundled": []
+  }
+]

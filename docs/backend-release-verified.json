@@ -1,0 +1,35 @@
+{
+  "release": "https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server/releases/tag/v0.9.12",
+  "asset": "https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server/releases/download/v0.9.12/rmc-multiplayer-client-0.9.12.tgz",
+  "assetDigest": "sha256:708bb889f1b17ced20e6c1e4573448a9cbce3752a840b3d63e2d1abf5748b178",
+  "version": "0.9.12",
+  "endpoint": "https://rmc-colyseus-multiplayer-server.vercel.app",
+  "health": {
+    "status": "ok",
+    "version": "0.9.12",
+    "instance": "0f7276d1-72a2-4015-a6d2-875d0b53ce65",
+    "games": [
+      "asteroids-coop",
+      "music-maker",
+      "space-invaders",
+      "combat",
+      "bomberman",
+      "gungeon",
+      "multiplayer-draw",
+      "sumo-battle",
+      "garden-chat",
+      "gauntlet-2d",
+      "gauntlet-3d",
+      "dust-circuit-rally",
+      "neon-breaker-duo",
+      "ring-rivals",
+      "tetris-duel",
+      "street-fighter-ii",
+      "just-like-rabbits"
+    ]
+  },
+  "publishedImports": "passed",
+  "stableIntegration": "passed",
+  "testSourceCommit": "d424d7c2f232159d3015d495f457518dd3f3aa4d",
+  "consumerLockfile": "D:\\Documents\\Projects\\VC\\Babylon\\babylon-lite-tetris-multiplayer-clone\\.backend-release-verification\\v0.9.12\\package-lock.json"
+}

@@ -1,0 +1,54 @@
+{
+  "sourceRevision": "f3700fdd4fab4cde2047a99a305ae3ac57e3d0c5",
+  "managedOverrides": [
+    {
+      "name": "openspec-apply-change",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "a3bf9564ae7195a19bb157c637f3d64468ce2cfba8b609c4bcb524325f27cd29",
+        "agents/openai.yaml": "74d468169b81e377cea7610fd371bb12b84ac5392f36349b3a9f423a658fe06c"
+      }
+    },
+    {
+      "name": "openspec-archive-change",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "22347db79d2e3abab5175e559e9bc5db24a3296468aac37b68130a68c1766abd",
+        "agents/openai.yaml": "0c0c30ff8b9cea32e170c4c4fff66d02482db9a514d751cfddb1b9308aef092b"
+      }
+    },
+    {
+      "name": "openspec-explore",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "00d0f146e1f24848bb5b2b29438fcf02b62068ed29c12c436818329b3b0cf240",
+        "agents/openai.yaml": "153ebf8d9ee5de9658e3f96abb3f497c8f131077675900839c3d5fb964974345"
+      }
+    },
+    {
+      "name": "openspec-propose",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "49187179fd7b77eb07a44eaf232a6a75b03477134e1eada01c40b37d0b86432d",
+        "agents/openai.yaml": "3a76a423c55bc853c8d6571ace082d16f2e158754d68172c2714ad2be920aa6b"
+      }
+    },
+    {
+      "name": "openspec-sync-specs",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "28a327331c34bda4d0a26208b3616b1cef8c53a10934a1fcb67a4a649335d4d0",
+        "agents/openai.yaml": "56c209ff4b8c7663151d5363c372981327cf41a9c85ee13474073f2c8fc5a800"
+      }
+    },
+    {
+      "name": "openspec-update-change",
+      "generator": "OpenSpec 1.14.0",
+      "files": {
+        "SKILL.md": "d55298aff5639f51dbd8094a0a8d23149b81b2ed99b362fcfab17d4e561b984f",
+        "agents/openai.yaml": "34a26de44313817b8af3e42d275c83e7ada5c3c37f9a6bb74d3b5e4c25f8c2e1"
+      }
+    }
+  ],
+  "autocompleteUI": "Unverified; Codex was not reopened"
+}

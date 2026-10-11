@@ -1,0 +1,631 @@
+{
+  "repository": "https://github.com/SamuelAsherRivello/babylon-lite-tetris-multiplayer-clone",
+  "defaultBranch": "main",
+  "origin": "https://github.com/SamuelAsherRivello/babylon-lite-tetris-multiplayer-clone.git",
+  "initialCommit": "441770f1ac09cebfa4c4e964ef56e2744fc1febf",
+  "initialMessage": "Initial commit",
+  "serverRelease": "https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server/releases/tag/v0.9.12",
+  "clientAsset": "https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server/releases/download/v0.9.12/rmc-multiplayer-client-0.9.12.tgz",
+  "endpoint": "https://rmc-colyseus-multiplayer-server.vercel.app",
+  "health": {
+    "status": "ok",
+    "version": "0.9.12",
+    "instance": "0f7276d1-72a2-4015-a6d2-875d0b53ce65",
+    "games": [
+      "asteroids-coop",
+      "music-maker",
+      "space-invaders",
+      "combat",
+      "bomberman",
+      "gungeon",
+      "multiplayer-draw",
+      "sumo-battle",
+      "garden-chat",
+      "gauntlet-2d",
+      "gauntlet-3d",
+      "dust-circuit-rally",
+      "neon-breaker-duo",
+      "ring-rivals",
+      "tetris-duel",
+      "street-fighter-ii",
+      "just-like-rabbits"
+    ]
+  },
+  "manifest": [
+    {
+      "path": ".agents/skills/.openspec-target",
+      "action": "copy",
+      "sha256": "ba0026f0a550d68592c195ccb5f042bdb4d5b675723d24995dbeee9d1be1be74"
+    },
+    {
+      "path": ".aiignore",
+      "action": "copy",
+      "sha256": "f31dc1f51c0f4675dc95e7a384829dc4fcd1a8ff4772bfd0cd780fe75489cf26"
+    },
+    {
+      "path": ".codex/agents/playwright_test_generator.toml",
+      "action": "copy",
+      "sha256": "8222bffb8c96399f7a01f6938aaf4719829b7bee5b3dc1ffb57fe5ed298fa27e"
+    },
+    {
+      "path": ".codex/agents/playwright_test_healer.toml",
+      "action": "copy",
+      "sha256": "98ac08c319ff7b9433373c0aca1e8e31ab2865ceb495e47d9db6cbe0bb98fa4a"
+    },
+    {
+      "path": ".codex/agents/playwright_test_planner.toml",
+      "action": "copy",
+      "sha256": "70d8d89862c86270a3b211c6f13cfa8a64d0c3c7cb8fa1b04b7cceae6214dc74"
+    },
+    {
+      "path": ".github/workflows/deploy-pages.yml",
+      "action": "copy",
+      "sha256": "b5b28affc7c6fdb363f5aade749cd8895a88b1866283593fcc906fe2770194eb"
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "action": "copy",
+      "sha256": "8265a039835c3574442c29376236fb73d4571715addcd1ba2a6eec7d3b905e35"
+    },
+    {
+      "path": ".gitignore",
+      "action": "copy",
+      "sha256": "50c8fa13adf0f4b2b8bcd55a0a441803b1f9a25e1a00b10431c68690df757a3c"
+    },
+    {
+      "path": ".triageignore",
+      "action": "copy",
+      "sha256": "0a0f6d783fa11030c4c8d68fbfa384ca98fa043f63db336468c2088421fd4385"
+    },
+    {
+      "path": "AGENTS.md",
+      "action": "copy",
+      "sha256": "0e19d3639fa0e822be8c28f5a67dfbcf347671a51e6f37765322e878684d9084"
+    },
+    {
+      "path": "AGENTS_TEMPLATE_USAGE_CHECKLIST.md",
+      "action": "copy",
+      "sha256": "a4673ce6d394ecc600fb3eefc4ad224b85a7982fe05c502a5e0f9ccd09688599"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "action": "copy",
+      "sha256": "cfca3c4ee46207933051271dc6d14f78b6e9daa4a9c037f32d01f9e2e9bbec39"
+    },
+    {
+      "path": "LICENSE",
+      "action": "copy",
+      "sha256": "0dbdfa1f772c9bd02ff3606fa122662ed54c867f91e487b5fc5e0f65dcad64d4"
+    },
+    {
+      "path": "README.md",
+      "action": "copy",
+      "sha256": "d9e55bf745a190a5e03b1f298f2fc83370d96a70292b4ad635eea83e6d26aa76"
+    },
+    {
+      "path": "SECURITY.md",
+      "action": "copy",
+      "sha256": "e431cd8ecbf36b1a99b25644ea35082e0834fdfc07374a22c9120c1e27c16f17"
+    },
+    {
+      "path": "docs/ai-overview.md",
+      "action": "copy",
+      "sha256": "868c02796c9faf185498de0777f9fa5449780af899c6f8074cd3ea96716599a7"
+    },
+    {
+      "path": "docs/coding-standards.md",
+      "action": "copy",
+      "sha256": "be2708ebb5f1a789af2bd056fab6e5e05a68479cbb6c9ff9064080aa063440c7"
+    },
+    {
+      "path": "docs/deep-dive-overview.md",
+      "action": "copy",
+      "sha256": "9c2a8e0fb81a3f1e5095f37add167895fd7d701fbe03735439fe1e873a22ec8c"
+    },
+    {
+      "path": "docs/layout-and-game-integration.md",
+      "action": "copy",
+      "sha256": "f09d650f9013920cee8dba508ee46c6a8618a1c8b2fa8408d990d1233c8326c5"
+    },
+    {
+      "path": "docs/marketing/images/youtube-thumbnail-browser-game-repo-template.png",
+      "action": "copy",
+      "sha256": "63623d6d1068b6b8dd09167ebbb0bc16d4fdaab008ed47472cf9c2437845e9ac"
+    },
+    {
+      "path": "docs/marketing/images/youtube-thumbnail-template-for-browser-games.png",
+      "action": "copy",
+      "sha256": "66ef3bb0f8a7da1222c405c6ee9ec9771f5b9619c2ce1efd4087d49bbc74641a"
+    },
+    {
+      "path": "docs/marketing/images/youtube-thumbnail-your-browser-game-starts-here.png",
+      "action": "copy",
+      "sha256": "dec282fd40676bd47aed91070fad2941148812d2755051040a01607b4b4eb21b"
+    },
+    {
+      "path": "docs/marketing/images/youtube-thumbnail.png",
+      "action": "copy",
+      "sha256": "bdc2ae81d123696483cb44fe90e3e2af15920ae0b04c7f110266aea23677f5c5"
+    },
+    {
+      "path": "docs/samuel-asher-rivello-banner.png",
+      "action": "copy",
+      "sha256": "3218064515d57e8103938f3b724194ce0f277d75c1ca74bb1ecdad95960d04cb"
+    },
+    {
+      "path": "docs/screenshot01.png",
+      "action": "copy",
+      "sha256": "80a96ce6cdb38f5fefb9300f305581412ca3d0a3065cec4ad8e42d7e7afadb92"
+    },
+    {
+      "path": "openspec/changes/.gitkeep",
+      "action": "copy",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "openspec/changes/archive/.gitkeep",
+      "action": "identical",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/design.md",
+      "action": "copy",
+      "sha256": "f58194f97899af709a7a0e097f8cdcea6dd8cf66a00f9e9620ba2bc6401a781c"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/proposal.md",
+      "action": "copy",
+      "sha256": "6e76bf9b166440a12322a6144cee921e93b2a33eea3329cb5853e8fb97395e3c"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/specs/babylon-lite-content/spec.md",
+      "action": "copy",
+      "sha256": "1a066f65eb26326b9272c99ad9f95b1bddb31413bc2541b56918e317c764bf97"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/specs/browser-template-layout/spec.md",
+      "action": "copy",
+      "sha256": "3b6cb017abd669557fc36deb2150c95cba541be68932166013bc5420fe6b5628"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/specs/game-integration-guidance/spec.md",
+      "action": "copy",
+      "sha256": "4ed2a1262940047d22225f307891c96fafb94bf89e370243c8ca75c186cf2d87"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-babylon-lite-pixel-perfect/tasks.md",
+      "action": "copy",
+      "sha256": "348df2edef2f4c73a296f42e01efb63bce5a50a4d6a3bf60547b81da93a5de8d"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/design.md",
+      "action": "copy",
+      "sha256": "134ff64516d708115133e0089bcb2dcbd694db1bf3a3609dae29664e691be355"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/proposal.md",
+      "action": "copy",
+      "sha256": "a11a2616a607a7324b880feb3d96c5e423c745a13f9e3114807faf0ae1d585bf"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/specs/browser-template-layout/spec.md",
+      "action": "copy",
+      "sha256": "be148f77f1df1a7d9e37cce9a3b25c8345ddf47db215d4c85be99ec3880674c7"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/specs/game-integration-guidance/spec.md",
+      "action": "copy",
+      "sha256": "5d0de90ff3a700c67cce0c98b3c760ff986f05c6386fafa90fc1f4f96442e061"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-changes-to-layout/tasks.md",
+      "action": "copy",
+      "sha256": "af20209fbcd70eb34f8f665a373b3006f85ab9204ea5cc657e520439861a6401"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/.openspec.yaml",
+      "action": "copy",
+      "sha256": "d5bb3b2886b07a10b017a3721982f76f0fcd4a25e89a394c72e34a89bb2757e7"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/README.md",
+      "action": "copy",
+      "sha256": "8e8ba631a86f865001e8d7418965d661344e266afda471d9f57c0578e771db35"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/design.md",
+      "action": "copy",
+      "sha256": "7e1db21486e5f321edcfccd21386e2f590836f1f34c53016f140797dbb804877"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/proposal.md",
+      "action": "copy",
+      "sha256": "117c47fd8c2b9a9524b6b1755145ee391fa20cb06acf2ea1d3bc6f767d0099c4"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/specs/babylon-render-resolution/spec.md",
+      "action": "copy",
+      "sha256": "b2c95edab0ad84a7f82f7f6d270b2c58e79c8d13b9281e05dbb02e25caf366aa"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-add-configurable-render-resolution/tasks.md",
+      "action": "copy",
+      "sha256": "ab97c697a9a92695744c7ee00a84db647986dcbc2fba9fbcae92817c8c621edb"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/design.md",
+      "action": "copy",
+      "sha256": "6bc069f2748409edbd914f89b390493a8536901b4000425eff42aade145106ae"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/proposal.md",
+      "action": "copy",
+      "sha256": "642957280f209d2f2ffadb30222a6d8c785ba906ad04ae33358bdc4fa8892382"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/specs/source-organization-standards/spec.md",
+      "action": "copy",
+      "sha256": "be0cd5a0c47c1d48524c75917a599220d9e4d62448f9a1d2bc1b2d2b6d335024"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/specs/template-layout-verification/spec.md",
+      "action": "copy",
+      "sha256": "11c71001dec190069d5e712bcf42a21530cb5c43055e463074707356a41e3781"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-do-cleanup-standards/tasks.md",
+      "action": "copy",
+      "sha256": "b855f9231fc6c7ee5e25a3f1a0449cd331775ec0da58af89c1b0506bfa0a7eb2"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/design.md",
+      "action": "copy",
+      "sha256": "d26ce4911503d279963bd7ffdedf4ea4f6703d821986ae501c420db886cd687e"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/proposal.md",
+      "action": "copy",
+      "sha256": "421eead9e6ce457908e2ecc34fb26128d8fda4c85d2f21ff2214265ecf5d7434"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/specs/babylon-lite-content/spec.md",
+      "action": "copy",
+      "sha256": "3e359c09189e63313b9ec8c2b32400361f8ffc141215108388861f1bce0c419a"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/specs/babylon-render-resolution/spec.md",
+      "action": "copy",
+      "sha256": "b28075cc6b03e5bf441632313b3db5b312ba3e11d0a4a6a150d59ab16ff880f8"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-move-babylon-overlay-into-world/tasks.md",
+      "action": "copy",
+      "sha256": "3087e7df0beaad87a542bf14431654c711e37aed83814e34ffc8ee7f4146147b"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-ai-instructions/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-ai-instructions/design.md",
+      "action": "copy",
+      "sha256": "5401989a38ce028be68c24bac6ff3dcb5328922d7b323ea7203fa88a854ef1d0"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-ai-instructions/proposal.md",
+      "action": "copy",
+      "sha256": "2b7b9cddd67b2555e2eb2fac2c47c7b97bc15435c6c56873b8d6291bd68b3e92"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-ai-instructions/specs/template-ai-guidance/spec.md",
+      "action": "copy",
+      "sha256": "2ef386d0010c16123917cb718e26cf46c2916a8f7c25b1a01dcf208ee84d6261"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-ai-instructions/tasks.md",
+      "action": "copy",
+      "sha256": "b9a448edb82341f4bb0b73462469a1f631d5fb5ad0fe1e8329d2e5eb6bb73345"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/.openspec.yaml",
+      "action": "copy",
+      "sha256": "b7f2b4e2a65656bb62ae7cb9957ed9862ae5eb2e00e0d6a1965c8f009cf0266f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/design.md",
+      "action": "copy",
+      "sha256": "70d5bea7259ffdf63211ebd265eb71f8b88d9de7bec062aedf89e5de4ef5ee8f"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/proposal.md",
+      "action": "copy",
+      "sha256": "be2e4f22486433cee1d542998921d4d907a85fbb3762267f2cb4657d11674d40"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/specs/game-integration-guidance/spec.md",
+      "action": "copy",
+      "sha256": "3b766be23153125b5987cf0de9dc5c26dd2f4051485b49d561102581b2f038a4"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/specs/template-ai-guidance/spec.md",
+      "action": "copy",
+      "sha256": "6581172e1c8b1c787c1112e4868329d50628d4e20a7f62816502d69b1c462639"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-01-update-info/tasks.md",
+      "action": "copy",
+      "sha256": "9c4ca79611e5f388bc012731c8420d6198fedd9acc828f97dde6b892c4f7a9ac"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/.openspec.yaml",
+      "action": "copy",
+      "sha256": "50ba286565dd1d880c71b1879dc8ea8d50b58b7f52e06ac4576efffb79c2f16d"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/design.md",
+      "action": "copy",
+      "sha256": "1b7b0c9c6b31637830f51b89b1ddaedddfda0368825f960f5503e3dedf5e0295"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/proposal.md",
+      "action": "copy",
+      "sha256": "831b31140da2f91a922dad510d295ddfd93880d85bd094e1b4a792f9acb42b51"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/specs/babylon-lite-content/spec.md",
+      "action": "copy",
+      "sha256": "16f1791ac19ebc4ae54f5bb4fc34d048c6a9ee6f6ddc75456fe02284bf2bd87e"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/specs/game-integration-guidance/spec.md",
+      "action": "copy",
+      "sha256": "25f083bb0347059b2744ea3511886f8bce16b4f6e808fd60032b50a221d45384"
+    },
+    {
+      "path": "openspec/changes/archive/2026-10-02-add-babylon-lite-pixel-grid-entry/tasks.md",
+      "action": "copy",
+      "sha256": "3a8201326db1e85ac4b510c5a809d2b57cea6ce9afc16693c086fd88b8e1e515"
+    },
+    {
+      "path": "openspec/changes/standardize-babylon-lite-readmes/.openspec.yaml",
+      "action": "copy",
+      "sha256": "db83cb6a249f31c5f8580b023f7b98100153cae6ba068c7dad4a4b282a6f0ed5"
+    },
+    {
+      "path": "openspec/changes/standardize-babylon-lite-readmes/design.md",
+      "action": "copy",
+      "sha256": "47e589f1e8e223413593c63c4f9c25228d504c151fdda0df8a7d377f7db54dca"
+    },
+    {
+      "path": "openspec/changes/standardize-babylon-lite-readmes/proposal.md",
+      "action": "copy",
+      "sha256": "5e0c333557a20d0e1e8ab88c65cf2e1c4e1bb18e05c86a294c7fa0000e890369"
+    },
+    {
+      "path": "openspec/changes/standardize-babylon-lite-readmes/tasks.md",
+      "action": "copy",
+      "sha256": "bac7e937fe8a23ceaff6eeb60567b3fb3e005232809bf594ebeafecb1adc9b3c"
+    },
+    {
+      "path": "openspec/config.yaml",
+      "action": "preserve-project-config",
+      "sha256": "f4ae014347b0084e7beaa7634a3271f7172294bee05d6237b1cd65b0668be7a6"
+    },
+    {
+      "path": "openspec/specs/.gitkeep",
+      "action": "preserve-empty-marker",
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "path": "openspec/specs/babylon-lite-content/spec.md",
+      "action": "copy",
+      "sha256": "fba9a3f5646ebd10925b9621feb86455220d7ea3b963c72aa19f57cb891fd590"
+    },
+    {
+      "path": "openspec/specs/babylon-render-resolution/spec.md",
+      "action": "copy",
+      "sha256": "970ae2e7cc381f1c5d6c437aaec106a9fe19fef6b82ddf432dce1dc5d39ad663"
+    },
+    {
+      "path": "openspec/specs/browser-template-layout/spec.md",
+      "action": "copy",
+      "sha256": "e2e04e24e3f7a5aface064f31764cd5ac228a58c9f0fad76b62954c5cb0655b1"
+    },
+    {
+      "path": "openspec/specs/game-integration-guidance/spec.md",
+      "action": "copy",
+      "sha256": "db7124d6a260a7213bace77290e5cb1b16331b567bf8e08da896ab18eb193e11"
+    },
+    {
+      "path": "openspec/specs/source-organization-standards/spec.md",
+      "action": "copy",
+      "sha256": "dec39751a7a1c916fe7cb8174b08ee86f64c9670d08a24cb73197711db05fedb"
+    },
+    {
+      "path": "openspec/specs/template-ai-guidance/spec.md",
+      "action": "copy",
+      "sha256": "ad29f6cbce37b7f0b9aa1f0c06c8dcd3d709b6c711a092ff29c65280f16b3a77"
+    },
+    {
+      "path": "openspec/specs/template-layout-verification/spec.md",
+      "action": "copy",
+      "sha256": "d37547fa8bbdf2774ccdbbb9157af83b7ae77bf28b1a4173f1c953a400414fca"
+    },
+    {
+      "path": "package-lock.json",
+      "action": "copy",
+      "sha256": "acf0b5994808a445d624efa2cfea45486e17eaee277bf2a251b00ef77c01c68f"
+    },
+    {
+      "path": "package.json",
+      "action": "copy",
+      "sha256": "902f31630dbc778d1651071011d48f5a006d109adcebbe646bd5bc2245d8b420"
+    },
+    {
+      "path": "project-name/index.html",
+      "action": "copy",
+      "sha256": "f95629e3dceddce57ea8f60bc6ec5a705ebc9271f6e3fd4609ee7312e977b31d"
+    },
+    {
+      "path": "project-name/public/template-favicon.svg",
+      "action": "copy",
+      "sha256": "dc58c2c453ba4178d38fdf13257a907130d52c2df1d101c301f20ec49d50dba4"
+    },
+    {
+      "path": "project-name/src/content/Content.jsx",
+      "action": "copy",
+      "sha256": "f77658d7fbcb08d0b311a8f266f9c1e7b5af30c7bf4f0d59be3dfb0f13c64e9e"
+    },
+    {
+      "path": "project-name/src/content/babylon/BabylonPresentation.css",
+      "action": "copy",
+      "sha256": "974ca79db7b6f9a6fff536ffc880e403683ccc7c37e5229d0cbfe6359db4f539"
+    },
+    {
+      "path": "project-name/src/content/babylon/BabylonPresentation.jsx",
+      "action": "copy",
+      "sha256": "c1b222edfb8b291f2d81c3056eba6b86ec88e5f6213d4b18808f85877df290fb"
+    },
+    {
+      "path": "project-name/src/content/babylon/config.js",
+      "action": "copy",
+      "sha256": "ee669bfe51a30c40d5237eb9434eb5029eceb6a8a25477090cf3a90618f2f9f9"
+    },
+    {
+      "path": "project-name/src/content/babylon/images/babylon_logo_256x256.png",
+      "action": "copy",
+      "sha256": "1696d4d0fe907a5cdac3a495d6759942f49ee6176200504429a74e4d30c48b7c"
+    },
+    {
+      "path": "project-name/src/content/babylon/images/babylon_logo_32x32.png",
+      "action": "copy",
+      "sha256": "11b6067240531ef6c14f80b9c3d7c18320b4aa4f6e022a1dc837c90e7cf82d85"
+    },
+    {
+      "path": "project-name/src/content/babylon/images/concentric-squares-32.png",
+      "action": "copy",
+      "sha256": "a0c9590acd200524cf9340e9d2a065cf9fad664cde7818f8192fc9fc9136ff3b"
+    },
+    {
+      "path": "project-name/src/content/babylon/initialization.js",
+      "action": "copy",
+      "sha256": "2e46f71a29dfcca04174a25ac2410f9489660c0202326ef1e5c89312104d9ba6"
+    },
+    {
+      "path": "project-name/src/content/babylon/pixel-grid-entry.js",
+      "action": "copy",
+      "sha256": "87a1925f11932d2b0ded9fb6ad3c52c9a9945c61705d5d33ae969d273ba042d9"
+    },
+    {
+      "path": "project-name/src/content/babylon/pixel-perfect.js",
+      "action": "copy",
+      "sha256": "7fba4966e38d09b1d905b040b09e1eafbb7081cd859055b05431a02eb000387e"
+    },
+    {
+      "path": "project-name/src/content/babylon/render-resolution.js",
+      "action": "copy",
+      "sha256": "5958257d10a37a04623609645b1aa2c60b604160d4a55a3fc307b83e7e26e35d"
+    },
+    {
+      "path": "project-name/src/content/babylon/showcase-overlay.js",
+      "action": "copy",
+      "sha256": "762e70b6000f2a7b16a16df80f221a226b5e19bbb5959cb8c98ac1f8c8ae8398"
+    },
+    {
+      "path": "project-name/src/content/babylon/world-hud.js",
+      "action": "copy",
+      "sha256": "7256417e18c676204e0c9c14c40749002bf95419b62b043caa85923e992a8017"
+    },
+    {
+      "path": "project-name/src/main.jsx",
+      "action": "copy",
+      "sha256": "13a61a3f0b6a987fe0cf8818a44e27513fe081ffa0758522fd61b2280d9b34c8"
+    },
+    {
+      "path": "project-name/src/shared/ContentShellContext.jsx",
+      "action": "copy",
+      "sha256": "f296ec6b21e96461f5f433b446c20cb8947dd22009729238daddd9be46359bdd"
+    },
+    {
+      "path": "project-name/src/shared/projectConfigStorage.js",
+      "action": "copy",
+      "sha256": "f9e258a807ca66fe29dddb7db9beb3b86ed09727ee0849d93dfd6bc823e19f70"
+    },
+    {
+      "path": "project-name/src/ui/App.jsx",
+      "action": "copy",
+      "sha256": "6d3ed017ff799c547ad80aa6304f7ed784bdbe135def270242bb797ada0a575e"
+    },
+    {
+      "path": "project-name/src/ui/BrowserSurface.jsx",
+      "action": "copy",
+      "sha256": "f7ecbd2566cf11a5b0d704da3ac45d98f75c8ae2dce765126a99833f3fcfff43"
+    },
+    {
+      "path": "project-name/src/ui/Dialog.jsx",
+      "action": "copy",
+      "sha256": "0227eb882175aed9d49e4d1013a8fa1f8afb55f352d2cd798bd278ca6b09b44a"
+    },
+    {
+      "path": "project-name/src/ui/Template.jsx",
+      "action": "copy",
+      "sha256": "c9a1abab05b9f16ab7c4fd91d08b56ddf3accb5d9bf4a2397865a996ae5616ad"
+    },
+    {
+      "path": "project-name/src/ui/assets/gutter-pattern.webp",
+      "action": "copy",
+      "sha256": "1bd9f174a10e3d7f68c77a3a96ff7d45a5b91729cf5f71570b71590ec27193d3"
+    },
+    {
+      "path": "project-name/src/ui/layout.js",
+      "action": "copy",
+      "sha256": "04ac6b93a4672cbf6af9676f9c1c863958ed012014bcce45b3e8a942003d9045"
+    },
+    {
+      "path": "project-name/src/ui/style.css",
+      "action": "copy",
+      "sha256": "7d34775455f72d5edbfbc73cdc28b39b1dd5fa2789a712ec21969c70f40ce4f8"
+    },
+    {
+      "path": "project-name/test/content.test.mjs",
+      "action": "copy",
+      "sha256": "d8cfbea4910f6caa63ee980163a80b8297d9e43ccdf4b584c289996506c4d113"
+    },
+    {
+      "path": "project-name/test/page.test.mjs",
+      "action": "copy",
+      "sha256": "31171220f16635544d2e21f55e0274b3562c00bbb8176c926a0368b0e6f97f55"
+    },
+    {
+      "path": "version.txt",
+      "action": "copy",
+      "sha256": "abf7ca2ca47340bbd4b479bb88114a8567884d86403f6f2bb85d71005f436646"
+    },
+    {
+      "path": "vite.config.js",
+      "action": "copy",
+      "sha256": "d27008246da98944e997d3391caaf4f37387f92a861c413a3b13ef221ac76ea2"
+    }
+  ]
+}

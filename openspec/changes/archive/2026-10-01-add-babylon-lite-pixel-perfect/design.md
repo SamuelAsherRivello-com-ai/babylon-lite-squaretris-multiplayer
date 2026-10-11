@@ -2,7 +2,7 @@
 
 ## Context
 
-See [proposal.md](proposal.md) for motivation. The Vite app mounts React from `project-name/src/main.jsx`; the content canvas must remain inside the existing content layer and React UI must remain independent. Babylon Lite is WebGPU-only. Its current API documents `Texture2DOptions` with `minFilter`, `magFilter`, and `mipMaps`, and `SurfaceOptions` with `msaaSamples` and DPR-aware surface sizing. See the [Lite architecture overview](https://github.com/BabylonJS/Babylon-Lite/blob/master/docs/lite/architecture/00-overview.md) and [Lite surface options](https://github.com/BabylonJS/Babylon-Lite/blob/master/packages/babylon-lite/src/engine/surface.ts).
+See [proposal.md](proposal.md) for motivation. The Vite app mounts React from `tetris/src/main.jsx`; the content canvas must remain inside the existing content layer and React UI must remain independent. Babylon Lite is WebGPU-only. Its current API documents `Texture2DOptions` with `minFilter`, `magFilter`, and `mipMaps`, and `SurfaceOptions` with `msaaSamples` and DPR-aware surface sizing. See the [Lite architecture overview](https://github.com/BabylonJS/Babylon-Lite/blob/master/docs/lite/architecture/00-overview.md) and [Lite surface options](https://github.com/BabylonJS/Babylon-Lite/blob/master/packages/babylon-lite/src/engine/surface.ts).
 
 ## Goals / Non-Goals
 

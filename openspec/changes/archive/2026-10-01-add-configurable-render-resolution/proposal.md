@@ -26,7 +26,7 @@ None. This is additive to the existing Babylon Lite integration.
 
 ## Impact
 
-- React settings state, local-storage persistence, HUD control, and keyboard handling under `project-name/src/ui/`.
-- Babylon Lite render-target allocation, resize handling, nearest-neighbor presentation, and lifecycle under `project-name/src/content/`.
-- Integration guidance and focused tests under `project-name/documentation/` and `project-name/test/`.
+- React settings state, local-storage persistence, HUD control, and keyboard handling under `tetris/src/ui/`.
+- Babylon Lite render-target allocation, resize handling, nearest-neighbor presentation, and lifecycle under `tetris/src/content/`.
+- Integration guidance and focused tests under `tetris/documentation/` and `tetris/test/`.
 - No new runtime dependency; use and verify the installed Babylon Lite 1.32.0 render-target APIs and WebGPU device limits.

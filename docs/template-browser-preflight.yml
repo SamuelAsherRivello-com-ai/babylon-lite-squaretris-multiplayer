@@ -1,0 +1,28 @@
+- generic [ref=e4]:
+  - generic:
+    - generic "Babylon Lite settings" [ref=e9]:
+      - button "(B) Babylon Lite" [ref=e10] [cursor=pointer]
+      - 'button "(R) RenderResolution: 1280x720 (Native)" [ref=e11] [cursor=pointer]'
+      - generic [ref=e12]: "Render Scale: 1x"
+      - generic [ref=e13]: "Mode: 2DPixelPerfect"
+      - generic [ref=e14]: "FPS: 240"
+    - generic [ref=e15]: GitHub Repository Template
+    - link "View the repository on GitHub" [ref=e18] [cursor=pointer]:
+      - /url: https://github.com/SamuelAsherRivello/github-repository-template
+    - region "(C) Config" [ref=e22]:
+      - generic [ref=e24] [cursor=pointer]:
+        - generic [ref=e25]: (F) Fullscreen
+        - checkbox "(F) Fullscreen" [ref=e26]
+      - generic [ref=e27] [cursor=pointer]:
+        - generic [ref=e28]: (P) Portrait
+        - checkbox "(P) Portrait" [ref=e29]
+      - generic [ref=e30] [cursor=pointer]:
+        - generic [ref=e31]: (H) HUD
+        - checkbox "(H) HUD" [checked] [ref=e32]
+      - button "(T) Reset Local Storage" [ref=e33] [cursor=pointer]
+    - region "(V) Stats" [ref=e35]:
+      - generic [ref=e37]: v0.0.8
+      - generic [ref=e38]: "DPR: 1"
+      - generic [ref=e39]: 16:9 Aspect
+      - generic [ref=e40]: 1280x720 Window
+      - generic [ref=e41]: 1280x720 Viewport

@@ -25,7 +25,7 @@ None; `openspec list --specs` reports no accepted specifications.
 
 ## Impact
 
-Expected implementation touches `project-name/index.html`, `project-name/src/main.jsx`, `App.jsx`, `style.css`, new layout modules, `project-name/test/page.test.mjs`, and linked documentation under `project-name/documentation/`. Keep the repository as npm root and `project-name/` as Vite root. Preserve the repository URL, version source, fullscreen storage key, and deployment configuration. No new runtime dependency, engine, service, release, skill generation, or pull request is proposed.
+Expected implementation touches `tetris/index.html`, `tetris/src/main.jsx`, `App.jsx`, `style.css`, new layout modules, `tetris/test/page.test.mjs`, and linked documentation under `tetris/documentation/`. Keep the repository as npm root and `tetris/` as Vite root. Preserve the repository URL, version source, fullscreen storage key, and deployment configuration. No new runtime dependency, engine, service, release, skill generation, or pull request is proposed.
 
 Verified baseline: React/React DOM with Vite, browser runtime, npm scripts `dev`, `test`, and `build`, and a GitHub Pages base path. Preserve external-link `noopener noreferrer`. The OpenSpec config incorrectly describes an absent stack; update factual context during implementation, not this planning request.
 

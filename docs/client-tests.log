@@ -1,0 +1,35 @@
+
+> test
+> node --test --test-isolation=none tetris/test/*.test.mjs docs/verification/*.test.mjs
+
+✔ browser test planner uses only reachable aim actions and agrees with authoritative collision (802.3784ms)
+✔ jitter delays actual bytes/events and preserves both directions in FIFO order (108.7715ms)
+✔ queued binary data is copied and socket close cancels pending callbacks (123.6555ms)
+✔ defaults to Babylon Lite 2D and does not apply the pixel preset to 3D (0.3013ms)
+✔ derives four relative render resolutions from native backing dimensions and caps double by the WebGPU limit (0.3142ms)
+✔ snaps Babylon Lite sprite anchors after the layer view and preserves the grid on round trip (1.7603ms)
+✔ snaps correctly through a zoomed and rotated Babylon Lite layer view (0.2515ms)
+✔ requires explicit mode setup and resnaps a layer after view changes (0.6791ms)
+✔ rejects Babylon Lite sprite mutations outside the pixel-grid entry module (4.7883ms)
+✔ adapts Babylon Lite sprite projection dimensions while sharing the engine surface registry (0.2381ms)
+✔ predicts aim immediately, replays only unacknowledged commands and rejects stale snapshots (0.6357ms)
+✔ commit freezes steering and retains cosmetic descent start only for matching authoritative pose (0.3965ms)
+✔ never leaks old input into a new piece or rematch, and stops clocks when paused (0.1766ms)
+✔ ghost uses authoritative collision including hidden entry and stable O rotation (0.1439ms)
+✔ concurrent input owners share one repeat and cancellation clears every owner (268.6071ms)
+✔ fixed portrait fits integer pixels where possible and remains usable on smaller displays (0.5757ms)
+✔ keeps npm/application and GitHub Pages roots (0.0856ms)
+✔ fits orientations and project-defined ratios in CSS pixels (0.2309ms)
+✔ invalid dimensions and orientation give actionable errors (0.3658ms)
+✔ renderer settings patch the shared config without dropping shell preferences (0.3606ms)
+✔ preserves corner contracts and engine-neutral content-layer guidance (1.4727ms)
+✔ keeps the UI and content source boundaries discoverable (0.8709ms)
+✔ renders the shell without a presentation and with a stub presentation (255.96ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2804.8262

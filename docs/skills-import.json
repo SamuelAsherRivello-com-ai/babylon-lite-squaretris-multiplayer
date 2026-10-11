@@ -1,0 +1,410 @@
+{
+  "source": "https://github.com/SamuelAsherRivello/ai-skills-library",
+  "revision": "f3700fdd4fab4cde2047a99a305ae3ac57e3d0c5",
+  "count": 35,
+  "rootLicenseFiles": [],
+  "skills": [
+    {
+      "name": "ai-skills-create-app",
+      "source": ".agents/skills/ai-skills-create/ai-skills-create-app",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "55173da848ad0d74421ed49752385f42cc4c48f1b0a8ec5058d83146a8e2cd34",
+        "agents/openai.yaml": "84307b0c9323b3f437403ad08aecdb7aaed035deab40ebe667f59e38dcb6a65e"
+      }
+    },
+    {
+      "name": "ai-skills-create-game",
+      "source": ".agents/skills/ai-skills-create/ai-skills-create-game",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "565a43d678a35e12cab4024f3e849973a8ecb3e55051bcbb12db7babb0b6ee4a",
+        "agents/openai.yaml": "b8f460d083e77f9c80b763ed7ecb6cd99e3ae2dab89090547ea1a31cda9ad578",
+        "references/multiplayer.md": "bacf38fc43892f94cb6ebf24546b825fa61e85301b0daa139f3e2e40d11e53cc"
+      }
+    },
+    {
+      "name": "ai-skills-create-github-repo",
+      "source": ".agents/skills/ai-skills-create/ai-skills-create-github-repo",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "a8f07f79e1922f1b5de91f91fedd0cf662fa73594fb419ac74f0ff852fd8c2ee"
+      }
+    },
+    {
+      "name": "ai-skills-release-version",
+      "source": ".agents/skills/ai-skills-create/ai-skills-release-version",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "63c049f6e249c719ced1bac4e3f333effdacdf90b7e62a9e261514752d374d6a",
+        "agents/openai.yaml": "957b91e80729efacd0bf65d761fa72de1a93ead9732e0ef697b76759a69f05e0"
+      }
+    },
+    {
+      "name": "ai-skills-library-move-global",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-move-global",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "ec52286592a2bf67aa1a213d7cb476d4af54fecc280911cc7285f01342a8820d",
+        "agents/openai.yaml": "764fbb4fdf203556fcc84a55e510c7cb78e0735feaf16225a1f96d3aa0f0710c"
+      }
+    },
+    {
+      "name": "ai-skills-library-move-project",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-move-project",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "3ab675b4312e340e162f7da1b5095cb4741b3bbc4d4ec680075100bad612a29e",
+        "agents/openai.yaml": "f8ca649524e1be0a76756237e2da88cf70d75401a63988c4f6a99bf266fec78a"
+      }
+    },
+    {
+      "name": "ai-skills-library-pull",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-pull",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "455888f2ee4b4a7eb1a79b3b190955a29b84567a7cbb3baed217a44a772d59ad",
+        "agents/openai.yaml": "545cdb91be49cdb3ea2b0a9822dd2af3e2e8fec2ede9df4f5161060b01ad3a5e"
+      }
+    },
+    {
+      "name": "ai-skills-library-push",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-push",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "8da63a7dd3c175269adbcf481570295468bfb204749344dd642c08822b83ba49",
+        "agents/openai.yaml": "c1b70e3f90dd934019dfdb4a266b9111b511137c46e7a3be5ee1fa9da5987ae5"
+      }
+    },
+    {
+      "name": "ai-skills-library-status",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-status",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "4573833ca665811a62576be2918a6a6903804fc1178b6ee443667de1b9486bbd",
+        "agents/openai.yaml": "93c6b07d1fee1e18f2d239ea4481fd099deeb43750d5ed7982cbd42ae26d8a5a",
+        "scripts/status.ps1": "6f682d2c7115732458c0468549e1197654d498bf5de5698f9413b0f9292cccb9"
+      }
+    },
+    {
+      "name": "ai-skills-library-welcome",
+      "source": ".agents/skills/ai-skills-library/ai-skills-library-welcome",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "4a60a19c1b5cbaa71809a75c20b61edf312b1f865327f735358eeccbe8926612",
+        "agents/openai.yaml": "adcdd42dfc589aaec2fc9227d8702a9af693b098fe6e4e2e07d58640d29572a1"
+      }
+    },
+    {
+      "name": "ai-skills-unarchive",
+      "source": ".agents/skills/ai-skills-library/ai-skills-unarchive",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "ed027f7aaadd4c8884443b9335b781281c26d30bae89a188c04430bd00b0dcc6",
+        "agents/openai.yaml": "49cc9518bcd5140eb97a12556185953b062cee31a3579ff3e7e23f3d0f0a8b5d"
+      }
+    },
+    {
+      "name": "ai-skills-project-run-start",
+      "source": ".agents/skills/ai-skills-run/ai-skills-project-run-start",
+      "sourceAliases": [],
+      "preservedVariants": [
+        {
+          "source": ".agents/skills/ai-skills-library/ai-skills-project-run-start",
+          "files": {
+            "run-project.ps1": "591b758fc64e6c7865956a3ce1dd9772459aac2b904929ad98fb63d6621d7549",
+            "SKILL.md": "f757ee43381968a12c3d3afe8bb4261ea13724c9a3c751dcefce37bd5aedecbf"
+          },
+          "reason": "Stale duplicate; maintained run-category version selected explicitly"
+        }
+      ],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "run-project.ps1": "7b327019fd46031894ba1c71226412fe1f921ba8159d93c196777052e8483ebd",
+        "SKILL.md": "0fa483f8e6747d02fe142289e875df5a186e33121d8496a5570e4d26de60cb9e"
+      }
+    },
+    {
+      "name": "ai-skills-project-run-status",
+      "source": ".agents/skills/ai-skills-run/ai-skills-project-run-status",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "7921d197941a63300d37faa7714e9a906f3c133a429bd35f3f22c87d64648a8d"
+      }
+    },
+    {
+      "name": "ai-skills-project-run-stop",
+      "source": ".agents/skills/ai-skills-run/ai-skills-project-run-stop",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "9ab7526ceb3b7667cd78be9443c066d527161a8bcc8ddf8e7ae2bc593457b310"
+      }
+    },
+    {
+      "name": "ai-skills-triage-analyze",
+      "source": ".agents/skills/ai-skills-triage/ai-skills-triage-analyze",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "e9d67e28ab20a70adfc1a071c3778faecefcde470fae13e25192841d44ac2a18",
+        "agents/openai.yaml": "ce4c2bd1aef9ed6edd3d7a01d7daedfc43d617b9dd462b66a78c9e88d0eba9cd",
+        "references/report-packet.md": "86f850386f72ebdece3c3b7daa3182d6f588355f8d55977596e4f8b02ad809a2"
+      }
+    },
+    {
+      "name": "ai-skills-triage-rearchitect",
+      "source": ".agents/skills/ai-skills-triage/ai-skills-triage-rearchitect",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "041a9604d28b2162567807b2240b2e8f600291bc876f3f3fb482e23ec2fa175b",
+        "agents/openai.yaml": "a469ba14fffc3885f1162f834a79653d7be17441b22d66121ecbdc3f9e8bfbc0",
+        "references/refactor-plan.md": "42f7c23045d8b29d37854aeca062c92be84eb3323bf79ada6dc981cb48199614"
+      }
+    },
+    {
+      "name": "ai-skills-triage-standardize",
+      "source": ".agents/skills/ai-skills-triage/ai-skills-triage-standardize",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "59959a9a71dc91ce7f73e62cc04c3746ee9d84c7d7a78b5c43a9d04e9ffc3122",
+        "agents/openai.yaml": "e7c93e686f704526ade66d59ad3d6b9b6a912126d7d5d70e02552084263d5432",
+        "references/ai-readiness-template.md": "052903660ad27605cb536fcfbffd3f56e00c57e1e2b8a2f28d5849d311163da9",
+        "references/aiignore-template.md": "a7a6662fbd40eaf4bb66ee320063a54cad7bf3f0271638edbfe56f711a844a6d",
+        "references/class-template.md": "e88d2645fe564c413b5d2a49d62e5a8f335857c9771b9f7a2dab59acbd44320a",
+        "references/project-template.md": "9de64024d250d7f94deeb90f285f3957747dac2c812d415ca45dd3539def8ef4",
+        "references/standards-document.md": "e469f1ee6fce1368dd5c36f39851039061fab1298ffbe44e2d029336e123f37d"
+      }
+    },
+    {
+      "name": "docker-sandbox-codex",
+      "source": ".agents/skills/docker-sandbox/docker-sandbox-codex",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "7d7f81d43a67b94178498db1ef281eabf87a71e8d13c1775263118a7407055d3"
+      }
+    },
+    {
+      "name": "docker-sandboxes-status",
+      "source": ".agents/skills/docker-sandbox/docker-sandboxes-status",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "33d0813bbd2c33f98f7a4c3046397d3e47e160d299bc1093147082d53864cf8c",
+        "scripts/status.ps1": "a030c2ba4a49a55f140611c72671e6f6fd4936d7b2028e311240c7f20daec40a"
+      }
+    },
+    {
+      "name": "teach",
+      "source": ".agents/skills/inbox/teach",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "GLOSSARY-FORMAT.md": "22f851b265a3bec5a333937cc7ff1250136c9b6512787ae2eb51a2a14e35c341",
+        "LEARNING-RECORD-FORMAT.md": "d49c754ea416a075534d0ba1428a0beba1327ae527c2d1af0333908d08e25d05",
+        "MISSION-FORMAT.md": "44ea82d5f57a626086bde99c70cd229cdef67998e8502c1cbcd50504f57f989a",
+        "RESOURCES-FORMAT.md": "377e70f83d41fdc2623037410600194655a2f7df41000925c24cc437da074ab5",
+        "SKILL.md": "d9480a846c88bb1151947eb484bab1a8c9a84af4d9ddf1ea0f6fb7fe639cf9b3",
+        "agents/openai.yaml": "80e96a4d492ad8538e609672361e8543b69e7b22ce83be0efc2e5532472ede69"
+      }
+    },
+    {
+      "name": "unslop",
+      "source": ".agents/skills/inbox/unslop",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "392381cbf1e7f878f881b0d7b1367d6a1cf817e3bef7193117e153253db685da"
+      }
+    },
+    {
+      "name": "openspec-apply-change",
+      "source": ".agents/skills/openspec/openspec-apply-change",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "d0de16bdd30dbef2e7965b5f3e58efb1f61d7fb5ad11e06bbce83dba6660e53f",
+        "agents/openai.yaml": "74d468169b81e377cea7610fd371bb12b84ac5392f36349b3a9f423a658fe06c"
+      }
+    },
+    {
+      "name": "openspec-archive-change",
+      "source": ".agents/skills/openspec/openspec-archive-change",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "56c994c1376d3c3d93d16b1024b6501db47b7941b2bea05313126b36f5bb1556",
+        "agents/openai.yaml": "0c0c30ff8b9cea32e170c4c4fff66d02482db9a514d751cfddb1b9308aef092b"
+      }
+    },
+    {
+      "name": "openspec-commit-inclusive",
+      "source": ".agents/skills/openspec/openspec-commit-inclusive",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "ad2d26bd508d7eeda8f6ecec8b6e7f2d47adf754fef44b9ee87804150602e2c4",
+        "agents/openai.yaml": "0959aeeb068b598df132d26c47f3031a752a3e06bb9fb277933677a3f34fef92"
+      }
+    },
+    {
+      "name": "openspec-dashboard",
+      "source": ".agents/skills/openspec/openspec-dashboard",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "c114314e5d4294008c4e24b56d9df04f0b6b6b85b2c95dc72e2245a58f8bc2a7",
+        "agents/openai.yaml": "88856d504eae4b7cce371b3d6b63a2d63ed7945d998f8501f06ae70e2270e466"
+      }
+    },
+    {
+      "name": "openspec-explore",
+      "source": ".agents/skills/openspec/openspec-explore",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "d728a3d8d7a20f2eab3f6a20efa7bc5a67d9520d8a3c0f4ad777b9973a7d97d8",
+        "agents/openai.yaml": "153ebf8d9ee5de9658e3f96abb3f497c8f131077675900839c3d5fb964974345"
+      }
+    },
+    {
+      "name": "openspec-grill-me",
+      "source": ".agents/skills/openspec/openspec-grill-me",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "5112bd143db0c1e087c08fc8df1947c3b98bc8aa5ed99d9ba442234e035a11d9",
+        "agents/openai.yaml": "23b085d8b98c5274883519f187912ac288fc6613b3e48d58d3171789e3b55391"
+      }
+    },
+    {
+      "name": "openspec-macro-finalize-sync-archive-commit-push",
+      "source": ".agents/skills/openspec/openspec-macro-finalize-sync-archive-commit-push",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "8a78e7ba4e6f93f5487be0b53cc6e98057039ac99af6403a274a111c9637158e",
+        "agents/openai.yaml": "5023504c6f69b7f579af0a10ccccbcc105639143cc55eb304fac83ccded88ad4"
+      }
+    },
+    {
+      "name": "openspec-propose",
+      "source": ".agents/skills/openspec/openspec-propose",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "f69cad505b2f1df37dbd307381dc61aad35481f29e9c8c6499d5ff3236244213",
+        "agents/openai.yaml": "3a76a423c55bc853c8d6571ace082d16f2e158754d68172c2714ad2be920aa6b"
+      }
+    },
+    {
+      "name": "openspec-sync-specs",
+      "source": ".agents/skills/openspec/openspec-sync-specs",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "50bff2040fde81b0afffb378fab641bd1835aeb27f51e878b4e27f019ca9c11f",
+        "agents/openai.yaml": "56c209ff4b8c7663151d5363c372981327cf41a9c85ee13474073f2c8fc5a800"
+      }
+    },
+    {
+      "name": "openspec-update-change",
+      "source": ".agents/skills/openspec/openspec-update-change",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "MIT",
+      "files": {
+        "SKILL.md": "793b143b7bc4af82886b4be8b0933dfac99977b92dcec0ff6df69e1dd4413e12",
+        "agents/openai.yaml": "34a26de44313817b8af3e42d275c83e7ada5c3c37f9a6bb74d3b5e4c25f8c2e1"
+      }
+    },
+    {
+      "name": "slidev-resync-templates-decks",
+      "source": ".agents/skills/slidev/slidev-resync-templates-decks",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "e0d465c214a8302053dcd9bf315a605e17433099be2dc2dfdb9b4afc9e5b3a32",
+        "agents/openai.yaml": "cd724d33a975d19a3c6fb407fbeaa137e38e8c01e0697868c41aab2841e40e58"
+      }
+    },
+    {
+      "name": "slidev-run",
+      "source": ".agents/skills/slidev/slidev-run",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "209956589e70869fbac986e2964600912ba6a5535e4be117af833a93dcf62dca",
+        "agents/openai.yaml": "922ae437d6bd3aa61e64cfe3b0a380441aaeacdfa85980011f16a711213ae638"
+      }
+    },
+    {
+      "name": "slidev-slides-to-content",
+      "source": ".agents/skills/slidev/slidev-slides-to-content",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "2d5f5702b9e88e99e318a728f750adf856032cd0566dcc8ff0b430df85f5000f",
+        "agents/openai.yaml": "e59ff4de5d188e59078eb9dbfa574b7e1245cfdb78f08d94115f411eee157186"
+      }
+    },
+    {
+      "name": "slidev-sync-layout-across-deck-slides",
+      "source": ".agents/skills/slidev/slidev-sync-layout-across-deck-slides",
+      "sourceAliases": [],
+      "preservedVariants": [],
+      "license": "Unspecified in skill frontmatter; original source notices preserved",
+      "files": {
+        "SKILL.md": "f027bd3e0bc6c9d7ce4a5bee7ebab2f16c2d6347d26d24ee5b9bae10337fec35",
+        "agents/openai.yaml": "9cdfce152c340d895e6b871d58012eb90937155820cfc1a654d95664ecb73661"
+      }
+    }
+  ]
+}

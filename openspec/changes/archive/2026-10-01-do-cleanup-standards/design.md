@@ -2,7 +2,7 @@
 
 ## Context
 
-The current Vite app keeps its React entry, layout modules, menu, and styles in a flat `project-name/src/` directory. Existing tests already exercise the layout through source inspection and runtime-friendly checks, while the documentation directory contains both maintained guidance and generated review artifacts.
+The current Vite app keeps its React entry, layout modules, menu, and styles in a flat `tetris/src/` directory. Existing tests already exercise the layout through source inspection and runtime-friendly checks, while the documentation directory contains both maintained guidance and generated review artifacts.
 
 ## Goals / Non-Goals
 
@@ -25,7 +25,7 @@ The current Vite app keeps its React entry, layout modules, menu, and styles in 
 2. **Keep the template component intentionally small.** Add a starter `Template` component that demonstrates UI composition and can be replaced or extended by consumers. It will not import or initialize a renderer.
 3. **Extend the existing focused test style.** Add file- and import-boundary assertions alongside the current layout checks rather than introducing a browser automation dependency. This keeps the test command fast and compatible with the renderer-free starter.
 4. **Treat review evidence as disposable.** Remove generated `layout-*` screenshots and `layout-verification.md`; retain maintained integration guidance and README assets, and update any links that point to removed evidence.
-5. **Document conventions in one concise file.** Add a short standards document under `project-name/documentation/` covering placement, naming, imports, and the UI/content responsibility boundary. It will avoid lint rules or broad style mandates.
+5. **Document conventions in one concise file.** Add a short standards document under `tetris/documentation/` covering placement, naming, imports, and the UI/content responsibility boundary. It will avoid lint rules or broad style mandates.
 
 ## Risks / Trade-offs
 

@@ -1,160 +1,162 @@
-<!-- AI: Keep commands rooted at the repository. The Vite application, source, tests, and build output belong in project-name/. Work within the following HTML template -->
-<a href="docs/samuel-asher-rivello-banner.png"><img src="docs/samuel-asher-rivello-banner.png" width="640" alt="Banner" /></a>
-<BR>
+<a href="docs/samuel-asher-rivello-banner.png"><img src="docs/samuel-asher-rivello-banner.png" width="640" alt="Samuel Asher Rivello" /></a>
 
-# {project-name}
+# Tetris Multiplayer Clone
 
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
+A private-board, two-player pixel-art duel: aim above the well, release, and send pressure with line clears.
 
-<!-- AI: Update this project summary when the template is used. -->
-This is the project repo....
+## Live Demo
+
+- [Play Tetris Multiplayer Clone](https://samuelasherrivello.github.io/babylon-lite-tetris-multiplayer-clone/)
+
+## Images
+
+<a href="docs/verification/duel-aim.png"><img src="docs/verification/duel-aim.png" width="640" alt="Actual WebGPU duel: own aim, landing ghost, private well and opponent outline" /></a>
+
+## Getting Started
+
+Use Node.js 24 and a browser with hardware-accelerated WebGPU, such as current Microsoft Edge or Chrome on a supported device.
+
+```sh
+npm ci
+npm run dev
+npm test
+npm run build
+npm run preview
+```
+
+Run commands from the repository root. Vite prints the local URL; the app uses `/babylon-lite-tetris-multiplayer-clone/`. Source and tests live in `tetris/`, output in `tetris/dist/`. A useful error appears if WebGPU is unavailable; no fallback renderer is included.
+
+Create an editable four-character room and send its share link to a friend. Your friend joins, then both choose **Ready up**. A third player cannot join. The three-second countdown starts the duel. Both must agree to a rematch.
+
+## Controls
+
+| Action | Keyboard | Touch / pointer |
+| --- | --- | --- |
+| Move aim | Left / Right, A / D | Left / Right buttons |
+| Rotate clockwise | Up / X | Clockwise button |
+| Rotate counterclockwise | Z | Counterclockwise button |
+| Release piece | Space | DROP |
+| Settings | C / B | Settings |
+| Fullscreen | F | Settings checkbox |
+
+Movement repeats after 150 ms, then every 50 ms. Touch controls support concurrent pointers. Losing focus or opening settings releases held inputs. **The online match continues while settings are open.**
+
+## Rules
+
+- Exactly two human opponents. You see only your own 10×20 well, your next five pieces, and your landing ghost. Four hidden rows are used for entry and top-out.
+- Your opponent shares a compact aiming outline above your well and a line showing their highest settled row. Their board, falling pieces, queue, landing and garbage gaps remain private at the server projection boundary.
+- Aim and rotate above the board. Release manually or automatically after five seconds. Descent takes 200 ms and cannot be steered. Your next piece arrives after settlement, independently of your rival.
+- Both receive identical independent seven-bags. Rotations try horizontal kicks 0, −1, +1, −2, +2. There is no hold, soft drop, continuous gravity, floor kick, spin or combo bonus.
+- Clearing one / two / three / four rows attacks with zero / one / two / four garbage rows. Your attack first cancels incoming rows in FIFO order. Opposing attacks on the same simulation tick cancel each other.
+- Incoming rows warn for at least one second. Mature rows enter only after your next placement and its cancellation, never during descent. Each packet uses one hidden gap column.
+- Blocked entry, hidden-row top-out or garbage overflow ends your round. The survivor wins; simultaneous top-out on the same 20 ms tick is a draw.
+
+## Multiplayer and recovery
+
+Uses the existing [RMC Colyseus Multiplayer Server](https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server), its WebSocket relay, and **free Vercel Hobby**. The static client is hosted on GitHub Pages. The browser contains no deployment credentials.
+
+The authoritative server validates every command, advances deadlines, resolves clears/attacks and decides results. Local aiming and release are predicted, then reconciled using acknowledged sequences and piece/epoch IDs. Opponent hints use monotonic recipient snapshots; there is no hidden opponent simulation on the client.
+
+Pinned client release: [v0.9.12](https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server/releases/tag/v0.9.12), installed from its exact release tarball and lockfile. Public relay: `https://rmc-colyseus-multiplayer-server.vercel.app`. For a local backend, copy `.env.example` to `.env.local` and set `VITE_MULTIPLAYER_SERVER_URL`, then restart Vite.
+
+Refresh recovery uses a rotating seat credential in **sessionStorage**, never the share URL. After the server detects a disconnect, both clocks pause; each seat has a cumulative 15-second recovery budget per match. Explicit **Leave / new room** forfeits. Each free Vercel relay request is bounded (up to 300 seconds), and rooms are process-local. Expired or lost rooms require a new code; cross-instance durable recovery is not promised.
+
+## Presentation and verification
+
+Babylon Lite 1.32.0 renders a stationary 288×512 logical surface with 16-pixel cells. Integer CSS scaling is used whenever 1× fits. Smaller displays use fractional fit; fractional DPR and reduced render presets have reduced pixel-spacing guarantees. DPR is applied once to the native backing size. Nearest sampling, no texture mipmaps and one MSAA sample preserve hard edges.
+
+Original patterned blocks, circuit gutters and six short event sounds are reproducible with `python tools/generate-game-assets.py --output tetris/src/content/assets`. Mute in Settings or append `?mute=1` (combine with room links using `&mute=1`). Reduced effects disables cosmetic flashes. No music.
+
+See [verification evidence](docs/verification/README.md), [asset provenance](docs/asset-provenance.md), [game brief](docs/game-brief.md), [template adaptations](docs/template-adaptations.md) and [backend release evidence](docs/backend-release-verified.json). Physical touch hardware and Codex skill autocomplete are unverified; browser touch emulation is recorded separately.
+
+## Release
+
+The checked-in **Release** GitHub Actions workflow tests/builds, bumps root `version.txt`, commits/tags on `main`, and creates a GitHub release. **Deploy live demo** builds and deploys Pages on pushes to `main` or manual dispatch. Explicitly dispatch Pages after a release bot commit when needed, then verify `/version.txt` and the displayed version. No paid backend or alternate host is needed.
+
+## Credits
+
+Built from [GitHub Repository Template](https://github.com/SamuelAsherRivello/github-repository-template) with [AI Skills Library](https://github.com/SamuelAsherRivello/ai-skills-library), React, Vite and [Babylon Lite](https://www.npmjs.com/package/@babylonjs/lite). [Tetris](https://en.wikipedia.org/wiki/Tetris) supplies gameplay inspiration; all project art, effects and sounds are original. This independent project is not affiliated with or endorsed by the Tetris rights holders.
 
 ## Original AI Prompt
 
-<!-- AI: Populate with the the earliest substantive user prompt that started this project. Replace the placeholder within the <details> below with the original prompt text. -->
+[{original-ai-prompt-url}]({original-ai-prompt-url}) — source URL unavailable; prompt-link provenance remains unverified. The initiating text and consequential follow-ups are preserved below; the interpreted game brief is separate.
 
 <details>
-<summary>Read the full original prompt</summary>
+<summary>Initiating request and supplied template</summary>
 
 ```text
+update this template and fully populate it for a multiplayer 2d pixel perfect game of [https://en.wikipedia.org/wiki/Tetris](https://en.wikipedia.org/wiki/Tetris)
 
-Create a new project from this template.
+$ai-skills-create-game
 
-Type: {App | Game}
-Orientation: {Portrait | Landscape}
-
-Project description:
-{Describe the app or game, including its core purpose and important features.}
-
-For games:
-Rendering: {2D Pixel Perfect | 3D}
-
+- Title: [Enter the Gungeon Clone]
+- Type: [Multiplayer, online cooperative, 2–4 players. All human players cooperate on the same team.]
+- World and camera:
+  - [Create one 2D level approximately twice the viewport width and twice its height, giving it about four times the area of one screen.]
+  - [The level may be tile-based or use freely placed artwork and geometry.]
+  - [Use a top-down orthographic camera that smoothly follows the local player and stays within the level boundaries.]
+- Core loop: [Cooperate to survive increasingly difficult enemy waves, dodge bullet patterns, collect loot, and choose weapon upgrades between waves. Defeat a boss every five waves. The run ends when the entire team is down.]
+- Controls: [WASD movement, mouse aiming, left-click shooting, and Space to dodge roll with a short cooldown and brief invulnerability.]
+- Cooperative mechanics:
+  - [Create or join a room using a shareable room code, then ready up together.]
+  - [Revive downed teammates, share upgrade rewards, and disable friendly fire.]
+  - [Scale enemy counts and difficulty with the number of active players.]
+  - [Show directional indicators for teammates outside the local camera view.]
+- Look and feel:
+  - [Original pixel-art dungeon scenery with stone floors, destructible props, and readable cover.]
+  - [Distinct player colors, expressive enemies, bright projectiles, punchy muzzle flashes, and clear hit feedback.]
+  - [Keep enemy bullets visually distinct from friendly shots. Show player health, teammate status, current wave, remaining enemies, and dodge cooldown.]
+- Gameplay requirements:
+  - [Include three starting weapons with distinct firing patterns and meaningful upgrades.]
+  - [Include enemies that chase, fire aimed shots, and emit radial bullet patterns.]
+  - [Provide short breaks between waves for upgrades and a team restart option after defeat.]
+- Multiplayer server and smoothness:
+  - [Use https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server or my writable fork: <fork URL, if applicable>.]
+  - [Automatically update the selected server repository with the room logic and synchronized state required by this game.]
+  - [Make the server authoritative for movement validation, combat, enemy spawning, damage, loot, revives, and wave progression.]
+  - [Use supported Colyseus prediction features where available, or implement suitable client-side prediction, server reconciliation, and interpolation.]
+  - [Respond immediately to local movement and dodge inputs. Smooth reconciliation corrections and drive the camera from the predicted local character position to avoid visible jitter.]
+  - [Interpolate remote players and enemies. Use immediate local animations, muzzle flashes, and cosmetic effects while reconciling gameplay outcomes with the server.]
+  - [Use deterministic projectile motion or other bandwidth-efficient synchronization where appropriate.]
+  - [Prioritize a smooth, consistent experience for every player over action density. If synchronization struggles, reduce concurrent bullets, enemies, spawn rates, and firing rates.]
+  - [Handle disconnects and reconnects gracefully.]
+  - [Verify with at least two browser clients, including simulated latency and jitter. Check responsive local movement, stable camera tracking, smooth remote motion, and consistent combat outcomes.]
+- Inspiration links:
+  - [https://store.steampowered.com/app/311690/Enter_the_Gungeon/]
+- Inspiration screenshots: [Attach reference screenshots here.]
+- Originality requirement: [Keep the requested project title, but create original artwork, sounds, characters, weapons, UI, and level layouts; use the reference only for gameplay and visual inspiration.]
 ```
 
 </details>
 
-## Live Demo
+<details>
+<summary>Consequential follow-up instructions</summary>
 
-<!-- AI: Keep exactly one bullet containing the demo link and no other visible text. Do not mention releases or add other text here. Keep this one link updated to the latest release URL. -->
+```text
+1 Yeah, I see only my board, but I see maybe a line indicating the very highest of theirs, and I see an outline of their next piece at the top as they're moving it left and right. But once they release it, I don't see it falling, and I don't see their blocks.
 
-- [{live-demo-url}](https://samuelasherrivello.github.io/github-repository-template/)
+stop there.
 
+Now read the [$ai-skills-create-game](C:\Users\srive\\.agents\skills\ai-skills-create-game\SKILL.md) skill and prepare a [$openspec-propose](C:\Users\srive\\.agents\skills\openspec-propose\SKILL.md) about how you will use the template and multiplayer server to meet the needs of the requested prompt. This allows for propose to think more heavily before implemtation.
 
-## Images
+it is a requirement to use the existing multiplayer server, with relay, with free vercel.
 
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. Work within the following HTML template -->
+You have [$github](app://connector_76869538009648d5b282a4bb21c3d157) access and the multiplayer server has the vercel credentials. there is no reason to stop for any reason until the game is done, and shipped to the readme as a live demo.
 
-<a href="docs/screenshot01.png"><img src="docs/screenshot01.png" width="640" alt="Screenshot placeholder" /></a>
+you are required to use the free plan of vercel. stop asking for alternatives
+```
 
-## Table of Contents
+</details>
 
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
+The interview's numbered choices were reconciled into the approved OpenSpec design: competitive 1v1, independent placement speed, a five-second maximum aim window, one-second garbage warning with placement-boundary insertion after cancellation, and a local landing ghost. This paragraph is an interpretation of those selections, not a verbatim user quotation.
 
-<!-- AI: Do not include anything above the Table of Contents within the Table of Contents. -->
-1. [Getting Started](#getting-started)
-2. [Project Details](#project-details)
-3. [Deep Dive](#deep-dive)
-4. [Credits](#credits)
+The original chat share URL is unavailable and its provenance remains unverified. No model or elapsed-time metadata is inferred.
 
-## Getting Started
+<details>
+<summary>Browser workflow follow-up</summary>
 
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
+```text
+when you spawn browser game windows, can you do it minimized or headless and still continue your work? that will be less disruptive to me
+```
 
-<!-- AI: Update this getting-started summary when the template is used. -->
-This is the getting started...
-
-### 🛠 Build Project
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-1. From the repository root, run `npm install`.
-2. Run `npm run build`.
-
-### 🛠 Run Project
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-1. From the repository root, run `npm run dev` and open the localhost URL Vite prints.
-2. Run `npm test` to execute the focused source checks.
-
-### 🛠 Release Version
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-1. Run `npm test` and `npm run build` from the repository root.
-2. Push to `main` to deploy through the GitHub Pages workflow.
-3. Run the **Release** workflow from GitHub Actions to bump the patch version, tag it, and create the GitHub release.
-
-## Project Details
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-<!-- AI: Update these project details when the template is used. -->
-This is the project details...
-
-### 🤖 AI
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-- [AI Overview](docs/ai-overview.md) describes the built-in and optional AI
-  resources.
-
-### 🧠 Deep Dive
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-- [Deep Dive Overview](docs/deep-dive-overview.md) summarizes the project's
-  technical details for developers.
-
-### 📦 Packages
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-- [Vite](https://vite.dev/) provides local development and production builds.
-
-### 📝 Structure
-
-<!-- AI: Keep this section to exactly four bullet points. -->
-
-- `docs/` contains canonical README images and project documentation assets.
-- [Layout and game integration](docs/layout-and-game-integration.md) documents viewport configuration, the implemented Babylon Lite showcase, and guidance for adapting the content layer to a game or app.
-- `project-name/index.html` mounts the React browser surface; `project-name/src/` contains viewport, gutter, content, and UI composition.
-- `project-name/test/` contains focused automated checks for the starter.
-
-## Deep Dive
-
-<!-- AI: This is where you want to have one page about the technical details of the project for a developer audience to get a high-level overview of the key three classes and contracts. -->
-
-- To learn more about the technical details, check out the [Deep Dive](docs/deep-dive-overview.md).
-
-## Credits
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-<!-- AI: Preserve established attribution and ownership. Customize the following subsections only from confirmed contributor, contact, and license information; do not infer a new owner from the repository name. -->
-### 💡 Contributors
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-<!-- AI: Preserve existing contributor credit and add contributors only when confirmed. Do not automatically advance experience counts or their reference year. -->
-- Samuel Asher Rivello - Over 25 years of game development XP (2026)
-
-### 💡 Contact
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-<!-- AI: Preserve confirmed contact destinations and their order unless requested otherwise. Use readable display URLs without a protocol or trailing slash while keeping the real link target intact. Do not invent accounts or change target capitalization based on display styling. -->
-- [LinkedIn.com/in/SamuelAsherRivello](https://Linkedin.com/in/SamuelAsherRivello) ⭐ 
-- [GitHub.com/SamuelAsherRivello](https://github.com/SamuelAsherRivello/)
-- [Twitter.com/srivello](https://twitter.com/srivello/)
-- Resume / Portfolio: [SamuelAsherRivello.com](http://www.SamuelAsherRivello.com)
-
-
-### 💡 License
-
-<!-- AI: Do not add more than one sentence of introductory text at the top of this section. -->
-
-<!-- AI: Keep the license name linked to the actual relative license file and verify that its terms match this statement. Keep the copyright holder and year consistent with that file. Do not change license terms, ownership, or dates without an explicit request. -->
-- Provided as-is under the [MIT License](LICENSE).
-
-- Copyright © 2026 Rivello Multimedia Consulting, LLC.
+</details>

@@ -1,0 +1,13 @@
+{
+  "stash": "b81c65d17e79f60310cb153d2162a7f2ddd06a23",
+  "paths": [
+    ".github/workflows/deploy.yml",
+    "README.md",
+    "multiplayer-server/documentation/games.md",
+    "multiplayer-server/packages/client/README.md",
+    "multiplayer-server/packages/client/index.js",
+    "multiplayer-server/packages/client/package.json",
+    "multiplayer-server/src/server.ts",
+    "multiplayer-server/test/combat-integration.mjs"
+  ]
+}

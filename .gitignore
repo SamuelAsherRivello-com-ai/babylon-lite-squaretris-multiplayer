@@ -2,7 +2,7 @@
 
 # Node and Vite output.
 node_modules/
-/project-name/dist/
+/tetris/dist/
 /.agents/artifacts/
 
 # Local configuration. Commit examples only, never credentials.
@@ -10,3 +10,15 @@ node_modules/
 .env.*
 # Playwright CLI output (may contain credentials)
 .playwright-cli/
+
+# Owned bootstrap and backend verification scratch.
+/_template-bootstrap/
+/_skills-library-source/
+/server-patch/
+/server-validation/
+/server-validation.zip
+/.backend-release-verification/
+/art-source/
+__pycache__/
+!/.env.example
+!/.env.production

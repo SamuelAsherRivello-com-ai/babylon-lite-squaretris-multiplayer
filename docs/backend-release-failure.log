@@ -1,0 +1,654 @@
+deploy / deploy	UNKNOWN STEP	﻿2026-10-10T19:48:21.3866691Z Current runner version: '2.337.0'
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3894894Z ##[group]Runner Image Provisioner
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3895763Z Hosted Compute Agent
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3896494Z Version: 20261002.596
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3897198Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3898006Z Build Date: 2026-10-02T22:28:27Z
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3898703Z Worker ID: {1211b34c-dce0-41a7-8810-e665b9f77079}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3899528Z Region: eastus2
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3900097Z Cloud: Azure
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3900674Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3902250Z ##[group]Operating System
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3903287Z Ubuntu
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3903956Z 24.04.5
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3904486Z LTS
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3905144Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3905721Z ##[group]Runner Image
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3906332Z Image: ubuntu-24.04
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3907104Z Version: 20261004.327.1
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3908478Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3910126Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3911165Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3912308Z ##[group]GITHUB_TOKEN Permissions
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3914574Z Contents: read
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3915200Z Metadata: read
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3915843Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3918053Z Secret source: Actions
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3919173Z Cache mode: write
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.3919937Z Prepare workflow directory
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.4460611Z Prepare all required actions
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.4512135Z Getting action download info
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:21.6282098Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.0510515Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2925212Z Uses: SamuelAsherRivello/rmc-colyseus-multiplayer-server/.github/workflows/deploy.yml@refs/heads/main (bbc4a2557731b315ed8cd5bee2ed4727b35176ee)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2930272Z ##[group] Inputs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2930953Z   ref: dad4a3d81a190197d45b5bbcd399637599f15aca
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2931658Z   version: 0.9.10
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2932179Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.2932927Z Complete job name: deploy / deploy
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3831228Z ##[group]Run actions/checkout@v4
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3832254Z with:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3833072Z   ref: dad4a3d81a190197d45b5bbcd399637599f15aca
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3833773Z   fetch-depth: 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3834492Z   repository: SamuelAsherRivello/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3838733Z   token: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3839262Z   ssh-strict: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3839797Z   ssh-user: git
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3840346Z   persist-credentials: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3840916Z   clean: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3841458Z   sparse-checkout-cone-mode: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3842071Z   fetch-tags: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3842985Z   show-progress: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3843582Z   lfs: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3844068Z   submodules: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3844595Z   set-safe-directory: true
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3845181Z   allow-unsafe-pr-checkout: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3846097Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3846936Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3847647Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3848290Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.3848834Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.5001498Z Syncing repository: SamuelAsherRivello/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.5004264Z ##[group]Getting Git version info
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.5005447Z Working directory is '/home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server'
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.5006925Z [command]/usr/bin/git version
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.6719201Z git version 2.55.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.6741960Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.6757602Z Temporarily overriding HOME='/home/runner/work/_temp/dd09105f-f385-46d8-ba44-c5d29337ee97' before making global git config changes
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.6760110Z Adding repository directory to the temporary git global config as a safe directory
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.6763585Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.7776982Z Deleting the contents of '/home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server'
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.7781158Z ##[group]Initializing the repository
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.7786978Z [command]/usr/bin/git init /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8851752Z hint: Using 'master' as the name for the initial branch. This default branch name
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8853773Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8855361Z hint: to use in all of your new repositories, which will suppress this warning,
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8856652Z hint: call:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8857421Z hint:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8858323Z hint: 	git config --global init.defaultBranch <name>
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8859392Z hint:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8860400Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8862036Z hint: 'development'. The just-created branch can be renamed via this command:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8863429Z hint:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8864120Z hint: 	git branch -m <name>
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8864918Z hint:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8866058Z hint: Disable this message with "git config set advice.defaultBranchName false"
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8874294Z Initialized empty Git repository in /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server/.git/
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.8886090Z [command]/usr/bin/git remote add origin https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9373738Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9376307Z ##[group]Disabling automatic garbage collection
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9378881Z [command]/usr/bin/git config --local gc.auto 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9418725Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9421409Z ##[group]Setting up auth
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9426969Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:22.9466155Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.2581366Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.2620901Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.2849820Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.2887373Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.3121637Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.3167305Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.3170217Z ##[group]Fetching the repository
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.3181226Z [command]/usr/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9069146Z From https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9072015Z  * [new branch]      main       -> origin/main
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9073718Z  * [new tag]         v0.1.0     -> v0.1.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9075027Z  * [new tag]         v0.2.0     -> v0.2.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9076397Z  * [new tag]         v0.2.1     -> v0.2.1
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9077860Z  * [new tag]         v0.3.0     -> v0.3.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9079264Z  * [new tag]         v0.4.0     -> v0.4.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9081063Z  * [new tag]         v0.5.0     -> v0.5.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9082464Z  * [new tag]         v0.6.0     -> v0.6.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9084276Z  * [new tag]         v0.7.0     -> v0.7.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9085741Z  * [new tag]         v0.8.0     -> v0.8.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9087186Z  * [new tag]         v0.9.0     -> v0.9.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9088592Z  * [new tag]         v0.9.1     -> v0.9.1
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9090007Z  * [new tag]         v0.9.2     -> v0.9.2
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9091479Z  * [new tag]         v0.9.3     -> v0.9.3
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9093537Z  * [new tag]         v0.9.4     -> v0.9.4
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9095533Z  * [new tag]         v0.9.5     -> v0.9.5
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9096980Z  * [new tag]         v0.9.6     -> v0.9.6
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9098811Z  * [new tag]         v0.9.7     -> v0.9.7
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9100261Z  * [new tag]         v0.9.8     -> v0.9.8
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9101725Z  * [new tag]         v0.9.9     -> v0.9.9
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9109227Z [command]/usr/bin/git rev-parse --verify --quiet dad4a3d81a190197d45b5bbcd399637599f15aca^{object}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9140086Z dad4a3d81a190197d45b5bbcd399637599f15aca
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9147868Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9150945Z ##[group]Determining the checkout info
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9156047Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9158037Z [command]/usr/bin/git sparse-checkout disable
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9390399Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9500081Z ##[group]Checking out the ref
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9504467Z [command]/usr/bin/git checkout --progress --force dad4a3d81a190197d45b5bbcd399637599f15aca
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9626058Z Note: switching to 'dad4a3d81a190197d45b5bbcd399637599f15aca'.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9627425Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9628415Z You are in 'detached HEAD' state. You can look around, make experimental
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9630690Z changes and commit them, and you can discard any commits you make in this
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9633684Z state without impacting any branches by switching back to a branch.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9635016Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9635877Z If you want to create a new branch to retain commits you create, you may
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9638713Z do so (now or later) by using -c with the switch command. Example:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9639964Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9640478Z   git switch -c <new-branch-name>
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9641445Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9642021Z Or undo this operation with:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9643259Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9643712Z   git switch -
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9644293Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9645265Z Turn off this advice by setting config variable advice.detachedHead to false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9646685Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9647182Z HEAD is now at dad4a3d Release v0.9.10
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9650861Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9687085Z [command]/usr/bin/git log -1 --format=%H
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:23.9717060Z dad4a3d81a190197d45b5bbcd399637599f15aca
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0092441Z ##[group]Run actions/setup-node@v4
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0093958Z with:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0094847Z   node-version: 24
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0095773Z   cache: npm
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0096681Z   always-auth: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0097681Z   check-latest: false
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0107333Z   token: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0108267Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0109740Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0110874Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0112082Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.0113475Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.1999875Z Found in cache @ /opt/hostedtoolcache/node/24.21.0/x64
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.2005817Z (node:2298) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.2008998Z (Use `node --trace-deprecation ...` to show where the warning was created)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:24.2011367Z ##[group]Environment details
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:26.8302607Z node: v24.21.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:26.8303892Z npm: 11.19.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:26.8305652Z yarn: 1.22.22
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:26.8306321Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:26.8346030Z [command]/opt/hostedtoolcache/node/24.21.0/x64/bin/npm config get cache
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.1959033Z /home/runner/.npm
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.3048509Z npm cache is not found
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.3205830Z ##[group]Run git fetch origin main --no-tags
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.3206269Z ^[[36;1mgit fetch origin main --no-tags^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.3206640Z ^[[36;1mgit merge-base --is-ancestor HEAD origin/main^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4424674Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4425038Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4425658Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4425983Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4426366Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.4426660Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6292088Z From https://github.com/SamuelAsherRivello/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6293113Z  * branch            main       -> FETCH_HEAD
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6368958Z ##[group]Run npm ci
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6369261Z ^[[36;1mnpm ci^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6436270Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6436541Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6437006Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6437288Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6437570Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:27.6437800Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6737885Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6739420Z added 120 packages, and audited 121 packages in 3s
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6739983Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6740333Z 20 packages are looking for funding
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6740945Z   run `npm fund` for details
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6755676Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6756105Z found 0 vulnerabilities
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6774528Z npm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6775388Z npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6776336Z npm warn install-scripts   msgpackr-extract@3.0.4 (install: node-gyp-build-optional-packages)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6776967Z npm warn install-scripts
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.6777731Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7305850Z ##[group]Run npm run check:docs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7306204Z ^[[36;1mnpm run check:docs^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7373825Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7374116Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7374811Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7375106Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7375396Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.7375634Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.8479492Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.8480378Z > rmc-colyseus-multiplayer-server@0.9.10 check:docs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.8480889Z > node scripts/check-docs.mjs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.8481117Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.8984765Z Documentation check passed: 16 supported games and local links.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9119431Z ##[group]Run npm run typecheck
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9119748Z ^[[36;1mnpm run typecheck^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9181796Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9182060Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9182491Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9183005Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9183306Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:30.9183534Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:31.0208574Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:31.0209461Z > rmc-colyseus-multiplayer-server@0.9.10 typecheck
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:31.0210209Z > tsc --noEmit
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:31.0210464Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7338767Z ##[group]Run npm test
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7339055Z ^[[36;1mnpm test^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7402375Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7402871Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7403346Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7403647Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7403957Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.7404184Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.8522814Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.8523931Z > rmc-colyseus-multiplayer-server@0.9.10 test
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.8545725Z > node --import tsx --test --test-concurrency=1 multiplayer-server/test/*.mjs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:32.8546742Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0845743Z ✔ arena is symmetric with clear equal escape routes (4.19401ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0847978Z ✔ collision prevents walking through outer walls (4.537114ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0850315Z ✔ plants block movement without eliminating players or growing into them (1.394257ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0873837Z ✔ bomb capacity, fuse, owner damage and blast duration (3.220273ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0874602Z ✔ owner leaves bomb but cannot reenter (1.365432ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0875394Z ✔ chain detonates once and destruction blocks that tick rays (0.608011ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0876026Z ✔ pause and restart have no stale clock or bomb state (2.366641ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0876593Z ✔ same seeded input stream produces identical outcomes (8.64406ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0877304Z ✔ all four starts have mirrored blocks and hidden upgrade opportunities (2.402999ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0878079Z ✔ hidden upgrade waits for all blasts, then later explosions destroy exposed items (1.174564ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0878899Z ✔ collection caps stats, exact bomb capacity, eliminated rejection and fresh reset (1.661198ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0879701Z ✔ walls warn for one second, close symmetrically and crush all occupants together (2.033616ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0883791Z ✔ warned tile can be escaped and closed wall blocks movement permanently (2.037813ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0885872Z ✔ inward wall schedule is deterministic, unique and fits the final thirty seconds (0.794821ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.0891255Z ✔ Chain Reaction extends every bomb in a same-tick chain and is off by default (1.281976ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.2958370Z ✔ four battle seats admit four humans and replace departed humans with CPUs (3.299381ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.2960385Z ✔ one human starts with three CPUs and only host can select valid options (1.605473ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.2967419Z ✔ CPU opponents generate real authoritative explosions (60.830658ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:33.2972970Z ✔ host can enable Chain Reaction for the next match (0.988785ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:34.2950261Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:34.4952054Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'CcXYoNExp' with roomId 'UcH3DBnk2'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:34.4975443Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:40.9656643Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:41.1664026Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'CcXYoNExp' with roomId 'UcH3DBnk2'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:48:41.1680931Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:00.6716121Z ✔ private Bomberman admission, authoritative bombs, isolation, capacity and same-identity reconnect (27134.267778ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:36.8614188Z ✔ two real Colyseus clients complete first-to-three and ready a fresh rematch (35941.633932ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0164496Z ✔ two ready humans start countdown; inputs expire and forged input is rejected (10.984278ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0168874Z ✔ disconnect neutralizes input without removing vulnerable character (5.88173ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0170439Z ✔ same-tick final eliminations draw with a bounded four-seat roster (0.945743ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0172263Z ✔ first-to-three advances rounds automatically and ready rematch resets everything (3.542643ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0175251Z ✔ two-minute timeout draws without a single survivor and awards no score (2.088145ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0178810Z ✔ simultaneous final blast eliminations draw and reset all four seats (1.169042ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0180591Z ✔ zero remaining connections return to lobby after round resolution (0.677611ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:37.0182417Z ✔ snapshot hides unrevealed items and inputs cannot grant upgrades or victory (1.115993ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:42.1258240Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:42.3262360Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'B4vo2Y7hG' with roomId 'DGqcIvS1_'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:49:42.3296353Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:14.0665065Z {"combatProbe":"passed","endpoint":"http://127.0.0.1:25562","room":"DGqcIvS1_","protocol":1,"tanks":4,"tick":2180,"mode":"ricochet"}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:14.3191608Z ✔ Combat real private admission, authoritative motion/fire, populations, recovery races and isolation (37082.725431ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5260065Z Combat sustained: 73440 steps in 970 ms (0.013 ms/tick)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5394626Z ✔ all arenas have valid distinct spawns and a connected tank-clearance graph (48.457257ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5404718Z ✔ humans and CPUs share forward/reverse, turning, solid wall and tank contact rules (1.58349ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5406674Z ✔ swept fast shells hit tanks and thin walls; classic stops and ricochet reflects corners (0.706014ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5408791Z ✔ one hit destroys, scores once, clears shots, safely respawns with protection ending on fire (2.639349ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5412958Z ✔ mutual impacts survive shot cleanup and repeated victim impacts use deterministic attribution (0.400682ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5414881Z ✔ owner immunity before bounce and reflected self-hit penalties floor at zero (0.317976ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5417009Z ✔ 136-second clock, final tick impacts, unique winner, ties, frozen outcomes and ready rematch reset (37.221725ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5445740Z ✔ sequenced controls expire in 300ms, invalid authority ignored, bounded firing population (21.19536ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5467045Z ✔ population matrix, host settings lock, queued handoff, disconnect takeover and no-human suspension (1.523187ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5468789Z ✔ CPU seeded decisions reproduce and all difficulty/arena combinations finish with bounded cost (973.258848ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:15.5484046Z ✔ High evaluates a covered Ricochet bank shot and every CPU level escapes a wall (8.676802ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:24.7436999Z ✔ garden: movement, collision, bounds, chat, late join, drop, reconnect, capacity and isolation (8960.713549ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:27.5393475Z ✔ gauntlet sync, class switching, late join, capacity, seat reuse, reconnect and isolation (2577.148567ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:27.7446179Z ✔ classes preserve health, cooldown, position and identity; input rejects forgery and expires (3.360873ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:27.7451389Z ✔ four enemies, server combat, food, key, terminal conditions and leader replay (1.811618ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:27.7455848Z ✔ enemy damage, projectile walls, spawn cap and seat reuse (20.359673ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:30.3713115Z ✔ gauntlet-2d sync, duplicate classes, late join, capacity, isolation and fresh reconnect (2401.107205ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:30.5610548Z ✔ four seats, duplicate classes, bounded authority and switching preserves health/cooldown (4.856467ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:30.5614087Z ✔ all objectives are reachable and walls block players (2.998955ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:30.5619911Z ✔ combat damage, pickup ownership, locked exit, victory and shared replay (3.469427ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:30.5625918Z ✔ four enemy behaviors, revival, defeat and replay (0.983675ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:34.0616945Z ✔ coded dungeon sync, authority, readiness, four seats, isolation, hot drop and fresh reconnect (3275.79469ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:34.2453373Z ✔ readiness, seats, input bounds, stale movement, dodge and cover (3.015505ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:34.2474547Z ✔ three weapon patterns, upgrades, friendly fire and destructible props (2.70916ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:34.2475569Z ✔ enemy patterns, scaled waves, boss cadence, loot, revive, defeat and leader replay (2.121909ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:37.2217040Z ✔ drawing ownership, late join, cleanup, stable seats, 12 capacity, and full-room retry (2747.914241ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:37.5089761Z ✔ participant host relay elects longest eligible host and keeps only host transfer (1.088752ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:39.1209213Z ✔ Just Like Rabbits relays presence, ordered actions, host transfer, capacity, and isolation (1624.492997ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:41.1688020Z ✔ music private room relay: identity, host-only publication, clock, capacity, guest rejoin, isolation and host end (1828.001959ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.5436594Z ✔ Neon Breaker synchronizes actions, admits two, snapshots late joins, frees seats, and isolates games (2155.601695ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.6630114Z ✔ Neon Breaker paddles travel the full width, overlap, and stay at distinct rows (2.72483ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.6635016Z ✔ a descending ball can bounce off either paddle at its own collision row (0.408486ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.6641341Z ✔ brick destruction scores, waves advance, and terminal match can restart (0.40523ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.6645306Z ✔ last ball consumes one shared life and waits for launch (0.263334ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:50:43.6660346Z ✔ wide paddle powerup affects both paddles and multiball remains capped (1.073684ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:18.3553728Z ✔ private room creation accepts custom codes, rejects collisions, normalizes joins and throttles guesses (34470.223984ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:18.5275730Z ✔ private room codes normalize input and use four uppercase alphanumeric characters (1.441654ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:18.5280400Z ✔ room code attempt limiter resets after its window (0.337783ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:18.7406197Z ✔ private room link helpers generate suggestions, read codes and preserve page parameters (2.630603ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:24.9827873Z ✔ racing synchronization, readiness, late arrival, authority, capacity, departure and fresh retry (6018.068467ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4686195Z ✔ ready authority, frozen roster, fresh participant and capacity (1.579252ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4687852Z ✔ invalid and stale inputs rejected, missing controls expire (11.887243ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4689412Z ✔ ordered directional gates prevent skip/reverse and validate three laps (0.681398ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4690828Z ✔ recovery preserves progress and has bounded cooldown and penalty (0.367058ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4691817Z ✔ contested pickup has one owner, timed respawn and bounded nitro (0.450044ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4694924Z ✔ AI completes full replayable race within target duration and snapshots are independent (154.513388ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:25.4699156Z ✔ hard timeout ends unfinished race and empty session clears trucks (185.972948ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:29.5919803Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:29.7924776Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'HOupdgEPA' with roomId 'KArn8AnUi'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:29.7953653Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:31.6766297Z ✔ Ring Rivals private room synchronizes the bout, enforces capacity, isolates games, and recovers the same seat (5975.727664ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:50.5197302Z ✔ Ring Rivals awards a forfeit after the 15-second recovery window expires (18849.512117ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:50.6397558Z ✔ Ring Rivals validates seats, boxer selections, sequence and action state (1.651277ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:50.6401622Z ✔ head and body guard reduce matching attacks and evasion avoids a timed hit (0.868469ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:50.6408276Z ✔ knockout ends a round, best-of-three resolves, and equal timer health draws without a point (2.051838ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:50.6413261Z ✔ disconnect suspends the clock and a forfeit ends the match (0.407975ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:51:55.4605522Z ✔ Space Invaders private relay: recovery, capacity, isolation, journal and authority (4597.402016ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:01.3812133Z ✔ private two-player duel synchronizes, enforces capacity, and restores the same seat (5697.246211ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:03.7766060Z ✔ fighter roster, two-seat admission, and private token-safe snapshots (1.433438ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:03.7770745Z ✔ bounded sequence inputs reject forged fields and stale frames (1.361834ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:03.7776368Z ✔ authoritative combat supports blocks and simultaneous knockout trades (1.910553ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:03.7780042Z ✔ timer, round transition, match winner, rematch, and same-seat recovery (0.534442ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:06.6502937Z ✔ sumo synchronization, authority, solo bot, late join, capacity, isolation and recovery (2654.66803ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:06.8350684Z ✔ bounded inputs, stale input and dash cooldown (1.759059ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:06.8355851Z ✔ collision credits ring-out, self-fall does not, first to three freezes then replays (0.593654ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:06.8358954Z ✔ expired or departed attacker receives no point and late joins spawn safely (0.278772ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:11.0732894Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:11.2733727Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'z5sdvKlXF' with roomId '8qa5GsfLt'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:11.2760169Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:34.8587878Z ✔ Tetris relay private admission, gameplay, privacy, recovery, outcome, rematch and expiry (27801.307196ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.1613334Z ✔ room rate budget is seat-scoped and rejects excess messages until the window renews (1.54073ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.1617733Z ✔ snapshot envelope cannot leak opponent cells through presence players or local warnings (0.661962ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3159823Z ✔ all orientations occupy four unique cells; edge rotations kick and O preserves occupancy (3.452304ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3162130Z ✔ straight landing stops above first obstacle and blocked entry has no fictitious landing (0.376677ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3165228Z ✔ identical independent seven-bag streams and replay do not depend on other player speed (4.522241ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3167986Z ✔ deadline equality auto releases, descent cannot steer, next piece starts independently (0.931396ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3173266Z ✔ fractional callback jitter uses one fixed tick grid and preserves simultaneous outcomes (1.831836ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3175347Z ✔ multirow attacks, warning maturity, FIFO cancellation and placement-boundary insertion (1.469396ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3178279Z ✔ single clears do not attack or cancel and simultaneous excess attacks neutralize (0.919054ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3194294Z ✔ upward overflow tops out and simultaneous hidden occupancy is an order-independent draw (1.102457ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3195972Z ✔ private projection never includes other board, queue, RNG, fall or packet gap (0.739748ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3197688Z ✔ validation deduplicates sequences and rejects stale piece, epoch, enum and forged state (1.028529ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3199333Z ✔ disconnect pauses clocks; leave forfeits; both-ready rematch resets epoch and board (0.65006ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3338941Z ℹ tests 107
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3339658Z ℹ suites 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3340213Z ℹ pass 107
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3341034Z ℹ fail 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3341650Z ℹ cancelled 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3342318Z ℹ skipped 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3343004Z ℹ todo 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3343431Z ℹ duration_ms 242432.467918
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3571995Z ##[group]Run npm install --global vercel@62.2.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3572937Z ^[[36;1mnpm install --global vercel@62.2.0^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3573724Z ^[[36;1mvercel pull --yes --environment=production --token="$VERCEL_TOKEN"^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3574524Z ^[[36;1mvercel build --prod --token="$VERCEL_TOKEN"^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3575449Z ^[[36;1mdeployment_url="$(vercel deploy --prebuilt --prod --skip-domain --token="$VERCEL_TOKEN")"^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3576395Z ^[[36;1mecho "url=$deployment_url" >> "$GITHUB_OUTPUT"^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3656716Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3656979Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3657430Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3657714Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3658133Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:35.3658557Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:46.5692954Z npm warn deprecated vercel@62.2.0: Known CLI self-upgrade bug. Reinstall vercel@latest using your package manager instead of running vc upgrade from this version.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8315626Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8316572Z added 285 packages in 12s
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8316981Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8317286Z 39 packages are looking for funding
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8318268Z   run `npm fund` for details
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8332192Z npm warn install-scripts 1 package has install scripts not yet covered by allowScripts:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8333665Z npm warn install-scripts   esbuild@0.27.0 (postinstall: node install.js)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8334235Z npm warn install-scripts
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:47.8335537Z npm warn install-scripts Run `npm install -g --allow-scripts=esbuild` to allow these scripts once, or `npm config set allow-scripts=esbuild --location=user` to allow them for all global installs.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.0796735Z Vercel CLI 62.2.0 (Node.js 24.21.0)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.0996237Z > NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.0997954Z > This information is used to shape the CLI roadmap and prioritize features.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.0999950Z > You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the following URL:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.1001719Z > https://vercel.com/docs/cli/about-telemetry
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.5856080Z Retrieving project…
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.8949852Z > Downloading `production` environment variables for rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:48.8950807Z Downloading
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.1281084Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.1282540Z ✓ Created         .vercel/.env.production.local file
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.1283297Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.1283581Z > Downloading project settings
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.1291278Z Downloaded project settings to ~/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server/.vercel/project.json [0ms]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.3974439Z Vercel CLI 62.2.0 (Node.js 24.21.0)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:49.7634677Z WARNING! Build not running on Vercel. System environment variables will not be available.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.2625370Z Installing dependencies...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6649092Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6649769Z up to date in 343ms
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6651265Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6652855Z 20 packages are looking for funding
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6653940Z   run `npm fund` for details
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6667346Z npm warn install-scripts 2 packages have install scripts not yet covered by allowScripts:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6668172Z npm warn install-scripts   esbuild@0.28.2 (postinstall: node install.js)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6668914Z npm warn install-scripts   msgpackr-extract@3.0.4 (install: node-gyp rebuild)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6669447Z npm warn install-scripts
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.6670241Z npm warn install-scripts Run `npm install-scripts ls` to review, or `npm install-scripts approve <pkg>` to allow.
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:50.8763158Z Using TypeScript 5.9.3 (local user-provided)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.5116931Z Build Completed in .vercel/output [4s]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6210836Z ╭────────────────────────────────────────────────────────────────────────╮
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6213073Z │                                                                        │
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6214541Z │                  Update available! v62.2.0 ≫ v63.1.2                   │
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6216026Z │   Changelog: https://vercel.com/docs/cli/release-notes#vercel@63.1.2   │
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6217679Z │                Run `npm i -g vercel@latest` to update.                 │
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6218949Z │                                                                        │
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.6220342Z ╰────────────────────────────────────────────────────────────────────────╯
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:54.8829888Z Vercel CLI 62.2.0 (Node.js 24.21.0)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:55.0937563Z Retrieving project…
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:55.3855114Z Deploying ashers-projects-d3be6036/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:55.9831878Z Uploading [--------------------] (0.0B/186.7KB)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:56.0018558Z Uploading [=====---------------] (49.3KB/186.7KB)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:56.0020884Z Uploading [==========----------] (93.9KB/186.7KB)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:56.0024076Z Uploading [===============-----] (140.3KB/186.7KB)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:56.0026156Z Uploading [====================] (186.7KB/186.7KB)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:57.0260972Z   Inspect         https://vercel.com/ashers-projects-d3be6036/rmc-colyseus-multiplayer-server/6fwuUztmZwHdrFwMrUHtyri1PMH4
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:57.0263184Z ▲ Production      https://rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:57.0318450Z Building…
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:52:58.5633968Z Building…
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:00.2667818Z Running build in Washington, D.C., USA (East) – iad1
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:00.2668729Z Build machine configuration: 2 cores, 8 GB
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:00.2669532Z Retrieving list of deployment files...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:01.3667146Z Downloading 498 deployment files...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:02.3984151Z Using prebuilt build artifacts from .vercel/output
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:02.3984806Z Learn more: https://vercel.link/build-output-api
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:02.3985294Z Deploying outputs...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.4201786Z ^[[2K^[[1A^[[2K^[[G▲ Production      https://rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.4203045Z Completing…
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.4221138Z ▲ Aliased         https://rmc-colyseus-multiplayer-server-ashers-projects-d3be6036.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6763184Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6764069Z ✓ Ready in 9s
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6764367Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6766102Z Next steps:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6766939Z - Automatically deploy changes on every push by connecting Git:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6767724Z   vercel git connect
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6768289Z - Check the production response:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6769401Z   vercel curl https://rmc-colyseus-multiplayer-server-ashers-projects-d3be6036.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6770388Z - View build logs:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6770960Z   vercel inspect rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app --logs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6771652Z - Create a new deployment from the same source:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.6772306Z   vercel redeploy rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7078316Z ##[group]Run node scripts/verify-release-health.mjs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7078766Z ^[[36;1mnode scripts/verify-release-health.mjs^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7143401Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7143680Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7144271Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7144549Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7144827Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7145198Z   SERVER_URL: https://rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:04.7145613Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.0725407Z {"result":"PASS","endpoint":"https://rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app","version":"0.9.10","games":["music-maker","space-invaders","combat","bomberman","gungeon","multiplayer-draw","sumo-battle","garden-chat","gauntlet-2d","gauntlet-3d","dust-circuit-rally","neon-breaker-duo","ring-rivals","tetris-duel","street-fighter-ii","just-like-rabbits"]}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1233159Z ##[group]Run npm test
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1233461Z ^[[36;1mnpm test^[[0m
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1298756Z shell: /usr/bin/bash -e {0}
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1299033Z env:
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1299474Z   VERCEL_TOKEN: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1299743Z   VERCEL_ORG_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1300029Z   VERCEL_PROJECT_ID: ***
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1300421Z   SERVER_URL: https://rmc-colyseus-multiplayer-server-guf62h2x1.vercel.app
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.1300848Z ##[endgroup]
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.2528968Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.2529670Z > rmc-colyseus-multiplayer-server@0.9.10 test
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.2530668Z > node --import tsx --test --test-concurrency=1 multiplayer-server/test/*.mjs
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4819842Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4821036Z ✔ arena is symmetric with clear equal escape routes (4.084319ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4823847Z ✔ collision prevents walking through outer walls (4.641734ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4826425Z ✔ plants block movement without eliminating players or growing into them (2.696768ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4828269Z ✔ bomb capacity, fuse, owner damage and blast duration (6.785996ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4829718Z ✔ owner leaves bomb but cannot reenter (1.788234ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4833665Z ✔ chain detonates once and destruction blocks that tick rays (1.119699ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4881570Z ✔ pause and restart have no stale clock or bomb state (4.545033ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4883070Z ✔ same seeded input stream produces identical outcomes (12.306391ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4886554Z ✔ all four starts have mirrored blocks and hidden upgrade opportunities (3.196344ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4888292Z ✔ hidden upgrade waits for all blasts, then later explosions destroy exposed items (1.547482ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4890144Z ✔ collection caps stats, exact bomb capacity, eliminated rejection and fresh reset (7.628015ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4891944Z ✔ walls warn for one second, close symmetrically and crush all occupants together (2.405681ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4893924Z ✔ warned tile can be escaped and closed wall blocks movement permanently (2.786496ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4895695Z ✔ inward wall schedule is deterministic, unique and fits the final thirty seconds (0.987542ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.4936113Z ✔ Chain Reaction extends every bomb in a same-tick chain and is off by default (1.397862ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.6555566Z ✔ four battle seats admit four humans and replace departed humans with CPUs (3.27909ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.6561290Z ✔ one human starts with three CPUs and only host can select valid options (1.912667ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.6565998Z ✔ CPU opponents generate real authoritative explosions (43.200853ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:05.6571703Z ✔ host can enable Chain Reaction for the next match (0.91136ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:16.3718620Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:16.5727880Z [Colyseus reconnection]: 🔄 Re-establishing sessionId '-hxwnIasR' with roomId 'NgxnROT42'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:16.6488254Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:33.5438605Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:33.7445309Z [Colyseus reconnection]: 🔄 Re-establishing sessionId '-hxwnIasR' with roomId 'NgxnROT42'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:33.7980086Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:53:53.4654959Z ✔ private Bomberman admission, authoritative bombs, isolation, capacity and same-identity reconnect (47601.596254ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:39.3432817Z ✔ two real Colyseus clients complete first-to-three and ready a fresh rematch (35944.21887ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2055791Z ✔ two ready humans start countdown; inputs expire and forged input is rejected (11.9353ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2074331Z ✔ disconnect neutralizes input without removing vulnerable character (6.057579ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2075795Z ✔ same-tick final eliminations draw with a bounded four-seat roster (1.152321ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2077981Z ✔ first-to-three advances rounds automatically and ready rematch resets everything (3.554345ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2079606Z ✔ two-minute timeout draws without a single survivor and awards no score (2.124775ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2080979Z ✔ simultaneous final blast eliminations draw and reset all four seats (1.195161ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2082238Z ✔ zero remaining connections return to lobby after round resolution (0.704711ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:54:49.2093867Z ✔ snapshot hides unrevealed items and inputs cannot grant upgrades or victory (1.123276ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:04.5675756Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:04.7678438Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'qE38vXpos' with roomId 'd7T1MpYMM'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:04.8260049Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:21.3452267Z ✖ Combat real private admission, authoritative motion/fire, populations, recovery races and isolation (31912.801058ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3013730Z Combat sustained: 73440 steps in 962 ms (0.013 ms/tick)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3150350Z ✔ all arenas have valid distinct spawns and a connected tank-clearance graph (46.432997ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3153859Z ✔ humans and CPUs share forward/reverse, turning, solid wall and tank contact rules (1.614808ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3156427Z ✔ swept fast shells hit tanks and thin walls; classic stops and ricochet reflects corners (0.709461ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3164374Z ✔ one hit destroys, scores once, clears shots, safely respawns with protection ending on fire (2.53807ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3166676Z ✔ mutual impacts survive shot cleanup and repeated victim impacts use deterministic attribution (0.405891ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3168608Z ✔ owner immunity before bounce and reflected self-hit penalties floor at zero (0.306615ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3183611Z ✔ 136-second clock, final tick impacts, unique winner, ties, frozen outcomes and ready rematch reset (37.420095ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3184919Z ✔ sequenced controls expire in 300ms, invalid authority ignored, bounded firing population (17.90567ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3185897Z ✔ population matrix, host settings lock, queued handoff, disconnect takeover and no-human suspension (1.713403ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3186872Z ✔ CPU seeded decisions reproduce and all difficulty/arena combinations finish with bounded cost (966.889221ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:32.3187722Z ✔ High evaluates a covered Ricochet bank shot and every CPU level escapes a wall (8.920709ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:55:52.5543924Z ✔ garden: movement, collision, bounds, chat, late join, drop, reconnect, capacity and isolation (20006.077413ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:15.3538802Z ✔ gauntlet sync, class switching, late join, capacity, seat reuse, reconnect and isolation (12821.174553ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:25.2774307Z ✔ classes preserve health, cooldown, position and identity; input rejects forgery and expires (3.718032ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:25.2776047Z ✔ four enemies, server combat, food, key, terminal conditions and leader replay (1.07749ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:25.2778101Z ✔ enemy damage, projectile walls, spawn cap and seat reuse (21.694352ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:38.1980764Z ✔ gauntlet-2d sync, duplicate classes, late join, capacity, isolation and fresh reconnect (12697.720349ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:48.0386127Z ✔ four seats, duplicate classes, bounded authority and switching preserves health/cooldown (4.226056ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:48.0396462Z ✔ all objectives are reachable and walls block players (3.274582ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:48.0397904Z ✔ combat damage, pickup ownership, locked exit, victory and shared replay (3.255826ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:56:48.0398809Z ✔ four enemy behaviors, revival, defeat and replay (0.817193ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:01.7609183Z ✔ coded dungeon sync, authority, readiness, four seats, isolation, hot drop and fresh reconnect (13503.804031ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:11.5934829Z ✔ readiness, seats, input bounds, stale movement, dodge and cover (3.187928ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:11.5939865Z ✔ three weapon patterns, upgrades, friendly fire and destructible props (1.921212ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:11.5949513Z ✔ enemy patterns, scaled waves, boss cadence, loot, revive, defeat and leader replay (2.775545ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:25.3763706Z ✔ drawing ownership, late join, cleanup, stable seats, 12 capacity, and full-room retry (13565.08023ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:35.3846241Z ✔ participant host relay elects longest eligible host and keeps only host transfer (1.053646ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:37.6439521Z ✔ Just Like Rabbits relays presence, ordered actions, host transfer, capacity, and isolation (2276.841095ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:57:49.3823202Z ✔ music private room relay: identity, host-only publication, clock, capacity, guest rejoin, isolation and host end (1759.975338ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:01.8130542Z ✔ Neon Breaker synchronizes actions, admits two, snapshots late joins, frees seats, and isolates games (2406.281887ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:11.6553026Z ✔ Neon Breaker paddles travel the full width, overlap, and stay at distinct rows (2.654538ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:11.6557251Z ✔ a descending ball can bounce off either paddle at its own collision row (0.345178ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:11.6564287Z ✔ brick destruction scores, waves advance, and terminal match can restart (0.43748ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:11.6566624Z ✔ last ball consumes one shared life and waits for launch (1.003842ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:11.6575559Z ✔ wide paddle powerup affects both paddles and multiball remains capped (0.313338ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:47.2748736Z ✔ private room creation accepts custom codes, rejects collisions, normalizes joins and throttles guesses (35403.170569ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:57.1560897Z ✔ private room codes normalize input and use four uppercase alphanumeric characters (1.444499ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:57.1566376Z ✔ room code attempt limiter resets after its window (0.267602ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:58:57.3719477Z ✔ private room link helpers generate suggestions, read codes and preserve page parameters (2.606779ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:13.7881845Z ✔ racing synchronization, readiness, late arrival, authority, capacity, departure and fresh retry (16196.615033ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9787478Z ✔ ready authority, frozen roster, fresh participant and capacity (2.286929ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9801438Z ✔ invalid and stale inputs rejected, missing controls expire (11.059489ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9803131Z ✔ ordered directional gates prevent skip/reverse and validate three laps (0.603371ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9808284Z ✔ recovery preserves progress and has bounded cooldown and penalty (0.321904ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9809552Z ✔ contested pickup has one owner, timed respawn and bounded nitro (0.444574ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9810868Z ✔ AI completes full replayable race within target duration and snapshots are independent (159.331832ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:23.9815327Z ✔ hard timeout ends unfinished race and empty session clears trucks (179.698784ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:37.9564208Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:38.1563153Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'OG-6pz_hi' with roomId 'bs-4kgUcg'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:38.2073566Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T19:59:50.3488384Z ✔ Ring Rivals private room synchronizes the bout, enforces capacity, isolates games, and recovers the same seat (26150.234037ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:08.8985347Z ✔ Ring Rivals awards a forfeit after the 15-second recovery window expires (18550.522961ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:18.7250366Z ✔ Ring Rivals validates seats, boxer selections, sequence and action state (1.563653ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:18.7255353Z ✔ head and body guard reduce matching attacks and evasion avoids a timed hit (0.802244ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:18.7260586Z ✔ knockout ends a round, best-of-three resolves, and equal timer health draws without a point (2.219812ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:18.7266905Z ✔ disconnect suspends the clock and a forfeit ends the match (0.369452ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:23.4062262Z ✔ Space Invaders private relay: recovery, capacity, isolation, journal and authority (4463.690249ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:38.1177990Z ✔ private two-player duel synchronizes, enforces capacity, and restores the same seat (4764.440776ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:48.0041933Z ✔ fighter roster, two-seat admission, and private token-safe snapshots (1.468744ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:48.0046991Z ✔ bounded sequence inputs reject forged fields and stale frames (1.481207ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:48.0053621Z ✔ authoritative combat supports blocks and simultaneous knockout trades (1.95223ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:00:48.0058443Z ✔ timer, round transition, match winner, rematch, and same-seat recovery (0.568305ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:02.2583987Z ✔ sumo synchronization, authority, solo bot, late join, capacity, isolation and recovery (14031.776943ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:12.1566650Z ✔ bounded inputs, stale input and dash cooldown (1.762916ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:12.1572483Z ✔ collision credits ring-out, self-fall does not, first to three freezes then replays (1.380428ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:12.1577088Z ✔ expired or departed attacker receives no point and late joins spawn safely (0.24526ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:26.1957065Z [Colyseus reconnection]: ⏳ will retry in 0.2 seconds...
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:26.3956956Z [Colyseus reconnection]: 🔄 Re-establishing sessionId 'Q1etWFxdT' with roomId 'FXTm1etrs'... (attempt 1 of 18)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:26.5045897Z [Colyseus reconnection]: ✅ reconnection successful!
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:47.8132998Z ✔ Tetris relay private admission, gameplay, privacy, recovery, outcome, rematch and expiry (35442.560941ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:57.9645567Z ✔ room rate budget is seat-scoped and rejects excess messages until the window renews (1.587728ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:57.9651340Z ✔ snapshot envelope cannot leak opponent cells through presence players or local warnings (0.686728ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1059750Z ✔ all orientations occupy four unique cells; edge rotations kick and O preserves occupancy (3.141292ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1064351Z ✔ straight landing stops above first obstacle and blocked entry has no fictitious landing (0.439444ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1066676Z ✔ identical independent seven-bag streams and replay do not depend on other player speed (4.334469ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1068830Z ✔ deadline equality auto releases, descent cannot steer, next piece starts independently (0.849724ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1072433Z ✔ fractional callback jitter uses one fixed tick grid and preserves simultaneous outcomes (1.605491ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1077978Z ✔ multirow attacks, warning maturity, FIFO cancellation and placement-boundary insertion (1.993539ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1081737Z ✔ single clears do not attack or cancel and simultaneous excess attacks neutralize (0.594996ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1088183Z ✔ upward overflow tops out and simultaneous hidden occupancy is an order-independent draw (0.807825ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1090988Z ✔ private projection never includes other board, queue, RNG, fall or packet gap (0.585037ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1096776Z ✔ validation deduplicates sequences and rejects stale piece, epoch, enum and forged state (0.590648ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1100845Z ✔ disconnect pauses clocks; leave forfeits; both-ready rematch resets epoch and board (0.794821ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1240883Z ℹ tests 107
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1241317Z ℹ suites 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1241637Z ℹ pass 106
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1241867Z ℹ fail 1
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1242121Z ℹ cancelled 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1242375Z ℹ skipped 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1242886Z ℹ todo 0
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1243320Z ℹ duration_ms 532833.698194
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1253105Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1263884Z ✖ failing tests:
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1264253Z 
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1264882Z test at multiplayer-server/test/combat-integration.mjs:10:1
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1266251Z ✖ Combat real private admission, authoritative motion/fire, populations, recovery races and isolation (31912.801058ms)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1267099Z   AssertionError [ERR_ASSERTION]: simultaneous reservations share one room
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1270290Z       at TestContext.<anonymous> (file:///home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server/multiplayer-server/test/combat-integration.mjs:42:10)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1274326Z       at async Test.run (node:internal/test_runner/test:1409:7)
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1275541Z       at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1276499Z     generatedMessage: false,
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1277043Z     code: 'ERR_ASSERTION',
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1277513Z     actual: false,
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1277921Z     expected: true,
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1278348Z     operator: '==',
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1278796Z     diff: 'simple'
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1279217Z   }
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1432518Z ##[error]Process completed with exit code 1.
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.1640627Z Post job cleanup.
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2523229Z [command]/usr/bin/git version
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2567539Z git version 2.55.0
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2610661Z Temporarily overriding HOME='/home/runner/work/_temp/1159bba8-ecee-465b-8c5d-a34522be2b61' before making global git config changes
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2612906Z Adding repository directory to the temporary git global config as a safe directory
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2615885Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/rmc-colyseus-multiplayer-server/rmc-colyseus-multiplayer-server
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2657222Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2704546Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2958101Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.2987623Z http.https://github.com/.extraheader
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.3001192Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.3043809Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.3306246Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.3346778Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.3829636Z Cleaning up orphan processes
+deploy / deploy	UNKNOWN STEP	2026-10-10T20:01:58.4168360Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

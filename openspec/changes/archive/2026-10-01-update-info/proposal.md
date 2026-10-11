@@ -22,4 +22,4 @@ Game AIs can mistake template demonstrations and generic layout choices for requ
 
 ## Impact
 
-Documentation and OpenSpec specifications only: `AGENTS.md`, `AGENTS_TEMPLATE_USAGE_CHECKLIST.md`, `project-name/documentation/layout-and-game-integration.md`, and OpenSpec delta/main specs. No runtime code, dependencies, or template demo behavior changes in this change.
+Documentation and OpenSpec specifications only: `AGENTS.md`, `AGENTS_TEMPLATE_USAGE_CHECKLIST.md`, `tetris/documentation/layout-and-game-integration.md`, and OpenSpec delta/main specs. No runtime code, dependencies, or template demo behavior changes in this change.
