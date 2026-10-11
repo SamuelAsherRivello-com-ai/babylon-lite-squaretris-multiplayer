@@ -38,6 +38,7 @@ Create an editable four-character room and send its share link to a friend. Your
 | Release piece | Space | DROP |
 | Settings | C / B | Settings |
 | Fullscreen | F | Settings checkbox |
+| Cycle render resolution | R | Settings selector |
 
 Movement repeats after 150 ms, then every 50 ms. Touch controls support concurrent pointers. Losing focus or opening settings releases held inputs. **The online match continues while settings are open.**
 

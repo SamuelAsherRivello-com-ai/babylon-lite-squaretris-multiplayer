@@ -1,0 +1,14 @@
+async page => {
+  await page.goto('http://127.0.0.1:5179/babylon-lite-tetris-multiplayer-clone/?mute=1');
+  await page.waitForFunction(()=>window.__duelInspect?.().graphicsReady);
+  await page.getByRole('button',{name:'Settings · C',exact:true}).click();
+  const select=page.getByRole('combobox');await select.selectOption('native');
+  await page.getByRole('heading',{name:'Settings',exact:true}).click();
+  const values=[];
+  for(let i=0;i<4;i++){await page.keyboard.press('r');values.push(await select.inputValue());}
+  if(values.join(',')!=='double,quarter,half,native')throw Error('R cycle incorrect: '+values);
+  await page.getByRole('button',{name:'Close dialog',exact:true}).click();
+  const code=page.getByRole('textbox',{name:'Room code',exact:true});await code.fill('ABC');await code.focus();await page.keyboard.press('r');
+  if(await code.inputValue()!=='ABCR')throw Error('R stole form focus');
+  return {values,formOwnsR:true};
+}
