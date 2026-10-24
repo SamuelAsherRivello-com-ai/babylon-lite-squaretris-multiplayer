@@ -1,12 +1,14 @@
 <a href="docs/samuel-asher-rivello-banner.png"><img src="docs/samuel-asher-rivello-banner.png" width="640" alt="Samuel Asher Rivello" /></a>
 
-# Tetris Multiplayer Clone
+# Squaretris
+
+[![Squaretris logo surrounded by colorful square puzzle pieces](docs/images/game-logo.png)](docs/game-branding.md)
 
 A private-board, two-player pixel-art duel: aim above the well, release, and send pressure with line clears.
 
 ## Live Demo
 
-- [Play Tetris Multiplayer Clone](https://samuelasherrivello.github.io/babylon-lite-tetris-multiplayer-clone/)
+- [Play Squaretris](https://samuelasherrivello.github.io/babylon-lite-squaretris-multiplayer/)
 
 ## Images
 
@@ -72,7 +74,7 @@ See [verification evidence](docs/verification/README.md), [asset provenance](doc
 
 ## Release
 
-Latest verified release: [v0.0.2](https://github.com/SamuelAsherRivello/babylon-lite-tetris-multiplayer-clone/releases/tag/v0.0.2).
+Latest verified release: [v0.0.2](https://github.com/SamuelAsherRivello/babylon-lite-squaretris-multiplayer/releases/tag/v0.0.2).
 
 The checked-in **Release** GitHub Actions workflow tests/builds, bumps root `version.txt`, commits/tags on `main`, and creates a GitHub release. **Deploy live demo** builds and deploys Pages on pushes to `main` or manual dispatch. Explicitly dispatch Pages after a release bot commit when needed, then verify `/version.txt` and the displayed version. No paid backend or alternate host is needed.
 
