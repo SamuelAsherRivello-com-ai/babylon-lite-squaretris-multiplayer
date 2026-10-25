@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run typecheck:config && vite build && node --experimental-strip-types scripts/check-deployment-assets.ts",
     "preview": "vite preview",
-    "test": "node --test --test-isolation=none tetris/test/*.test.mjs docs/verification/*.test.mjs"
+    "test": "node --test --test-isolation=none tetris/test/*.test.mjs docs/verification/*.test.mjs tetris/test/page.test.ts",
+    "typecheck:config": "tsc -p tsconfig.config.json"
   },
   "dependencies": {
     "@babylonjs/lite": "1.32.0",
@@ -16,6 +17,10 @@
     "react-dom": "^19.3.0"
   },
   "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "5.9.3",
     "vite": "^8.3.0"
   },
   "engines": {

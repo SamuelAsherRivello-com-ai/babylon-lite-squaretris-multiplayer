@@ -6,7 +6,7 @@ import { defineConfig } from "vite";
 const repositoryRoot = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: "/babylon-lite-tetris-multiplayer-clone/",
+  base: "/babylon-lite-squaretris-multiplayer/",
   plugins: [react()],
   root: "tetris",
   server: {
