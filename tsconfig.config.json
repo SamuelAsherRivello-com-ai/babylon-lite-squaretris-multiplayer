@@ -25,6 +25,9 @@
     "vite.config.ts",
     "scripts/deployment-assets.ts",
     "scripts/check-deployment-assets.ts",
-    "tetris/test/page.test.ts"
+    "tetris/test/page.test.ts",
+    "scripts/recovery-storage.ts",
+    "scripts/scoped-recovery-plugin.ts",
+    "scripts/recovery-storage.test.ts"
   ]
 }

@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "npm run typecheck:config && vite build && node --experimental-strip-types scripts/check-deployment-assets.ts",
     "preview": "vite preview",
-    "test": "node --test --test-isolation=none tetris/test/*.test.mjs docs/verification/*.test.mjs tetris/test/page.test.ts",
+    "test": "node --test --test-isolation=none tetris/test/*.test.mjs docs/verification/*.test.mjs tetris/test/page.test.ts scripts/recovery-storage.test.ts",
     "typecheck:config": "tsc -p tsconfig.config.json"
   },
   "dependencies": {
