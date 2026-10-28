@@ -11,6 +11,15 @@ export const defaultLayout = Object.freeze({
   pixelGrid: {width:288,height:512},
 });
 
+export const desktopLayout = Object.freeze({
+  orientation: "landscape",
+  ...aspectRatioPresets.landscape,
+});
+
+export function selectResponsiveLayout(layout, surfaceWidth, surfaceHeight) {
+  return layout === defaultLayout && surfaceWidth > surfaceHeight * 1.2 ? desktopLayout : layout;
+}
+
 export function validateLayout(layout) {
   const { width, height, orientation } = layout;
   if (![width, height].every((value) => Number.isFinite(value) && value > 0)) {

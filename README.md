@@ -6,6 +6,8 @@
 
 A private-board, two-player pixel-art duel: aim above the well, release, and send pressure with line clears.
 
+Choose **Single Player** for a local run or **Multiplayer** to create or join a private room. Solo uses the same aim-and-release board rules without a rival or network room. On desktop, the portrait board sits beside its HUD; mobile keeps the board, status and controls in a compact portrait layout.
+
 ## Live Demo
 
 - [Play Squaretris](https://samuelasherrivello-com-ai.github.io/babylon-lite-squaretris-multiplayer/)
@@ -28,7 +30,9 @@ npm run preview
 
 Run commands from the repository root. Vite prints the local URL; the app uses `/babylon-lite-tetris-multiplayer-clone/`. Source and tests live in `tetris/`, output in `tetris/dist/`. A useful error appears if WebGPU is unavailable; no fallback renderer is included.
 
-Create an editable four-character room and send its share link to a friend. Your friend joins, then both choose **Ready up**. A third player cannot join. The three-second countdown starts the duel. Both must agree to a rematch.
+In Multiplayer, create an editable four-character room and send its share link to a friend. Your friend joins, then both choose **Ready up**. A third player cannot join. The three-second countdown starts the duel. Both must agree to a rematch.
+
+In Single Player, pieces use the same five-second aim deadline, straight committed fall, 200 ms resolution, line clearing, and local top-out rules. The run ends at top-out and shows your lines and placements; line clears do not send attacks. No account or multiplayer connection is needed.
 
 ## Controls
 
@@ -46,7 +50,7 @@ Movement repeats after 150 ms, then every 50 ms. Touch controls support concurre
 
 ## Rules
 
-- Exactly two human opponents. You see only your own 10×20 well, your next five pieces, and your landing ghost. Four hidden rows are used for entry and top-out.
+- **Multiplayer:** exactly two human opponents. You see only your own 10×20 well, your next five pieces, and your landing ghost. Four hidden rows are used for entry and top-out.
 - Your opponent shares a compact aiming outline above your well and a line showing their highest settled row. Their board, falling pieces, queue, landing and garbage gaps remain private at the server projection boundary.
 - Aim and rotate above the board. Release manually or automatically after five seconds. Descent takes 200 ms and cannot be steered. Your next piece arrives after settlement, independently of your rival.
 - Both receive identical independent seven-bags. Rotations try horizontal kicks 0, −1, +1, −2, +2. There is no hold, soft drop, continuous gravity, floor kick, spin or combo bonus.
@@ -66,7 +70,7 @@ Refresh recovery uses a rotating seat credential in **sessionStorage**, never th
 
 ## Presentation and verification
 
-Babylon Lite 1.32.0 renders a stationary 288×512 logical surface with 16-pixel cells. Integer CSS scaling is used whenever 1× fits. Smaller displays use fractional fit; fractional DPR and reduced render presets have reduced pixel-spacing guarantees. DPR is applied once to the native backing size. Nearest sampling, no texture mipmaps and one MSAA sample preserve hard edges.
+Babylon Lite 1.32.0 renders a stationary 288×512 logical portrait board with 16-pixel cells. On desktop it sits on the left beside the right-side React HUD within a landscape app boundary; mobile retains the compact portrait composition. Integer CSS scaling is used whenever 1× fits. Smaller displays use fractional fit; fractional DPR and reduced render presets have reduced pixel-spacing guarantees. DPR is applied once to the native backing size. Nearest sampling, no texture mipmaps and one MSAA sample preserve hard edges.
 
 Original patterned blocks, circuit gutters and six short event sounds are reproducible with `python tools/generate-game-assets.py --output tetris/src/content/assets`. Mute in Settings or append `?mute=1` (combine with room links using `&mute=1`). Reduced effects disables cosmetic flashes. No music.
 

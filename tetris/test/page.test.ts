@@ -6,7 +6,7 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 import viteConfig from '../../vite.config.ts';
-import { defaultLayout, fitViewport, validateLayout } from '../src/ui/layout.js';
+import { defaultLayout, desktopLayout, fitViewport, selectResponsiveLayout, validateLayout } from '../src/ui/layout.js';
 import { projectConfigStorageKey, readProjectConfig, writeProjectConfigPatch } from '../src/shared/projectConfigStorage.js';
 
 test('keeps npm/application and GitHub Pages roots', () => {
@@ -24,6 +24,12 @@ test('fits orientations and project-defined ratios in CSS pixels', () => {
       assert.ok(fit.width>0 && fit.height>0);
     }
   }
+});
+test('selects a landscape app frame on desktop and keeps the fixed portrait frame on mobile', () => {
+  assert.equal(selectResponsiveLayout(defaultLayout, 1920, 1080), desktopLayout);
+  assert.equal(selectResponsiveLayout(defaultLayout, 390, 844), defaultLayout);
+  const custom = { orientation: 'square', width: 1, height: 1 };
+  assert.equal(selectResponsiveLayout(custom, 1920, 1080), custom);
 });
 test('invalid dimensions and orientation give actionable errors', () => {
   for (const width of [0,-1,Infinity,NaN,'16']) assert.throws(() => validateLayout({...defaultLayout,width}), /finite positive/);

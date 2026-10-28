@@ -29,6 +29,7 @@ import { getLogicalToRenderScale } from "./babylon/pixel-perfect.js";
 import { BabylonLiteAIEntry, BabylonLiteMode } from "./babylon/pixel-grid-entry.js";
 import { createRenderTargetSurfaceView, getRenderResolutionDimensions } from "./babylon/render-resolution.js";
 import { useBabylonPresentation } from "./babylon/BabylonPresentation.jsx";
+import { permittedOpponentProjection } from "./opponent-projection.js";
 
 
 const BACKGROUND = Object.freeze({ r: 0.025, g: 0.04, b: 0.08, a: 1 });
@@ -265,10 +266,11 @@ export function DuelCanvas({ readModel, onReady }) {
             BabylonLiteAIEntry.update(target,{frame,sizePx:[w,h]});
             BabylonLiteAIEntry.move(target,[Math.round(x+w/2),Math.round(y+h/2)]);
           };
-          const own=model?.server?.own, piece=model?.piece;
+          const own=model?.server?.own??model?.own, piece=model?.piece;
+          const phase=model?.server?.phase??model?.phase;
           if(own) {
             own.board?.slice(4).forEach((row,y)=>row.forEach((v,x)=>{if(v)block(v==='G'?7:SHAPES.indexOf(v),64+x*16,128+y*16);}));
-            if(piece && model.server.phase==='playing') {
+            if(piece && phase==='playing') {
               const dest=landing(own.board,piece), shape=SHAPES.indexOf(piece.shape);
               if(piece.stage==='aiming') {
                 if(dest!==null) cells(piece.shape,piece.rotation).forEach(([x,y])=>{if(dest+y>=4)block(shape+8,64+(piece.x+x)*16,128+(dest+y-4)*16);});
@@ -279,8 +281,7 @@ export function DuelCanvas({ readModel, onReady }) {
                 cells(piece.shape,piece.rotation).forEach(([x,y])=>block(shape,64+(piece.x+x)*16,Math.round(64+(targetY-64)*progress)+y*16));
               }
             }
-            own.queue?.slice(0,5).forEach((shape,i)=>cells(shape).forEach(([x,y])=>block(SHAPES.indexOf(shape),8+x*8,160+i*52+y*8,8,8)));
-            const opponent=model.server.opponent;
+            const opponent=permittedOpponentProjection(model);
             if(opponent?.aim) cells(opponent.aim.shape,opponent.aim.rotation).forEach(([x,y])=>block(SHAPES.indexOf(opponent.aim.shape)+16,64+(opponent.aim.x+x)*16,28+y*8,16,8));
             if(opponent?.height>0) for(let x=0;x<10;x++)block(25,64+x*16,448-opponent.height*16-8);
           }
