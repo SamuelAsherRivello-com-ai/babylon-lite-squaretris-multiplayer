@@ -2,6 +2,11 @@ name: Release
 
 on:
   workflow_dispatch:
+    inputs:
+      approved_sha:
+        description: Full main commit SHA approved for release
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -19,6 +24,13 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
+      - name: Verify approved revision
+        env:
+          APPROVED_SHA: ${{ inputs.approved_sha }}
+        run: |
+          [[ "$APPROVED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$APPROVED_SHA"
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$APPROVED_SHA"
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -34,6 +46,7 @@ jobs:
         shell: bash
         run: |
           current="$(cut -d= -f2 version.txt)"
+          [[ "$current" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]
           IFS=. read -r major minor patch <<< "$current"
           next="$major.$minor.$((patch + 1))"
           printf 'version=%s\n' "$next" > version.txt
@@ -41,15 +54,30 @@ jobs:
       - name: Commit and tag release
         env:
           VERSION: ${{ steps.version.outputs.value }}
+          APPROVED_SHA: ${{ inputs.approved_sha }}
+          GH_TOKEN: ${{ github.token }}
         run: |
+          test "$(git ls-remote origin refs/heads/main | cut -f1)" = "$APPROVED_SHA"
+          status="$(gh api "repos/$GITHUB_REPOSITORY/releases/tags/v$VERSION" 2>&1)" || {
+            [[ "$status" == *"HTTP 404"* ]] || { echo "$status" >&2; exit 1; }
+          }
+          if [[ "$status" != *"HTTP 404"* ]]; then
+            echo "Release already exists" >&2
+            exit 1
+          fi
+          if git ls-remote --exit-code --tags origin "refs/tags/v$VERSION"; then
+            echo "Release tag already exists" >&2
+            exit 1
+          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add version.txt
           git commit -m "chore: release v$VERSION"
           git tag "v$VERSION"
-          git push origin HEAD:main --tags
+          git push --atomic origin HEAD:main "refs/tags/v$VERSION"
       - name: Create GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
           VERSION: ${{ steps.version.outputs.value }}
         run: gh release create "v$VERSION" --generate-notes --title "v$VERSION"
+
