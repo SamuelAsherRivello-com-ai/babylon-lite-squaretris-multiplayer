@@ -39,9 +39,9 @@ In Single Player, pieces use the same five-second aim deadline, straight committ
 | Action | Keyboard | Touch / pointer |
 | --- | --- | --- |
 | Move aim | Left / Right, A / D | Left / Right buttons |
-| Rotate clockwise | Up / X | Clockwise button |
+| Rotate clockwise | Up / W / X | Clockwise button |
 | Rotate counterclockwise | Z | Counterclockwise button |
-| Release piece | Space | DROP |
+| Release piece | Down / S / Space | DROP |
 | Settings | C / B | Settings |
 | Fullscreen | F | Settings checkbox |
 | Cycle render resolution | R | Settings selector |

@@ -3,7 +3,7 @@ import {test} from 'node:test';
 import {DuelPrediction} from '../src/content/duel-state.js';
 import {DuelControls} from '../src/content/duel-controls.js';
 import {emptyBoard,landing} from '@rmc/multiplayer-client/tetris-duel';
-import {fitViewport,defaultLayout} from '../src/ui/layout.js';
+import {fitViewport,fitGameContent,defaultLayout} from '../src/ui/layout.js';
 
 const snapshot=(patch={})=>({protocolVersion:1,epoch:1,revision:1,serverTime:1000,phase:'playing',paused:false,own:{ack:0,out:false,board:emptyBoard(),piece:{id:1,shape:'T',x:3,rotation:0,stage:'aiming',deadline:6000}},...patch});
 test('predicts aim immediately, replays only unacknowledged commands and rejects stale snapshots',()=>{
@@ -40,7 +40,10 @@ test('concurrent input owners share one repeat and cancellation clears every own
   await new Promise(resolve=>setTimeout(resolve,175));assert.equal(sent.filter(v=>v==='left').length,2);
   controls.reset();const count=sent.length;await new Promise(resolve=>setTimeout(resolve,80));assert.equal(sent.length,count);assert.equal(controls.owners.size,0);
 });
-test('fixed portrait fits integer pixels where possible and remains usable on smaller displays',()=>{
-  assert.deepEqual(fitViewport(1280,1080,defaultLayout),{width:576,height:1024,x:352,y:28});
-  const tiny=fitViewport(250,450,defaultLayout);assert.equal(tiny.width,250);assert.ok(tiny.height<450);
+test('flexible portrait viewport clamps its ratio and keeps the game fitted',()=>{
+  const wide=fitViewport(1280,1080,defaultLayout); assert.equal(wide.width,675); assert.equal(wide.height,1080);
+  assert.deepEqual(fitGameContent(wide.width,wide.height),{width:607.5,height:1080,x:33.75,y:0});
+  const tall=fitViewport(300,1000,defaultLayout); assert.equal(tall.height,300/(9/20));
+  const phone=fitViewport(390,844,defaultLayout); assert.equal(phone.width,390); assert.equal(phone.height,844);
+  const tiny=fitGameContent(250,450); assert.equal(tiny.width,250); assert.ok(tiny.height<450);
 });

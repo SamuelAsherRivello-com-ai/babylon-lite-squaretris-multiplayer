@@ -46,7 +46,7 @@ While aiming, the game SHALL always show a faint outline of the local piece's le
 - **THEN** only that top outline changes and no opponent landing ghost appears
 
 ### Requirement: Keyboard and concurrent touch controls
-The game SHALL support left/right or A/D movement, X/up clockwise rotation, Z counterclockwise rotation, and Space commitment. Touch SHALL provide movement, both rotations, and commit with simultaneous pointers. Held inputs SHALL release on blur, cancellation, and teardown. Focused fields SHALL suppress gameplay shortcuts and shell shortcuts SHALL preserve game keys.
+The game SHALL support left/right or A/D movement, up/W/X clockwise rotation, Z counterclockwise rotation, and down/S/Space commitment. Touch SHALL provide movement, both rotations, and commit with simultaneous pointers. Held inputs SHALL release on blur, cancellation, and teardown. Focused fields SHALL suppress gameplay shortcuts and shell shortcuts SHALL preserve game keys.
 
 #### Scenario: Simultaneous touch and cancellation
 - **WHEN** one touch holds movement while another rotates or commits, then movement is canceled

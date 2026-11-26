@@ -6,7 +6,7 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 import viteConfig from '../../vite.config.ts';
-import { defaultLayout, desktopLayout, fitViewport, selectResponsiveLayout, validateLayout } from '../src/ui/layout.js';
+import { defaultLayout, fitViewport, selectResponsiveLayout, validateLayout } from '../src/ui/layout.js';
 import { projectConfigStorageKey, readProjectConfig, writeProjectConfigPatch } from '../src/shared/projectConfigStorage.js';
 
 test('keeps npm/application and GitHub Pages roots', () => {
@@ -14,7 +14,7 @@ test('keeps npm/application and GitHub Pages roots', () => {
   assert.equal(viteConfig.base, "/babylon-lite-squaretris-multiplayer/");
 });
 test('fits orientations and project-defined ratios in CSS pixels', () => {
-  for (const layout of [defaultLayout, {orientation:'portrait',width:9,height:16}, {orientation:'square',width:1,height:1}, {orientation:'landscape',width:7,height:3}]) {
+  for (const layout of [{orientation:'portrait',width:9,height:16}, {orientation:'square',width:1,height:1}, {orientation:'landscape',width:7,height:3}]) {
     for (const [w,h] of [[1600,900],[400,900],[800,800],[160,100]] as const) {
       const fit = fitViewport(w,h,layout);
       assert.ok(fit.width <= w && fit.height <= h + 1e-9);
@@ -25,8 +25,8 @@ test('fits orientations and project-defined ratios in CSS pixels', () => {
     }
   }
 });
-test('selects a landscape app frame on desktop and keeps the fixed portrait frame on mobile', () => {
-  assert.equal(selectResponsiveLayout(defaultLayout, 1920, 1080), desktopLayout);
+test('keeps a portrait frame on desktop and mobile', () => {
+  assert.equal(selectResponsiveLayout(defaultLayout, 1920, 1080), defaultLayout);
   assert.equal(selectResponsiveLayout(defaultLayout, 390, 844), defaultLayout);
   const custom = { orientation: 'square', width: 1, height: 1 };
   assert.equal(selectResponsiveLayout(custom, 1920, 1080), custom);
@@ -35,6 +35,7 @@ test('invalid dimensions and orientation give actionable errors', () => {
   for (const width of [0,-1,Infinity,NaN,'16']) assert.throws(() => validateLayout({...defaultLayout,width}), /finite positive/);
   assert.throws(() => validateLayout({orientation:'portrait',width:16,height:9}), /orientation must match/);
   assert.throws(() => validateLayout({...defaultLayout,orientation:'unknown'}), /orientation must match/);
+  assert.throws(() => validateLayout({...defaultLayout,minRatio:0.7}), /ratio range/);
   assert.throws(() => fitViewport(-1,900,defaultLayout), /nonnegative CSS/);
   assert.deepEqual(fitViewport(0,0,defaultLayout), {width:0,height:0,x:0,y:0});
 });
@@ -58,15 +59,15 @@ test('renderer settings patch the shared config without dropping shell preferenc
     fullscreen: true,
   });
 });
-test('preserves corner contracts and engine-neutral content-layer guidance', async () => {
+test('preserves bottom navigation and engine-neutral content-layer guidance', async () => {
   const read = (name: string) => readFile(new URL('../'+name,import.meta.url),'utf8');
   const [app,surface,main,html,guide] = await Promise.all([read('src/ui/App.jsx'),read('src/ui/BrowserSurface.jsx'),read('src/main.jsx'),read('index.html'),read('../docs/layout-and-game-integration.md')]);
   assert.ok(main.includes('getElementById("root")'));
   assert.ok(html.includes('id="root"'));
   for (const id of ['content_layer','ui_layer','viewport','browser_surface']) assert.ok(surface.includes('id="'+id+'"'));
-  for (const position of ['top_left','top_right','bottom_left','bottom_right']) assert.ok(app.includes('<Corner position="'+position+'">'));
+  assert.match(app, /className="bottom_bar"[\s\S]*id="mode_action"[\s\S]*Settings[\s\S]*id="project_title"[\s\S]*id="version"/);
   assert.match(app,/versionText.*trim/);
-  assert.match(app,/noopener noreferrer/);
+  assert.doesNotMatch(app,/GitHub ↗/);
   assert.doesNotMatch(app,/localStorage.clear|orientationOverride/);
   assert.match(surface,/Selected content mounts beneath the independent UI layer/);
   assert.doesNotMatch(surface,/Babylon Lite content mounts here|future Babylon Lite integration/i);

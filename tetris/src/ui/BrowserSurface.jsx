@@ -1,5 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
-import { defaultLayout, fitViewport, validateLayout } from "./layout.js";
+import { defaultLayout, fitGameContent, fitViewport, validateLayout } from "./layout.js";
 
 function rectangle(x, y, width, height) {
   return { left: x, top: y, width, height };
@@ -32,6 +32,7 @@ export function BrowserSurface({ layout = defaultLayout, children, ui, gutters =
   let error;
   try { validateLayout(layout); } catch (failure) { error = failure.message; }
   const viewport = error ? null : fitViewport(size.width, size.height, layout);
+  const game = viewport && fitGameContent(viewport.width, viewport.height);
   const regions = viewport && {
     top: rectangle(0, 0, size.width, viewport.y),
     bottom: rectangle(0, viewport.y + viewport.height, size.width, viewport.y),
@@ -49,7 +50,7 @@ export function BrowserSurface({ layout = defaultLayout, children, ui, gutters =
           {/* Selected content mounts beneath the independent UI layer. Content and renderer
               integrations own their backing resolution and lifecycle while the viewport stays
               in CSS pixels. See the integration guide for current renderer examples. */}
-          <div id="content_layer">{children}</div>
+          <div id="content_layer" style={rectangle(game.x, game.y, game.width, game.height)}>{children}</div>
           <div id="ui_layer">{ui}</div>
         </div>
       </>}

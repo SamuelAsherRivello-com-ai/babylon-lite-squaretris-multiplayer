@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { MultiplayerClient, suggestRoomCode, readRoomCode, buildRoomLink } from '@rmc/multiplayer-client';
 import { cells, landing, SHAPES } from '@rmc/multiplayer-client/tetris-duel';
 import { DuelCanvas } from './DuelCanvas.jsx';
@@ -26,6 +27,8 @@ function QueuePreview({ queue = [] }) {
 export function Content() {
   const { paused, preferences } = useContentShell();
   const [graphicsReady, setGraphicsReady] = useState(false);
+  const [modeActionTarget, setModeActionTarget] = useState(null);
+  useEffect(() => { setModeActionTarget(document.getElementById('mode_action')); }, []);
   const [mode, setMode] = useState(() => initialGameMode(readRoomCode()));
   const [status, setStatus] = useState('idle');
   const [error, setError] = useState('');
@@ -172,10 +175,10 @@ export function Content() {
       <DuelCanvas readModel={() => model.current.read()} onReady={setGraphicsReady} />
       <div className="opponent_label">{mode === 'solo' ? 'SOLO RUN' : `OPPONENT AIM ${server?.opponent && !server.opponent.connected ? '· OFFLINE' : ''}`}</div>
       <div className="own_label">YOUR AIM <span>{active ? (visible.piece?.stage === 'aiming' ? timer + ' s' : 'RELEASED') : '5 s to release'}</span></div>
-      <div className="board_label">YOUR WELL <span>{mode === 'multiplayer' ? `${code} · ${status}` : 'LOCAL'}</span></div>
+      {mode === 'multiplayer' && <div className="board_label"><span>{`${code} · ${status}`}</span></div>}
       {active && visible.piece?.stage === 'aiming' && own && landing(own.board, visible.piece) === null && <div className="blocked_entry" role="status">ENTRY BLOCKED · MOVE NOW</div>}
       {mode === 'solo' && phase === 'results' && <div className="solo_board_result" role="status">RUN OVER</div>}
-      {mode === 'solo' && active && <button className="mobile_back" onClick={leaveSolo}>Modes</button>}
+      {modeActionTarget && mode === 'solo' && active && createPortal(<button className="mobile_back corner_action" onClick={leaveSolo}>Modes</button>, modeActionTarget)}
       {active && buttonRow}
     </div>
     <aside className="game_hud" aria-label="Game HUD">
@@ -183,7 +186,7 @@ export function Content() {
         <h1>Squaretris</h1>
         <div className="hud_stats"><div><span>LINES</span><strong>{own?.lines || 0}</strong></div><div><span>PIECES</span><strong>{own?.placements || 0}</strong></div><div><span>TIME</span><strong>{Math.floor(clock * 20 / 1000)}s</strong></div></div>
         <div className="next_heading">NEXT</div><QueuePreview queue={own?.queue} />
-        <p className="hud_help">← → / A D move. X / ↑ rotate. Z turn back. Space releases the piece.</p>
+        <p className="hud_help">← → / A D move. ↑ / W / X rotate clockwise. Z turn back. ↓ / S / Space drops the piece.</p>
         <button className="hud_secondary" onClick={leaveSolo}>Back to modes</button>
         {buttonRow}
       </>}
@@ -207,14 +210,14 @@ export function Content() {
         {!server ? <><h2>Multiplayer</h2><p>Create a room or join a friend's private board.</p>
           <label>ROOM CODE<input aria-label="Room code" value={code} maxLength={4} autoCapitalize="characters" spellCheck="false" onChange={(event) => setCode(event.target.value.toUpperCase().replace(/[^A-Z0-9]/g, ''))} /></label>
           <div className="room_actions"><button onClick={() => connect(true)} disabled={['connecting', 'reconnecting'].includes(status)}>Create room</button><button onClick={() => connect(false)} disabled={['connecting', 'reconnecting'].includes(status)}>Join room</button></div>
-          <p className="hud_help">← → / A D move. X / ↑ rotate. Z turn back. Space releases the piece.</p>
+          <p className="hud_help">← → / A D move. ↑ / W / X rotate clockwise. Z turn back. ↓ / S / Space drops the piece.</p>
         </> : server.paused || status !== 'connected' ? <><h2>{['error', 'offline', 'full'].includes(status) ? 'Connection ended' : 'Reconnecting…'}</h2><p>Both clocks pause after the server detects a disconnect. Each seat has 15 seconds of recovery per match.</p><button onClick={() => location.reload()}>Reload to recover seat</button></> :
           phase === 'countdown' ? <><h2 className="countdown">{Math.max(1, Math.ceil((server.startsAt - visible.time) / 1000))}</h2><p>Both players ready. Same pieces, separate boards.</p></> :
             phase === 'lobby' ? <><h2>{server.opponent ? 'Your rival is here' : 'Invite a friend'}</h2><p>{server.opponent ? `${own.name} vs ${server.opponent.name}` : 'Share this link. Two players, two private boards.'}</p>{share && <input aria-label="Share room link" readOnly value={share} onFocus={(event) => event.target.select()} />}<button onClick={() => { void sound().unlock(); client.current.send('ready', { ready: !own.ready }); }}>{own.ready ? 'Ready · undo' : 'Ready up'}</button><p>{server.opponent?.ready ? 'Rival ready' : 'Waiting for rival to ready up'}</p></> :
               <><h2>{phase === 'aborted' ? 'Room expired' : result}</h2><p>{own.lines} lines · {own.placements} pieces</p><button onClick={() => client.current.send('rematch', { ready: !own.ready })}>{own.ready ? 'Rematch requested · undo' : 'Request rematch'}</button><p>Both players must agree.</p></>}
         {error && <p role="alert" className="error">{String(error)}<br />If the free relay expired, create a new room.</p>}
         <div className="connection_status" role="status">{status}</div>
-        <button className="hud_secondary" onClick={leaveMultiplayer}>Leave / new room</button>
+        {(server || ['connecting', 'reconnecting'].includes(status)) && <button className="hud_secondary" onClick={leaveMultiplayer}>Leave / new room</button>}
         <button className="hud_secondary" onClick={backToModes}>Back to modes</button>
       </section>}
     </aside>

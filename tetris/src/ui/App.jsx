@@ -28,21 +28,19 @@ export function App({layout=defaultLayout,content=null,contentPresentation=null,
     };
     window.addEventListener('keydown',shortcut);return()=>window.removeEventListener('keydown',shortcut);
   },[]);
-  const Settings=contentPresentation?.Settings;
   const activeLayout=selectResponsiveLayout(layout,surfaceSize.width,surfaceSize.height);
   return <ContentShellProvider paused={Boolean(dialog)} preferences={prefs}>
     <BrowserSurface layout={activeLayout} gutters={gutters} ui={<>
-      <Corner position="top_left"><div id="project_title" className="corner-title">TETRIS DUEL</div></Corner>
-      <Corner position="top_right"><a className="corner-body" href="https://github.com/SamuelAsherRivello/babylon-lite-tetris-multiplayer-clone" target="_blank" rel="noopener noreferrer">GitHub ↗</a></Corner>
-      <Corner position="bottom_left"><button className="corner-body" onClick={()=>setDialog('settings')}>Settings · C</button></Corner>
-      <Corner position="bottom_right"><div id="version" className="corner-body">v{versionText.trim().replace(/^version=|^v/g,'')}</div></Corner>
+      <div className="bottom_bar">
+        <div className="corner_actions"><span id="mode_action"/><button className="corner_action" onClick={()=>setDialog('settings')}>Settings</button></div>
+        <div className="bottom_identity"><span id="project_title" className="corner-title">Squaretris</span><span aria-hidden="true"> · </span><span id="version" className="corner-body">v{versionText.trim().replace(/^version=|^v/g,'')}</span></div>
+      </div>
       {dialog&&<Dialog title="Settings" onClose={()=>setDialog(null)}>
-        <p>The current game continues while settings are open.</p>
         <div className="dialog_options">
           <label><input type="checkbox" checked={fullscreen} onChange={toggleFullscreen}/> Fullscreen · F</label>
           <label><input type="checkbox" checked={prefs.muted} onChange={e=>setPrefs(v=>({...v,muted:e.target.checked}))}/> Mute sounds</label>
           <label><input type="checkbox" checked={prefs.reduced} onChange={e=>setPrefs(v=>({...v,reduced:e.target.checked}))}/> Reduced effects</label>
-          {Settings&&<Settings/>}
+          <small>Instructions: Play with WASD keys, or arrow keys, or on-screen buttons.</small>
         </div>
       </Dialog>}
     </>}>{content}</BrowserSurface>

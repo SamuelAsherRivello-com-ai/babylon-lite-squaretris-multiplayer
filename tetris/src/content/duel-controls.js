@@ -1,4 +1,4 @@
-export const KEY_ACTIONS = {ArrowLeft:'left',a:'left',ArrowRight:'right',d:'right',ArrowUp:'cw',x:'cw',z:'ccw',' ':'commit'};
+export const KEY_ACTIONS = {ArrowLeft:'left',a:'left',ArrowRight:'right',d:'right',ArrowUp:'cw',w:'cw',ArrowDown:'commit',s:'commit',x:'cw',z:'ccw',' ':'commit'};
 
 /** Separate owners allow keyboard + multiple pointers without duplicate repeat loops. */
 export class DuelControls {

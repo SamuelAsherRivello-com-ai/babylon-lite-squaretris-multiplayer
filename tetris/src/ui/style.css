@@ -44,7 +44,8 @@ h1, h2, p { margin: 0 0 .8em; }
   background: #0b1628;
   box-shadow: 0 0 0 1px #25405b, 0 12px 90px #0008;
 }
-#content_layer, #ui_layer { position: absolute; inset: 0; overflow: hidden; }
+#content_layer, #ui_layer { position: absolute; overflow: hidden; }
+#ui_layer { inset: 0; }
 #ui_layer { z-index: 4; pointer-events: none; }
 .corner { position: absolute; pointer-events: auto; font-size: 3.05cqw; line-height: 1.3; }
 .corner_top_left { left: 2.8%; top: 1.4%; }
@@ -52,7 +53,13 @@ h1, h2, p { margin: 0 0 .8em; }
 .corner_bottom_left { left: 2.8%; bottom: 1.2%; }
 .corner_bottom_right { right: 2.8%; bottom: 1.2%; }
 .corner-title { font-weight: 700; letter-spacing: .05em; color: #d8f8ff; }
-.corner button { padding: 0; border: 0; background: none; }
+.bottom_bar { position: absolute; right: 2.8%; bottom: 1%; left: 2.8%; display: flex; align-items: center; justify-content: space-between; gap: .4em; color: #c9d9ed; font-size: clamp(9px, 2.5cqw, 13px); line-height: 1.2; pointer-events: auto; }
+.bottom_bar .corner-title { white-space: nowrap; }
+.bottom_identity { white-space: nowrap; }
+.bottom_bar #version { white-space: nowrap; }
+.corner_actions { display: flex; align-items: center; gap: .3em; }
+.corner_action { padding: .35em .5em; color: #d3edff; background: #14283e; border-color: #36536e; font-size: inherit; }
+.corner_action:hover { color: #d8f8ff; background: #14283e; }
 .corner a { text-decoration: none; }
 
 .duel {
@@ -80,6 +87,7 @@ h1, h2, p { margin: 0 0 .8em; }
 }
 .babylon_content, .babylon_canvas { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
 .babylon_canvas { display: block; image-rendering: pixelated; }
+.babylon_content::after { content: ""; position: absolute; top: 88.7%; right: 0; left: 0; height: 4%; background: #091122; pointer-events: none; }
 .babylon_content_message {
   position: absolute;
   inset: 10% 5%;
@@ -101,7 +109,7 @@ h1, h2, p { margin: 0 0 .8em; }
 .own_label { top: 11.8%; left: 22.2%; display: flex; justify-content: space-between; width: 55.6%; color: #8fe9eb; font-size: clamp(9px, 2.6cqw, 14px); }
 .own_label span { color: #ffcd58; }
 .board_label { top: 87.9%; left: 22.2%; display: flex; justify-content: space-between; width: 55.6%; color: #829bb8; font-size: clamp(8px, 2.3cqw, 13px); }
-.board_label span { font-size: .9em; }
+.board_label span { margin-left: auto; font-size: .9em; }
 .blocked_entry, .solo_board_result { top: 26%; left: 22.2%; width: 55.6%; padding: 1.5cqw; background: #0c192eee; text-align: center; font-size: clamp(9px, 2.5cqw, 14px); }
 .blocked_entry { color: #ff768b; }
 .solo_board_result { color: #ffcd58; }
@@ -160,7 +168,7 @@ h1, h2, p { margin: 0 0 .8em; }
 .queue_piece_cells i[data-color="6"] { background: #ffac69; }
 .duel_controls { display: flex; width: 100%; gap: .35em; margin: 1.3em 0; pointer-events: auto; user-select: none; }
 .board_stage > .duel_controls { display: none; }
-.duel_controls button { flex: 1; padding: .35em .2em; touch-action: none; background: #102238; border-bottom: 3px solid #263f59; font-size: 1.25em; }
+.duel_controls button { display: flex; align-items: center; justify-content: center; flex: 1; padding: 0 .2em; line-height: 1; touch-action: none; background: #102238; border-bottom: 3px solid #263f59; font-size: 1.25em; }
 .duel_controls [data-action=commit] { color: #ffcd58; border-color: #827343; font-size: .9em; }
 .duel_controls [data-held=true] { background: #24546b; transform: translateY(1px); }
 .game_hud > .duel_controls { margin-top: auto; }
@@ -186,25 +194,29 @@ h1, h2, p { margin: 0 0 .8em; }
   .game_hud { position: absolute; inset: 0; z-index: 3; display: block; overflow: visible; padding: 0; border: 0; pointer-events: none; }
   .game_hud > * { pointer-events: auto; }
   .game_hud h1, .game_hud h2, .game_hud > .hud_help, .game_hud > .hud_secondary { display: none; }
-  .game_hud > .hud_stats { position: absolute; top: 28%; right: 2.8%; display: flex; flex-direction: column; gap: 1.5cqw; width: 15%; margin: 0; text-align: center; }
-  .game_hud > .hud_stats span { font-size: clamp(6px, 2.15cqw, 11px); }
-  .game_hud > .hud_stats strong { margin: 0 0 1cqw; font-size: clamp(18px, 6cqw, 30px); }
+  .game_hud > .hud_stats { position: absolute; top: 28%; bottom: 14%; right: 2.8%; display: flex; flex-direction: column; justify-content: space-around; gap: 0; width: 15%; margin: 0; text-align: center; }
+  .game_hud > .hud_stats > div { flex: 0 1 auto; gap: .35em; }
+  .game_hud > .hud_stats span { font-size: clamp(6px, 2.15cqw, 11px); overflow-wrap: anywhere; }
+  .game_hud > .hud_stats strong { margin: 0; font-size: clamp(16px, 5.2cqw, 27px); }
+  .duel[data-mode=multiplayer] .game_hud > .hud_stats { bottom: auto; gap: 1.5cqw; }
   .game_hud > .incoming_warning { position: absolute; top: 56%; right: 2.8%; width: 15%; text-align: center; font-size: clamp(7px, 2.15cqw, 11px); }
-  .next_heading { position: absolute; top: 28%; left: 2.8%; }
-  .game_hud > .queue_preview { position: absolute; top: 34%; left: 2.8%; display: grid; gap: 1cqw; width: 15%; margin: 0; }
+  .next_heading { position: absolute; top: 28%; left: 2.8%; width: 15%; margin: 0; text-align: center; font-size: clamp(6px, 2.15cqw, 11px); }
+  .game_hud > .queue_preview { position: absolute; top: 33%; bottom: 14%; left: 2.8%; display: grid; grid-template-rows: repeat(5, 1fr); align-items: center; gap: 0; width: 15%; margin: 0; }
   .queue_piece { grid-template-columns: 1fr; gap: 0; }
   .queue_piece_name { display: none; }
   .queue_piece_cells { grid-template: repeat(3, 6px) / repeat(4, 6px); min-height: 24px; }
   .game_hud > .duel_controls { display: none; }
-  .board_stage > .duel_controls { position: absolute; z-index: 5; right: 3%; bottom: 4.5%; left: 3%; display: flex; width: 94%; height: 7%; margin: 0; }
+  .board_stage > .duel_controls { position: absolute; z-index: 5; right: 3.5%; bottom: 5.1%; left: 3.5%; display: flex; width: 93%; height: 5.8%; gap: .25em; margin: 0; }
+  .board_stage > .duel_controls button { background: #102035; border-color: #304a63; border-bottom-width: 2px; }
+  .board_stage > .duel_controls [data-action=commit] { border-color: #827343; }
   .board_stage > .duel_controls button { font-size: clamp(18px, 6cqw, 30px); }
   .board_stage > .duel_controls [data-action=commit] { font-size: clamp(12px, 3.5cqw, 18px); }
-  .mobile_back { position: absolute; z-index: 5; top: 18%; right: 3%; display: block; padding: .3em .5em; font-size: clamp(9px, 2.5cqw, 13px); }
+  .mobile_back { display: block; }
   .board_label { top: 84%; }
-  .game_hud > .room_panel, .game_hud > .hud_panel { position: absolute; top: 24%; left: 7%; display: flex; width: 86%; max-height: 64%; min-height: 0; overflow: auto; padding: 5cqw; background: #0b182bf5; border: 1px solid #355770; box-shadow: 0 3cqw 10cqw #0008; text-align: center; }
+  .game_hud > .room_panel, .game_hud > .hud_panel { position: absolute; top: 7%; bottom: 7%; left: 4%; display: flex; justify-content: safe center; width: 92%; max-height: none; min-height: 0; overflow: auto; padding: 4cqw; gap: 1.5cqw; background: #0b182bf5; border: 1px solid #355770; box-shadow: 0 3cqw 10cqw #0008; text-align: center; }
   .game_hud > .room_panel h2, .game_hud > .hud_panel h2, .game_hud > .hud_panel h1 { display: block; }
   .game_hud > .room_panel p, .game_hud > .hud_panel p { font-size: 3.25cqw; }
-  .game_hud > .room_panel .hud_help { display: block; margin-top: 3cqw !important; font-size: 2.75cqw; }
+  .game_hud > .room_panel .hud_help { display: block; margin-top: 1cqw !important; padding-top: 0; font-size: 2.75cqw; }
   .game_hud > .room_panel label { font-size: 2.8cqw; }
   .game_hud > .room_panel label input { font-size: 6cqw; }
   .game_hud > .room_panel .connection_status { font-size: 2.3cqw; }
@@ -213,7 +225,19 @@ h1, h2, p { margin: 0 0 .8em; }
   .game_hud > .hud_panel.mode_panel { gap: 3cqw; }
   .game_hud > .hud_panel.mode_panel .hud_secondary { display: block; }
   .game_hud > .hud_panel.mode_panel > button { display: block; }
-  .game_hud > .hud_panel:not(.mode_panel) { top: 29%; }
+  .game_hud > .hud_panel:not(.mode_panel) { top: 7%; }
   .game_hud > .hud_panel:not(.mode_panel) .hud_secondary { display: block; }
   .connection_status { font-size: .8em; }
 }
+.board_stage::before, .board_stage::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 4.5%;
+  bottom: 11%;
+  width: 2.8%;
+  background: #0a1424;
+  pointer-events: none;
+}
+.board_stage::before { left: 0; }
+.board_stage::after { right: 0; }
